@@ -1,0 +1,17 @@
+{
+    "PDN_MULTILAYER": false,
+    "FP_PDN_MULTILAYER": false,
+    "PDN_CORE_RING": false,
+    "PDN_ENABLE_RAILS": true,
+    "PDN_SKIPTRIM": false,
+    "PDN_VWIDTH": 2.0,
+    "PDN_HWIDTH": 2.0,
+    "PDN_VSPACING": 3.0,
+    "PDN_HSPACING": 3.0,
+    "PDN_VPITCH": 110.0,
+    "PDN_HPITCH": 129.0,
+    "PDN_HORIZONTAL_HALO": 0.0,
+    "PDN_VERTICAL_HALO": 0.0,
+    "VDD_NETS": ["vccd1"],
+    "GND_NETS": ["vssd1"]
+}

@@ -1,0 +1,95 @@
+{
+    "DESIGN_NAME": "project_macro",
+    "FP_PDN_MULTILAYER": false,
+    "VERILOG_FILES": [
+        "dir::../../verilog/rtl/project_macro.v",
+        "dir::../../verilog/rtl/ecg_project_sources.v"
+    ],
+    "VERILOG_DEFINES": "SKY130",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 25,
+    "pdk::sky130*": {
+        "RT_MAX_LAYER": "met4",
+        "scl::sky130_fd_sc_hd": {
+            "CLOCK_PERIOD": 25
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "SYNTH_MAX_FANOUT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    },
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 880 1031.66",
+    "IO_PIN_ORDER_CFG": "dir::pin_order.cfg",
+    "FP_DEF_TEMPLATE": "dir::fixed_dont_change/project_macro.def",
+    "PDN_MULTILAYER": false,
+    "PDN_CORE_RING": false,
+    "PDN_ENABLE_RAILS": true,
+    "PDN_SKIPTRIM": false,
+    "PDN_VWIDTH": 2.0,
+    "PDN_HWIDTH": 2.0,
+    "PDN_VSPACING": 3.0,
+    "PDN_HSPACING": 3.0,
+    "PDN_VPITCH": 110.0,
+    "PDN_HPITCH": 129.0,
+    "PDN_HORIZONTAL_HALO": 0.0,
+    "PDN_VERTICAL_HALO": 0.0,
+    "VDD_NETS": [
+        "vccd1"
+    ],
+    "GND_NETS": [
+        "vssd1"
+    ],
+    "MAX_TRANSITION_CONSTRAINT": 1.0,
+    "MAX_FANOUT_CONSTRAINT": 16,
+    "SYNTH_ABC_BUFFERING": false,
+    "PL_RESIZER_SETUP_SLACK_MARGIN": 0.4,
+    "PL_RESIZER_HOLD_SLACK_MARGIN": 0.4,
+    "CTS_CLK_MAX_WIRE_LENGTH": 500,
+    "RT_MAX_LAYER": "met4",
+    "DIODE_ON_PORTS": "both",
+    "RUN_ANTENNA_REPAIR": true,
+    "RUN_POST_GRT_DESIGN_REPAIR": true,
+    "RUN_POST_GRT_RESIZER_TIMING": true,
+    "GRT_RESIZER_SETUP_SLACK_MARGIN": 0.2,
+    "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.2,
+    "DRT_OPT_ITERS": 64,
+    "MAGIC_DEF_LABELS": false,
+    "MAGIC_DRC_USE_GDS": true,
+    "PNR_SDC_FILE": "dir::pnr.sdc",
+    "SIGNOFF_SDC_FILE": "dir::signoff.sdc",
+    "meta": {
+        "flow": "Classic",
+        "substituting_steps": {
+            "+OpenROAD.DetailedRouting": "Odb.InsertECOBuffers",
+            "+Odb.InsertECOBuffers": "OpenROAD.DetailedRouting"
+        }
+    },
+    "INSERT_ECO_BUFFERS": [
+        {
+            "target": "fanout1629/X",
+            "buffer": "sky130_fd_sc_hd__buf_4"
+        },
+        {
+            "target": "fanout1976/X",
+            "buffer": "sky130_fd_sc_hd__buf_4"
+        },
+        {
+            "target": "fanout2038/X",
+            "buffer": "sky130_fd_sc_hd__buf_4"
+        },
+        {
+            "target": "load_slew70/X",
+            "buffer": "sky130_fd_sc_hd__buf_4"
+        }
+    ]
+}

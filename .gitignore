@@ -1,0 +1,50 @@
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local toolchains and local-only installs
+ECG/.local/
+ECG/
+# HLS/Vivado generated outputs
+**/*_prj/
+**/vivado_prj/
+**/logs/
+**/sim_build/
+**/_parallel_cosim_workers/
+**/.Xil/
+**/xsim.dir/
+
+# Simulator/waveform artifacts
+**/*.wdb
+**/*.wcfg
+**/*.vcd
+**/*.fst
+**/*.wlf
+
+# Tool logs and journals
+**/*.jou
+**/*.str
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+Module 6_ Hardening Your Design for the OpenFrame Multi-Project - Silicon Sprint AUC Workshop.html
+Module 6_ Hardening Your Design for the OpenFrame Multi-Project - Silicon Sprint AUC Workshop_files/
+
+# Large datasets (not version controlled)
+hls4ml/mitbih_test.csv
+hls4ml/mitbih_train.csv
+
+# HLS generated archives
+hls4ml/**/*.tar.gz
+
+# Model binaries (keep JSON)
+model/**/*.h5
+
+# Simulation run artifacts
+verf/results.xml
+verf/sim.log
+verf/test_output.log
+ resluts 

@@ -1,0 +1,10 @@
+[
+    "1_syn.json",
+    "2_floorplan.json",
+    "3_powerplan.json",
+    "4_placement.json",
+    "5_cts.json",
+    "6_routing.json",
+    "7_signoff.json",
+    "eco.json"
+]

@@ -1,0 +1,19 @@
+{
+    "PNR_SDC_FILE": "dir::pnr.sdc",
+    "SIGNOFF_SDC_FILE": "dir::signoff.sdc",
+
+  "meta": {
+    "flow": "Classic",
+    "substituting_steps": {
+      "+OpenROAD.DetailedRouting": "Odb.InsertECOBuffers",
+      "+Odb.InsertECOBuffers": "OpenROAD.DetailedRouting"
+    }
+  },
+
+  "INSERT_ECO_BUFFERS": [
+    { "target": "fanout1629/X", "buffer": "sky130_fd_sc_hd__buf_4" },
+    { "target": "fanout1976/X", "buffer": "sky130_fd_sc_hd__buf_4" },
+    { "target": "fanout2038/X", "buffer": "sky130_fd_sc_hd__buf_4" },
+    { "target": "load_slew70/X", "buffer": "sky130_fd_sc_hd__buf_4" }
+  ]
+}

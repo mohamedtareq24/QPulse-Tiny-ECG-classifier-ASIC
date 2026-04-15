@@ -1,0 +1,66 @@
+Backend: Vitis
+ClockPeriod: 50
+HLSConfig:
+  Flows:
+    - vitis:fifo_depth_optimization
+  LayerName:
+    input_layer_3:
+      Precision:
+        result: ap_fixed<10,5>
+      Trace: false
+    conv1d_6:
+      Precision:
+        bias:   ap_fixed<10,5>
+        result: ap_fixed<10,5>
+        weight: ap_fixed<10,5>
+      ReuseFactor: 20
+      Trace: false
+    conv1d_6_relu:
+      Precision:
+        result: ap_fixed<10,5>
+      Trace: false
+    max_pooling1d_6:
+      Precision:
+        result: ap_fixed<10,5>
+      Trace: false
+    conv1d_7:
+      Precision:
+        bias:   ap_fixed<10,5>
+        result: ap_fixed<10,5>
+        weight: ap_fixed<10,5>
+      ReuseFactor: 160
+      Trace: false
+    conv1d_7_relu:
+      Precision:
+        result: ap_fixed<10,5>
+      Trace: false
+    max_pooling1d_7:
+      Precision:
+        result: ap_fixed<10,5>
+      Trace: false
+    flatten_3:
+      Precision:
+        result: ap_fixed<10,5>
+      Trace: false
+    dense_3:
+      Precision:
+        bias:   ap_fixed<10,5>
+        result: ap_fixed<10,5>
+        weight: ap_fixed<10,5>
+      ReuseFactor: 1720
+      Trace: false
+  Model:
+    BramFactor: 1000000000000
+    ParallelizationFactor: 1
+    Precision: ap_fixed<10,5>
+    ReuseFactor: 64
+    Strategy: Resource
+    TraceOutput: false
+IOType: io_stream
+InputData: null
+KerasModel: null
+OutputDir: hls4ml_prj
+OutputPredictions: null
+Part: xcku115-flvb2104-2-e
+ProjectName: tiny_ecg_no_activ
+Version: 1.0.0
