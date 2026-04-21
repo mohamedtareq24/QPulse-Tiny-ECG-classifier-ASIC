@@ -1,8 +1,11 @@
 # Q-PULSE — TinyECG Arrhythmia Classifier on Silicon
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+Q-PULSE implements a tiny 1D CNN ECG arrhythmia classifier and carries it end-to-end from ML training through HLS/RTL to Sky130 physical design. The project supports both simulator-based verification and a simulator-free UART HIL flow on real FPGA hardware.
 
-Q-PULSE is a full-stack **ECG arrhythmia classifier** that travels from a trained neural network all the way to a physical chip. A lightweight **1D CNN (TinyECG)** classifies 187-sample ECG windows into 5 arrhythmia classes, is compiled to fixed-point RTL using **hls4ml / Vitis HLS**, wrapped with a UART interface, verified with **cocotb + pyUVM**, hardened in **LibreLane** for the **Sky130** process, and taped out as one project slot in an **eFabless OpenFrame Multi-Project Chip** (Silicon Sprint 26).
+Q-PULSE is a full-stack **ECG arrhythmia classifier** that travels from a trained neural network all the way to a physical chip. A lightweight **1D CNN (TinyECG)** classifies 187-sample ECG windows into 5 arrhythmia classes, is compiled to fixed-point RTL using **hls4ml / Vitis HLS**, wrapped with a UART interface, verified with **cocotb + pyUVM** and a simulator-free **UART Hardware-in-the-Loop (HIL)** path, hardened in **LibreLane** for the **Sky130** process, and taped out as one project slot in an **eFabless OpenFrame Multi-Project Chip** (Silicon Sprint 26).
+
+> **HIL is a first-class flow in this repo.**
+> If you have FPGA hardware connected over UART, start with the HIL quickstart in [Run FPGA HIL (Recommended)](#4-run-fpga-hil-recommended) and then use simulator runs for debug depth.
 
 ---
 
@@ -30,6 +33,7 @@ Q-PULSE is a full-stack **ECG arrhythmia classifier** that travels from a traine
       - [DUT](#dut)
       - [Architecture](#architecture)
       - [UART Packet Protocol](#uart-packet-protocol)
+    - [Hardware-in-the-Loop (FPGA/UART, asyncio pyUVM)](#hardware-in-the-loop-fpgauart-asyncio-pyuvm)
     - [6. Place \& Route — LibreLane](#6-place--route--librelane)
       - [Design Parameters](#design-parameters)
       - [Config Stage Pipeline](#config-stage-pipeline)
@@ -42,8 +46,9 @@ Q-PULSE is a full-stack **ECG arrhythmia classifier** that travels from a traine
     - [1. Train the Model](#1-train-the-model)
     - [2. Convert Keras → HLS](#2-convert-keras--hls)
     - [3. Compare Accuracy](#3-compare-accuracy)
-    - [4. Run RTL Verification](#4-run-rtl-verification)
-    - [5. Physical Implementation](#5-physical-implementation)
+    - [4. Run FPGA HIL (Recommended)](#4-run-fpga-hil-recommended)
+    - [5. Run RTL Verification (Simulator)](#5-run-rtl-verification-simulator)
+    - [6. Physical Implementation](#6-physical-implementation)
   - [Key Parameters](#key-parameters)
   - [Dataset](#dataset)
 
@@ -126,7 +131,12 @@ si-sprint26-project-q-pulse/
 │   ├── Makefile
 │   └── tiny_ecg_clip_reluf3s_run1/   ← tape-out HLS project
 │       └── hls4ml_config.yml
-├── fpga/                         # FPGA validation
+├── fpga/                         # FPGA bitstream + hardware test flow
+│   ├── testing/                  # HIL runners, UVM envs, UART debug notes
+│   │   ├── run_hil.py            # asyncio entry point (no cocotb simulator)
+│   │   ├── README.md             # Detailed pyuvm asyncio backend notes
+│   │   └── Makefile              # Includes `hil` / `hil-test` targets
+│   └── Makefile                  # FPGA build and test helpers
 ├── model/                        # Exported model files (JSON + H5)
 └── scripts/                      # Utility scripts
     ├── change_fifo_depth.py      # Patch HLS FIFO depths in generated project
@@ -312,6 +322,20 @@ make change_depth DRY_RUN=1 DEPTH=4096  # preview only
 
 The reference outputs are taken directly from the hls4ml C-simulation artifacts (`csim_results.log`), providing a golden reference without re-implementing the inference model.
 
+### Hardware-in-the-Loop (FPGA/UART, asyncio pyUVM)
+
+This repo includes a pure Python, simulator-free HIL backend for direct UART
+validation against physical FPGA hardware.
+
+- **Backend entry**: `fpga/testing/run_hil.py` (drives `uvm_root().run_test()` under `asyncio.run()`)
+- **pyuvm runtime**: patched fork replacing cocotb scheduling/triggers with `asyncio`
+- **Installation**: `pip install "git+https://github.com/mohamedtareq24/pyuvm-asyncio-HIL@asyncio-hil"`
+- **Detailed design notes**: `fpga/testing/README.md`
+
+This path lets driver/monitor/scoreboard `run_phase()` coroutines execute
+concurrently on real hardware without requiring a simulator process, making it
+the closest verification path to deployment behavior.
+
 ---
 
 ### 6. Place & Route — LibreLane
@@ -471,7 +495,35 @@ cd hls4ml
 make compare   # Accuracy comparison vs float32
 ```
 
-### 4. Run RTL Verification
+### 4. Run FPGA HIL (Recommended)
+
+Linux/macOS:
+
+```bash
+cd fpga/testing
+python3 -m venv ../../../.venv_hil
+source ../../../.venv_hil/bin/activate
+python -m pip install --upgrade pip pyserial-asyncio
+python -m pip install "git+https://github.com/mohamedtareq24/pyuvm-asyncio-HIL@asyncio-hil"
+make hil-test PORT=/dev/ttyUSB0 TEST=ECGSmokeTest HIL_NUM_FRAMES=3
+```
+
+Windows PowerShell:
+
+```powershell
+cd fpga/testing
+py -3 -m venv ..\..\..\.venv_hil
+..\..\..\.venv_hil\Scripts\Activate.ps1
+python -m pip install --upgrade pip pyserial-asyncio
+python -m pip install "git+https://github.com/mohamedtareq24/pyuvm-asyncio-HIL@asyncio-hil"
+make hil-test PORT=COM3 TEST=ECGSmokeTest HIL_NUM_FRAMES=3
+```
+
+Use this flow for end-to-end UART validation on real hardware. For setup,
+transport configuration, and asyncio backend internals, see
+`fpga/testing/README.md`.
+
+### 5. Run RTL Verification (Simulator)
 
 ```bash
 cd verf
@@ -480,7 +532,7 @@ make sim TEST=ECGSmokeTest
 make sim TEST=ECGMiniRegressionTest
 ```
 
-### 5. Physical Implementation
+### 6. Physical Implementation
 
 LibreLane is invoked inside a **Nix shell**. See [Module 0 — Installation & Environment Setup](https://silicon-sprint-auc.readthedocs.io/en/latest/MODULE0.html) for the full setup guide.
 
