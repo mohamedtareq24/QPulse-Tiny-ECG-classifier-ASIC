@@ -1,7 +1,5 @@
 # Q-PULSE — TinyECG Arrhythmia Classifier on Silicon
 
-Q-PULSE implements a tiny 1D CNN ECG arrhythmia classifier and carries it end-to-end from ML training through HLS/RTL to Sky130 physical design. The project supports both simulator-based verification and a simulator-free UART HIL flow on real FPGA hardware.
-
 Q-PULSE is a full-stack **ECG arrhythmia classifier** that travels from a trained neural network all the way to a physical chip. A lightweight **1D CNN (TinyECG)** classifies 187-sample ECG windows into 5 arrhythmia classes, is compiled to fixed-point RTL using **hls4ml / Vitis HLS**, wrapped with a UART interface, verified with **cocotb + pyUVM** and a simulator-free **UART Hardware-in-the-Loop (HIL)** path, hardened in **LibreLane** for the **Sky130** process, and taped out as one project slot in an **eFabless OpenFrame Multi-Project Chip** (Silicon Sprint 26).
 
 > **HIL is a first-class flow in this repo.**
