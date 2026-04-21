@@ -1,0 +1,23 @@
+[uvm_test_top.env.scoreboard]: Scoreboard reference loaded from: /home/zkp_egy2/Desktop/old_desktop/Tarek/ECG/tape_out/fpga/testing/ecg_uvm/tv/ref_onehot.txt (21892 entries)
+
+================================================================================
+[TEST CONFIG] ECGNEpochTest
+================================================================================
+  frame_len:            187
+  num_frames:           20000
+  clk_period_ns:        10
+  uart_bauddiv:         260
+  serial_port:          /dev/ttyUSB0
+  baud_rate:            115200
+  byte_timeout_s:       10.0
+  response_timeout_s:   10.0
+  input_path:           /home/zkp_egy2/Desktop/old_desktop/Tarek/ECG/tape_out/fpga/testing/ecg_uvm/tv/cdatafile/c.tiny_ecg_no_activ.autotvin_input_layer_3.dat
+  hls_output_path:      /home/zkp_egy2/Desktop/old_desktop/Tarek/ECG/tape_out/fpga/testing/ecg_uvm/tv/cdatafile/c.tiny_ecg_no_activ.autotvout_layer11_out.dat
+  ref_onehot_path:      /home/zkp_egy2/Desktop/old_desktop/Tarek/ECG/tape_out/fpga/testing/ecg_uvm/tv/ref_onehot.txt
+================================================================================
+
+[SEQ PRE_BODY] name=seq type=ECGNEpochSequence epochs=20000 frame_len=187 num_frames_cfg=20000 bauddiv=260
+[SEQ PRE_BODY] name=initial_ap_start type=ECGCsrApStartPulseSequence kind=csr-only packets=1
+[uvm_test_top.env.scoreboard]: Scoreboard summary: epochs=20000 matches=20000 mismatches=0 ignored_early_outputs=0
+[uvm_test_top.env.class_coverage]: Class coverage summary: observed_classes=5/5 hits=[17351, 596, 1376, 191, 486] invalid_onehot=0 total=20000
+[uvm_test_top.env.uart_rx_ag.monitor]: RX read retry: Serial stream returned EOF
