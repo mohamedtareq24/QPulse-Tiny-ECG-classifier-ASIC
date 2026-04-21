@@ -2,8 +2,8 @@
 
 Q-PULSE is a full-stack **ECG arrhythmia classifier** that travels from a trained neural network all the way to a physical chip. A lightweight **1D CNN (TinyECG)** classifies 187-sample ECG windows into 5 arrhythmia classes, is compiled to fixed-point RTL using **hls4ml / Vitis HLS**, wrapped with a UART interface, verified with **cocotb + pyUVM** and a simulator-free **UART Hardware-in-the-Loop (HIL)** path, hardened in **LibreLane** for the **Sky130** process, and taped out as one project slot in an **eFabless OpenFrame Multi-Project Chip** (Silicon Sprint 26).
 
-> **HIL is a first-class flow in this repo.**
-> If you have FPGA hardware connected over UART, start with the HIL quickstart in [Run FPGA HIL (Recommended)](#4-run-fpga-hil-recommended) and then use simulator runs for debug depth.
+> **HIL is based on a patched version of PyUVM.**
+> The same tests and sequences can be reused across simulator and hardware runs.
 
 ---
 
@@ -44,8 +44,8 @@ Q-PULSE is a full-stack **ECG arrhythmia classifier** that travels from a traine
     - [1. Train the Model](#1-train-the-model)
     - [2. Convert Keras → HLS](#2-convert-keras--hls)
     - [3. Compare Accuracy](#3-compare-accuracy)
-    - [4. Run FPGA HIL (Recommended)](#4-run-fpga-hil-recommended)
-    - [5. Run RTL Verification (Simulator)](#5-run-rtl-verification-simulator)
+    - [4. Run RTL Verification (Simulator)](#4-run-rtl-verification-simulator)
+    - [5. Run FPGA HIL](#5-run-fpga-hil)
     - [6. Physical Implementation](#6-physical-implementation)
   - [Key Parameters](#key-parameters)
   - [Dataset](#dataset)
@@ -332,7 +332,8 @@ validation against physical FPGA hardware.
 
 This path lets driver/monitor/scoreboard `run_phase()` coroutines execute
 concurrently on real hardware without requiring a simulator process, making it
-the closest verification path to deployment behavior.
+the closest verification path to deployment behavior. Because this is still a
+UVM environment, tests and sequences can be reused between simulation and HIL.
 
 ---
 
@@ -493,7 +494,16 @@ cd hls4ml
 make compare   # Accuracy comparison vs float32
 ```
 
-### 4. Run FPGA HIL (Recommended)
+### 4. Run RTL Verification (Simulator)
+
+```bash
+cd verf
+pip install -r ecg_uvm/requirements.txt   # or pyuvm_ecg/requirements.txt
+make sim TEST=ECGSmokeTest
+make sim TEST=ECGMiniRegressionTest
+```
+
+### 5. Run FPGA HIL
 
 Linux/macOS:
 
@@ -520,15 +530,6 @@ make hil-test PORT=COM3 TEST=ECGSmokeTest HIL_NUM_FRAMES=3
 Use this flow for end-to-end UART validation on real hardware. For setup,
 transport configuration, and asyncio backend internals, see
 `fpga/testing/README.md`.
-
-### 5. Run RTL Verification (Simulator)
-
-```bash
-cd verf
-pip install -r ecg_uvm/requirements.txt   # or pyuvm_ecg/requirements.txt
-make sim TEST=ECGSmokeTest
-make sim TEST=ECGMiniRegressionTest
-```
 
 ### 6. Physical Implementation
 
