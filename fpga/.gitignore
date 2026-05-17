@@ -1,0 +1,42 @@
+# Keep key source/config and docs at root.
+# Ignore generated/cache artifacts currently present in workspace.
+
+# Python local environment
+.venv/
+
+# Vivado and xsim generated caches
+.Xil/
+xsim.dir/
+
+# Generated Vivado project outputs (q_pulse_debug)
+q_pulse_debug/q_pulse_debug.cache/
+q_pulse_debug/q_pulse_debug.gen/
+q_pulse_debug/q_pulse_debug.hw/
+q_pulse_debug/q_pulse_debug.ip_user_files/
+q_pulse_debug/q_pulse_debug.runs/
+q_pulse_debug/q_pulse_debug.sim/
+
+# Generated Vivado project outputs (test)
+test/test.cache/
+test/test.gen/
+test/test.hw/
+test/test.ioplanning/
+test/test.ip_user_files/
+test/test.runs/
+test/test.sim/
+
+# cocotb/pyuvm generated simulation build output
+testing/sim_build/
+
+# Generated ROM weight and test-bench data files (re-generated from model)
+testing/*.dat
+testing/tb_data/
+
+# Python caches
+testing/**/__pycache__/
+testing/**/*.py[cod]
+
+# Keep these explicitly tracked artifacts
+!cons.xdc
+!20K_frames_test.log
+!testing/results.xml

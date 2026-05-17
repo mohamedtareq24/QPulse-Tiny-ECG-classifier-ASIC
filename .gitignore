@@ -15,7 +15,7 @@ ECG/
 **/_parallel_cosim_workers/
 **/.Xil/
 **/xsim.dir/
-
+**/fpga/test/test
 # Simulator/waveform artifacts
 **/*.wdb
 **/*.wcfg
@@ -47,4 +47,11 @@ model/**/*.h5
 verf/results.xml
 verf/sim.log
 verf/test_output.log
- resluts 
+
+# FPGA generated project caches, bitstreams, and debug projects
+fpga/test/
+fpga/bitstreams/
+fpga/q_pulse_debug/
+fpga/vivado/
+fpga/xsim.dir/
+fpga/testing/results.xml
