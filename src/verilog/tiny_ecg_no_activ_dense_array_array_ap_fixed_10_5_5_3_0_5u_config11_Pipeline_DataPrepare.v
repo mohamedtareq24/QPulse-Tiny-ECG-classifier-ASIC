@@ -1154,7 +1154,10 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        i_in_fu_472 <= 6'd0;
+    end else if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln33_fu_2382_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             i_in_fu_472 <= add_ln33_fu_2388_p2;
         end else if ((ap_loop_init == 1'b1)) begin
@@ -1164,13 +1167,23 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        i_in_1_reg_5020 <= 6'd0;
+    end else if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         i_in_1_reg_5020 <= ap_sig_allocacmp_i_in_1;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd28) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0105_fu_684 <= 0;
+        p_0_1_0_0_0107_fu_688 <= 0;
+        p_0_2_0_0_0109_fu_692 <= 0;
+        p_0_3_0_0_0111_fu_696 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd28) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0105_fu_684 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0107_fu_688 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0109_fu_692 <= {{layer9_out_dout[29:20]}};
@@ -1179,7 +1192,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd27) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0113_fu_700 <= 0;
+        p_0_1_0_0_0115_fu_704 <= 0;
+        p_0_2_0_0_0117_fu_708 <= 0;
+        p_0_3_0_0_0119_fu_712 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd27) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0113_fu_700 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0115_fu_704 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0117_fu_708 <= {{layer9_out_dout[29:20]}};
@@ -1188,7 +1208,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd26) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0121_fu_716 <= 0;
+        p_0_1_0_0_0123_fu_720 <= 0;
+        p_0_2_0_0_0125_fu_724 <= 0;
+        p_0_3_0_0_0127_fu_728 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd26) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0121_fu_716 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0123_fu_720 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0125_fu_724 <= {{layer9_out_dout[29:20]}};
@@ -1197,7 +1224,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd25) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0129_fu_732 <= 0;
+        p_0_1_0_0_0131_fu_736 <= 0;
+        p_0_2_0_0_0133_fu_740 <= 0;
+        p_0_3_0_0_0135_fu_744 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd25) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0129_fu_732 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0131_fu_736 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0133_fu_740 <= {{layer9_out_dout[29:20]}};
@@ -1206,7 +1240,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd24) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0137_fu_748 <= 0;
+        p_0_1_0_0_0139_fu_752 <= 0;
+        p_0_2_0_0_0141_fu_756 <= 0;
+        p_0_3_0_0_0143_fu_760 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd24) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0137_fu_748 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0139_fu_752 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0141_fu_756 <= {{layer9_out_dout[29:20]}};
@@ -1215,7 +1256,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd23) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0145_fu_764 <= 0;
+        p_0_1_0_0_0147_fu_768 <= 0;
+        p_0_2_0_0_0149_fu_772 <= 0;
+        p_0_3_0_0_0151_fu_776 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd23) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0145_fu_764 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0147_fu_768 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0149_fu_772 <= {{layer9_out_dout[29:20]}};
@@ -1224,7 +1272,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd22) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0153_fu_780 <= 0;
+        p_0_1_0_0_0155_fu_784 <= 0;
+        p_0_2_0_0_0157_fu_788 <= 0;
+        p_0_3_0_0_0159_fu_792 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd22) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0153_fu_780 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0155_fu_784 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0157_fu_788 <= {{layer9_out_dout[29:20]}};
@@ -1233,7 +1288,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd21) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0161_fu_796 <= 0;
+        p_0_1_0_0_0163_fu_800 <= 0;
+        p_0_2_0_0_0165_fu_804 <= 0;
+        p_0_3_0_0_0167_fu_808 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd21) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0161_fu_796 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0163_fu_800 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0165_fu_804 <= {{layer9_out_dout[29:20]}};
@@ -1242,7 +1304,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd20) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0169_fu_812 <= 0;
+        p_0_1_0_0_0171_fu_816 <= 0;
+        p_0_2_0_0_0173_fu_820 <= 0;
+        p_0_3_0_0_0175_fu_824 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd20) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0169_fu_812 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0171_fu_816 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0173_fu_820 <= {{layer9_out_dout[29:20]}};
@@ -1251,7 +1320,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd19) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0177_fu_828 <= 0;
+        p_0_1_0_0_0179_fu_832 <= 0;
+        p_0_2_0_0_0181_fu_836 <= 0;
+        p_0_3_0_0_0183_fu_840 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd19) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0177_fu_828 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0179_fu_832 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0181_fu_836 <= {{layer9_out_dout[29:20]}};
@@ -1260,7 +1336,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd39) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_017_fu_508 <= 0;
+        p_0_1_0_0_019_fu_512 <= 0;
+        p_0_2_0_0_021_fu_516 <= 0;
+        p_0_3_0_0_023_fu_520 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd39) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_017_fu_508 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_019_fu_512 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_021_fu_516 <= {{layer9_out_dout[29:20]}};
@@ -1269,7 +1352,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd18) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0185_fu_844 <= 0;
+        p_0_1_0_0_0187_fu_848 <= 0;
+        p_0_2_0_0_0189_fu_852 <= 0;
+        p_0_3_0_0_0191_fu_856 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd18) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0185_fu_844 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0187_fu_848 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0189_fu_852 <= {{layer9_out_dout[29:20]}};
@@ -1278,7 +1368,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd17) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0193_fu_860 <= 0;
+        p_0_1_0_0_0195_fu_864 <= 0;
+        p_0_2_0_0_0197_fu_868 <= 0;
+        p_0_3_0_0_0199_fu_872 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd17) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0193_fu_860 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0195_fu_864 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0197_fu_868 <= {{layer9_out_dout[29:20]}};
@@ -1287,7 +1384,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd41) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_01_fu_476 <= 0;
+        p_0_1_0_0_03_fu_480 <= 0;
+        p_0_2_0_0_05_fu_484 <= 0;
+        p_0_3_0_0_07_fu_488 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd41) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_01_fu_476 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_03_fu_480 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_05_fu_484 <= {{layer9_out_dout[29:20]}};
@@ -1296,7 +1400,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd16) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0201_fu_876 <= 0;
+        p_0_1_0_0_0203_fu_880 <= 0;
+        p_0_2_0_0_0205_fu_884 <= 0;
+        p_0_3_0_0_0207_fu_888 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd16) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0201_fu_876 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0203_fu_880 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0205_fu_884 <= {{layer9_out_dout[29:20]}};
@@ -1305,7 +1416,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd15) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0209_fu_892 <= 0;
+        p_0_1_0_0_0211_fu_896 <= 0;
+        p_0_2_0_0_0213_fu_900 <= 0;
+        p_0_3_0_0_0215_fu_904 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd15) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0209_fu_892 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0211_fu_896 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0213_fu_900 <= {{layer9_out_dout[29:20]}};
@@ -1314,7 +1432,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd14) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0217_fu_908 <= 0;
+        p_0_1_0_0_0219_fu_912 <= 0;
+        p_0_2_0_0_0221_fu_916 <= 0;
+        p_0_3_0_0_0223_fu_920 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd14) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0217_fu_908 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0219_fu_912 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0221_fu_916 <= {{layer9_out_dout[29:20]}};
@@ -1323,7 +1448,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd13) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0225_fu_924 <= 0;
+        p_0_1_0_0_0227_fu_928 <= 0;
+        p_0_2_0_0_0229_fu_932 <= 0;
+        p_0_3_0_0_0231_fu_936 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd13) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0225_fu_924 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0227_fu_928 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0229_fu_932 <= {{layer9_out_dout[29:20]}};
@@ -1332,7 +1464,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd12) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0233_fu_940 <= 0;
+        p_0_1_0_0_0235_fu_944 <= 0;
+        p_0_2_0_0_0237_fu_948 <= 0;
+        p_0_3_0_0_0239_fu_952 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd12) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0233_fu_940 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0235_fu_944 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0237_fu_948 <= {{layer9_out_dout[29:20]}};
@@ -1341,7 +1480,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd11) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0241_fu_956 <= 0;
+        p_0_1_0_0_0243_fu_960 <= 0;
+        p_0_2_0_0_0245_fu_964 <= 0;
+        p_0_3_0_0_0247_fu_968 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd11) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0241_fu_956 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0243_fu_960 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0245_fu_964 <= {{layer9_out_dout[29:20]}};
@@ -1350,7 +1496,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd10) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0249_fu_972 <= 0;
+        p_0_1_0_0_0251_fu_976 <= 0;
+        p_0_2_0_0_0253_fu_980 <= 0;
+        p_0_3_0_0_0255_fu_984 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd10) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0249_fu_972 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0251_fu_976 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0253_fu_980 <= {{layer9_out_dout[29:20]}};
@@ -1359,7 +1512,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd9) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0257_fu_988 <= 0;
+        p_0_1_0_0_0259_fu_992 <= 0;
+        p_0_2_0_0_0261_fu_996 <= 0;
+        p_0_3_0_0_0263_fu_1000 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd9) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0257_fu_988 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0259_fu_992 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0261_fu_996 <= {{layer9_out_dout[29:20]}};
@@ -1368,7 +1528,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd38) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_025_fu_524 <= 0;
+        p_0_1_0_0_027_fu_528 <= 0;
+        p_0_2_0_0_029_fu_532 <= 0;
+        p_0_3_0_0_031_fu_536 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd38) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_025_fu_524 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_027_fu_528 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_029_fu_532 <= {{layer9_out_dout[29:20]}};
@@ -1377,7 +1544,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd8) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0265_fu_1004 <= 0;
+        p_0_1_0_0_0267_fu_1008 <= 0;
+        p_0_2_0_0_0269_fu_1012 <= 0;
+        p_0_3_0_0_0271_fu_1016 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd8) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0265_fu_1004 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0267_fu_1008 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0269_fu_1012 <= {{layer9_out_dout[29:20]}};
@@ -1386,7 +1560,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd7) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0273_fu_1020 <= 0;
+        p_0_1_0_0_0275_fu_1024 <= 0;
+        p_0_2_0_0_0277_fu_1028 <= 0;
+        p_0_3_0_0_0279_fu_1032 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd7) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0273_fu_1020 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0275_fu_1024 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0277_fu_1028 <= {{layer9_out_dout[29:20]}};
@@ -1395,7 +1576,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd6) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0281_fu_1036 <= 0;
+        p_0_1_0_0_0283_fu_1040 <= 0;
+        p_0_2_0_0_0285_fu_1044 <= 0;
+        p_0_3_0_0_0287_fu_1048 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd6) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0281_fu_1036 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0283_fu_1040 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0285_fu_1044 <= {{layer9_out_dout[29:20]}};
@@ -1404,7 +1592,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd5) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0289_fu_1052 <= 0;
+        p_0_1_0_0_0291_fu_1056 <= 0;
+        p_0_2_0_0_0293_fu_1060 <= 0;
+        p_0_3_0_0_0295_fu_1064 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd5) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0289_fu_1052 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0291_fu_1056 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0293_fu_1060 <= {{layer9_out_dout[29:20]}};
@@ -1413,7 +1608,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd4) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0297_fu_1068 <= 0;
+        p_0_1_0_0_0299_fu_1072 <= 0;
+        p_0_2_0_0_0301_fu_1076 <= 0;
+        p_0_3_0_0_0303_fu_1080 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd4) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0297_fu_1068 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0299_fu_1072 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0301_fu_1076 <= {{layer9_out_dout[29:20]}};
@@ -1422,7 +1624,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0305_fu_1084 <= 0;
+        p_0_1_0_0_0307_fu_1088 <= 0;
+        p_0_2_0_0_0309_fu_1092 <= 0;
+        p_0_3_0_0_0311_fu_1096 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0305_fu_1084 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0307_fu_1088 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0309_fu_1092 <= {{layer9_out_dout[29:20]}};
@@ -1431,7 +1640,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0313_fu_1100 <= 0;
+        p_0_1_0_0_0315_fu_1104 <= 0;
+        p_0_2_0_0_0317_fu_1108 <= 0;
+        p_0_3_0_0_0319_fu_1112 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0313_fu_1100 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0315_fu_1104 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0317_fu_1108 <= {{layer9_out_dout[29:20]}};
@@ -1440,7 +1656,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0321_fu_1116 <= 0;
+        p_0_1_0_0_0323_fu_1120 <= 0;
+        p_0_2_0_0_0325_fu_1124 <= 0;
+        p_0_3_0_0_0327_fu_1128 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0321_fu_1116 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0323_fu_1120 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0325_fu_1124 <= {{layer9_out_dout[29:20]}};
@@ -1449,7 +1672,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0329_fu_1132 <= 0;
+        p_0_1_0_0_0331_fu_1136 <= 0;
+        p_0_2_0_0_0333_fu_1140 <= 0;
+        p_0_3_0_0_0335_fu_1144 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_0329_fu_1132 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0331_fu_1136 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0333_fu_1140 <= {{layer9_out_dout[29:20]}};
@@ -1458,7 +1688,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & ((i_in_1_reg_5020 == 6'd42) | ((i_in_1_reg_5020 == 6'd43) | ((i_in_1_reg_5020 == 6'd44) | ((i_in_1_reg_5020 == 6'd45) | ((i_in_1_reg_5020 == 6'd46) | ((i_in_1_reg_5020 == 6'd47) | ((i_in_1_reg_5020 == 6'd48) | ((i_in_1_reg_5020 == 6'd49) | ((i_in_1_reg_5020 == 6'd50) | ((i_in_1_reg_5020 == 6'd51) | ((i_in_1_reg_5020 == 6'd52) | ((i_in_1_reg_5020 == 6'd53) | ((i_in_1_reg_5020 == 6'd54) | ((i_in_1_reg_5020 == 6'd55) | ((i_in_1_reg_5020 == 6'd56) | ((i_in_1_reg_5020 == 6'd57) | ((i_in_1_reg_5020 == 6'd58) | ((i_in_1_reg_5020 == 6'd59) | ((i_in_1_reg_5020 == 6'd60) | ((i_in_1_reg_5020 == 6'd61) | ((i_in_1_reg_5020 == 6'd62) | (i_in_1_reg_5020 == 6'd63)))))))))))))))))))))))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_0337_fu_1148 <= 0;
+        p_0_1_0_0_0339_fu_1152 <= 0;
+        p_0_2_0_0_0341_fu_1156 <= 0;
+        p_0_3_0_0_0343_fu_1160 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & ((i_in_1_reg_5020 == 6'd42) | ((i_in_1_reg_5020 == 6'd43) | ((i_in_1_reg_5020 == 6'd44) | ((i_in_1_reg_5020 == 6'd45) | ((i_in_1_reg_5020 == 6'd46) | ((i_in_1_reg_5020 == 6'd47) | ((i_in_1_reg_5020 == 6'd48) | ((i_in_1_reg_5020 == 6'd49) | ((i_in_1_reg_5020 == 6'd50) | ((i_in_1_reg_5020 == 6'd51) | ((i_in_1_reg_5020 == 6'd52) | ((i_in_1_reg_5020 == 6'd53) | ((i_in_1_reg_5020 == 6'd54) | ((i_in_1_reg_5020 == 6'd55) | ((i_in_1_reg_5020 == 6'd56) | ((i_in_1_reg_5020 == 6'd57) | ((i_in_1_reg_5020 == 6'd58) | ((i_in_1_reg_5020 == 6'd59) | ((i_in_1_reg_5020 == 6'd60) | ((i_in_1_reg_5020 == 6'd61) | ((i_in_1_reg_5020 == 6'd62) | (i_in_1_reg_5020 == 6'd63)))))))))))))))))))))))) begin
         p_0_0_0_0_0337_fu_1148 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_0339_fu_1152 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0341_fu_1156 <= {{layer9_out_dout[29:20]}};
@@ -1467,7 +1704,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd37) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_033_fu_540 <= 0;
+        p_0_1_0_0_035_fu_544 <= 0;
+        p_0_2_0_0_037_fu_548 <= 0;
+        p_0_3_0_0_039_fu_552 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd37) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_033_fu_540 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_035_fu_544 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_037_fu_548 <= {{layer9_out_dout[29:20]}};
@@ -1476,7 +1720,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd36) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_041_fu_556 <= 0;
+        p_0_1_0_0_043_fu_560 <= 0;
+        p_0_2_0_0_045_fu_564 <= 0;
+        p_0_3_0_0_047_fu_568 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd36) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_041_fu_556 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_043_fu_560 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_045_fu_564 <= {{layer9_out_dout[29:20]}};
@@ -1485,7 +1736,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd35) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_049_fu_572 <= 0;
+        p_0_1_0_0_051_fu_576 <= 0;
+        p_0_2_0_0_053_fu_580 <= 0;
+        p_0_3_0_0_055_fu_584 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd35) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_049_fu_572 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_051_fu_576 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_053_fu_580 <= {{layer9_out_dout[29:20]}};
@@ -1494,7 +1752,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd34) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_057_fu_588 <= 0;
+        p_0_1_0_0_059_fu_592 <= 0;
+        p_0_2_0_0_061_fu_596 <= 0;
+        p_0_3_0_0_063_fu_600 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd34) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_057_fu_588 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_059_fu_592 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_061_fu_596 <= {{layer9_out_dout[29:20]}};
@@ -1503,7 +1768,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd33) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_065_fu_604 <= 0;
+        p_0_1_0_0_067_fu_608 <= 0;
+        p_0_2_0_0_069_fu_612 <= 0;
+        p_0_3_0_0_071_fu_616 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd33) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_065_fu_604 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_067_fu_608 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_069_fu_612 <= {{layer9_out_dout[29:20]}};
@@ -1512,7 +1784,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd32) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_073_fu_620 <= 0;
+        p_0_1_0_0_075_fu_624 <= 0;
+        p_0_2_0_0_077_fu_628 <= 0;
+        p_0_3_0_0_079_fu_632 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd32) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_073_fu_620 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_075_fu_624 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_077_fu_628 <= {{layer9_out_dout[29:20]}};
@@ -1521,7 +1800,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd31) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_081_fu_636 <= 0;
+        p_0_1_0_0_083_fu_640 <= 0;
+        p_0_2_0_0_085_fu_644 <= 0;
+        p_0_3_0_0_087_fu_648 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd31) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_081_fu_636 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_083_fu_640 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_085_fu_644 <= {{layer9_out_dout[29:20]}};
@@ -1530,7 +1816,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd30) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_089_fu_652 <= 0;
+        p_0_1_0_0_091_fu_656 <= 0;
+        p_0_2_0_0_093_fu_660 <= 0;
+        p_0_3_0_0_095_fu_664 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd30) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_089_fu_652 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_091_fu_656 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_093_fu_660 <= {{layer9_out_dout[29:20]}};
@@ -1539,7 +1832,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd29) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_097_fu_668 <= 0;
+        p_0_1_0_0_099_fu_672 <= 0;
+        p_0_2_0_0_0101_fu_676 <= 0;
+        p_0_3_0_0_0103_fu_680 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd29) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_097_fu_668 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_099_fu_672 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_0101_fu_676 <= {{layer9_out_dout[29:20]}};
@@ -1548,7 +1848,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd40) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_09_fu_492 <= 0;
+        p_0_1_0_0_011_fu_496 <= 0;
+        p_0_2_0_0_013_fu_500 <= 0;
+        p_0_3_0_0_015_fu_504 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (i_in_1_reg_5020 == 6'd40) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_09_fu_492 <= trunc_ln35_fu_2399_p1;
         p_0_1_0_0_011_fu_496 <= {{layer9_out_dout[19:10]}};
         p_0_2_0_0_013_fu_500 <= {{layer9_out_dout[29:20]}};

@@ -18,7 +18,7 @@
 `default_nettype none
 
 module axis_uart_tx_bridge #(
-    parameter [31:0] BAUDIV = 32'd868   // clock cycles per baud period
+    parameter [31:0] BAUDIV = 32'd434   // clock cycles per baud period
 ) (
     input  wire       clk,        // system clock (must match BAUDIV)
     input  wire       arst_n,     // async reset, active low

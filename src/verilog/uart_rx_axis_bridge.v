@@ -104,7 +104,7 @@ module uart_rx_axis_bridge #(
                 // Wait for byte 1 (becomes TDATA[15:8]).
                 S_BYTE1: begin
                     if (urx_done) begin
-                        m_tdata  <= {byte0 , urx_data};  // MSB first in concat
+                        m_tdata  <= {urx_data , byte0};  // MSB first in concat
                         m_tvalid <= 1'b1;
                         fsm      <= S_VALID;
                     end else if (urx_err) begin

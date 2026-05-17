@@ -132,7 +132,12 @@ module tiny_ecg_no_activ_start_for_pooling1d_cl_array_ap_fixed_4u_array_ap_fixed
     integer i;
 
     always @ (posedge clk) begin
-        if (we) begin
+        if(reset)
+        begin
+            for (i=0; i<DEPTH; i=i+1)
+                SRL_SIG[i] <= 0;
+        end
+        else if (we) begin
             for (i=0; i<DEPTH-1; i=i+1)
                 SRL_SIG[i+1] <= SRL_SIG[i];
             SRL_SIG[0] <= din;

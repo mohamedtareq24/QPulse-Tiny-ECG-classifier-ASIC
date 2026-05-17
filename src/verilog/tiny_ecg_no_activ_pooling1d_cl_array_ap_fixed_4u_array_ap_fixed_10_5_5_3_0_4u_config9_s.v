@@ -202,7 +202,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if(ap_rst)
+    begin
+        i_iw_fu_68 <= 0;
+    end
+    else if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         i_iw_fu_68 <= 7'd0;
     end else if (((icmp_ln185_fu_167_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
         i_iw_fu_68 <= i_iw_2_fu_173_p2;
@@ -210,7 +214,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_148)) begin
+    if(ap_rst)
+    begin
+        pX <= 0;
+    end
+    else if ((1'b1 == ap_condition_148)) begin
         if ((icmp_ln165_fu_211_p2 == 1'd1)) begin
             pX <= 32'd0;
         end else if ((icmp_ln165_fu_211_p2 == 1'd0)) begin
@@ -220,7 +228,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_071_fu_72 <= 0;
+    end
+    else if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         p_0_0_0_0_071_fu_72 <= void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_3;
     end else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_071_fu_72 <= trunc_ln187_fu_255_p1;
@@ -228,7 +240,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if(ap_rst)
+    begin
+        p_0_1_0_0_074_fu_76 <= 0;
+    end
+    else if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         p_0_1_0_0_074_fu_76 <= void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_2;
     end else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_1_0_0_074_fu_76 <= {{layer8_out_dout[19:10]}};
@@ -236,7 +252,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if(ap_rst)
+    begin
+        p_0_2_0_0_077_fu_80 <= 0;
+    end
+    else if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         p_0_2_0_0_077_fu_80 <= void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_1;
     end else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_2_0_0_077_fu_80 <= {{layer8_out_dout[29:20]}};
@@ -244,7 +264,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if(ap_rst)
+    begin
+        p_0_3_0_0_080_fu_84 <= 0;
+    end
+    else if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         p_0_3_0_0_080_fu_84 <= void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data;
     end else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_3_0_0_080_fu_84 <= {{layer8_out_dout[39:30]}};
@@ -252,25 +276,44 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln185_fu_167_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        and_ln145_reg_465 <= 0;
+    end
+    else if (((icmp_ln185_fu_167_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         and_ln145_reg_465 <= and_ln145_fu_199_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        icmp_ln185_reg_461 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         icmp_ln185_reg_461 <= icmp_ln185_fu_167_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln185_fu_167_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+    if(ap_rst)
+    begin
+        sX <= 0;
+    end
+    else if (((icmp_ln185_fu_167_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
         sX <= ap_phi_mux_storemerge_phi_fu_104_p4;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
+    if(ap_rst)
+    begin
+        void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data <= 0;
+        void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_1 <= 0;
+        void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_2 <= 0;
+        void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_3 <= 0;
+    end
+    else if ((1'b1 == ap_CS_fsm_state4)) begin
         void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data <= p_0_3_0_0_080_fu_84;
         void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_1 <= p_0_2_0_0_077_fu_80;
         void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_2 <= p_0_1_0_0_074_fu_76;

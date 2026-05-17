@@ -25,15 +25,20 @@ input clk;
 
 initial begin
      
-    $readmemh("./tiny_ecg_no_activ_conv_1d_cl_array_ap_fixed_1u_array_ap_fixed_10_5_5_3_0_2u_config2_s_w2_ROM_1Pcud.dat", rom0);
+    $readmemh("tiny_ecg_no_activ_conv_1d_cl_array_ap_fixed_1u_array_ap_fixed_10_5_5_3_0_2u_config2_s_w2_ROM_1Pcud.dat", rom0);
 end
 
   
 always @(posedge clk) 
 begin 
-    if (ce0) 
+    if(reset) 
+        q0 <= 0;
+    else
     begin
-        q0 <= rom0[address0];
+        if (ce0) 
+        begin
+            q0 <= rom0[address0];
+        end
     end
 end
 

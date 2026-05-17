@@ -188,7 +188,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if(ap_rst)
+    begin
+        i_iw_fu_56 <= 'b0;
+    end
+    else if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         i_iw_fu_56 <= 8'd0;
     end else if (((ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln185_fu_123_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         i_iw_fu_56 <= i_iw_4_fu_129_p2;
@@ -196,7 +200,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_140)) begin
+    if(ap_rst)
+    begin
+        pX_1 <= 0;
+    end
+    else if ((1'b1 == ap_condition_140)) begin
         if ((icmp_ln165_fu_167_p2 == 1'd1)) begin
             pX_1 <= 32'd0;
         end else if ((icmp_ln165_fu_167_p2 == 1'd0)) begin
@@ -206,7 +214,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if(ap_rst)
+    begin
+        p_0_0_0_0_047_fu_60 <= 0;
+    end
+    else if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         p_0_0_0_0_047_fu_60 <= void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_5;
     end else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_0_0_0_047_fu_60 <= trunc_ln187_fu_211_p1;
@@ -214,7 +226,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if(ap_rst)
+    begin
+        p_0_1_0_0_050_fu_64 <= 0;
+    end
+    else if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         p_0_1_0_0_050_fu_64 <= void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_4;
     end else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         p_0_1_0_0_050_fu_64 <= {{layer4_out_dout[19:10]}};
@@ -222,25 +238,42 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln185_fu_123_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        and_ln145_reg_321 <= 0;
+    end
+    else if (((icmp_ln185_fu_123_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         and_ln145_reg_321 <= and_ln145_fu_155_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        icmp_ln185_reg_317 <= 0;
+    end
+    else if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         icmp_ln185_reg_317 <= icmp_ln185_fu_123_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln185_fu_123_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if(ap_rst)
+    begin
+        sX_1 <= 0;
+    end
+    else if (((ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln185_fu_123_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         sX_1 <= ap_phi_mux_storemerge_phi_fu_84_p4;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
+    if(ap_rst)
+    begin
+        void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_4 <= 0;
+        void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_5 <= 0;
+    end
+    else if ((1'b1 == ap_CS_fsm_state4)) begin
         void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_4 <= p_0_1_0_0_050_fu_64;
         void_compute_pool_buffer_1d_array_const_stream_array_0_kernel_data_5 <= p_0_0_0_0_047_fu_60;
     end

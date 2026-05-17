@@ -25,15 +25,20 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("./tiny_ecg_no_activ_dense_array_ap_fixed_4u_array_ap_fixed_10_5_5_3_0_5u_config11_s_outidx_ROM_AUfYi.dat", rom0);
+    $readmemh("tiny_ecg_no_activ_dense_array_ap_fixed_4u_array_ap_fixed_10_5_5_3_0_5u_config11_s_outidx_ROM_AUfYi.dat", rom0);
 end
 
   
 always @(posedge clk) 
 begin 
-    if (ce0) 
+    if(reset) 
+        q0 <= 0;
+    else
     begin
-        q0 <= rom0[address0];
+        if (ce0) 
+        begin
+            q0 <= rom0[address0];
+        end
     end
 end
 

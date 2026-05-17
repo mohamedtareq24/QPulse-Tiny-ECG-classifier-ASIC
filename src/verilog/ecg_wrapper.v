@@ -3,15 +3,22 @@
 //  Description : Top-level wrapper for tiny_ecg_no_activ inference accelerator.
 //
 //  RX Packet (2 UART bytes, byte-0 first / LSB):
-//    [15:10] = 6 bits for Control
-//    [15] ---> soft reset
-//    [14] ---> start
-//    [13] ---> Mode (0 == UART INPUT , 1 == ADC INPUT, not implemented)
-//    [12] ---> CSR select (0 = data, 1 = control)
-//    [9:0]   = 10-bit input sample  (ap_fixed<10,5>, zero-padded to 16 bits)
+//    [15:12] = 4 bits for Control
+//    [15]    ---> CSR Address Space Select (0 = data, 1 = control)
+//    [14:12] ---> Register Address 
+//    [11:0]  ---> CSR Data OR Input sample (ap_fixed<10,5>, zero-padded to 12 bits)
 //
 //  TX Byte (1 UART byte):
 //    [4:0]   = one-hot argmax class (class 0..4 from dense layer output)
+//
+//  Register Map:
+//    0xxx = Data Register
+//    1000 = CSR Register [Soft Reset, Start, Mode]
+//    1001 = Slope Threshold Register
+//    1010 = RS Threshold Register
+//    1011 = Max Window Threshold Register
+//    1100 = Tolerance Threshold Register
+//    1101 = Floor Offset Register
 //
 //  AXI-S note:
 //    The HLS core packs each ap_fixed<10,5> sample into a 16-bit slot [N*16+9:N*16].
@@ -24,23 +31,28 @@
 //==============================================================================
 
 `default_nettype none
-
+`define ASIC
 module ecg_wrapper #(
-    parameter [31:0] BAUDIV = 32'd868   // 100 MHz / 115200 baud
+    parameter [31:0] BAUDIV = 32'd35, // 4 MHz / 115200 baud
+    parameter DATA_W = 8
 ) (
     input  wire clk,     // system clock (matches BAUDIV)
     input  wire arst_n,  // async reset, active low
-    input  wire rx,      // UART RX pin (connect to host TX)
-    output wire tx       // UART TX pin (connect to host RX)
+    (* mark_debug = "true", keep = "true" *)    input  wire rx,      // UART RX pin (connect to host TX)
+    (* mark_debug = "true", keep = "true" *)    output wire tx,       // UART TX pin (connect to host RX)
+    (* mark_debug = "true", keep = "true" *)    input   wire          adc_valid,
+    (* mark_debug = "true", keep = "true" *)    input   wire [7:0]    adc_data,
+    output  wire          adc_ready
 );
 
+    assign adc_ready = 1'b1;  // always ready; ADC has no backpressure
     // -------------------------------------------------------------------------
     // UART RX → 16-bit AXI-S bridge
     // Assembles two consecutive UART bytes into one 16-bit beat.
     // -------------------------------------------------------------------------
-    wire [15:0] brx_tdata;
-    wire        brx_tvalid;
-    wire        brx_tready;
+    (* mark_debug = "true", keep = "true" *) wire [15:0] brx_tdata;
+    (* mark_debug = "true", keep = "true" *) wire        brx_tvalid;
+    (* mark_debug = "true", keep = "true" *) wire        brx_tready;
 
     uart_rx_axis_bridge #(.BAUDIV(BAUDIV)) u_rx_bridge (
         .clk     (clk),
@@ -55,9 +67,9 @@ module ecg_wrapper #(
     // 8-bit AXI-S → UART TX bridge
     // Serialises one byte per AXI-S beat.
     // -------------------------------------------------------------------------
-    reg  [7:0] btx_tdata;
-    reg        btx_tvalid;
-    wire       btx_tready;
+    (* mark_debug = "true", keep = "true" *) reg  [7:0] btx_tdata;
+    (* mark_debug = "true", keep = "true" *) reg        btx_tvalid;
+    (* mark_debug = "true", keep = "true" *) wire       btx_tready;
 
     axis_uart_tx_bridge #(.BAUDIV(BAUDIV)) u_tx_bridge (
         .clk     (clk),
@@ -76,32 +88,69 @@ module ecg_wrapper #(
     // Flow control passes straight through: the bridge holds TVALID/TDATA
     // until in_tready is asserted by the HLS core.
     // -------------------------------------------------------------------------
-    reg [15:0] in_tdata;
-    reg        in_tvalid;
-    reg        in_tready;
-    assign brx_tready = brx_tdata[12] ? 1'b1 : in_tready;
+    (* mark_debug = "true", keep = "true" *) reg [15:0] in_tdata;
+    (* mark_debug = "true", keep = "true" *) reg         in_tvalid;
+    (* mark_debug = "true", keep = "true" *) wire        in_tready;
+    assign brx_tready = brx_tdata[15] ? 1'b1 : in_tready;
 
-    wire [79:0] out_tdata;
-    wire        out_tvalid;
-    wire        out_tready;
+    (* mark_debug = "true", keep = "true" *) wire [79:0] out_tdata;
+    (* mark_debug = "true", keep = "true" *) wire        out_tvalid;
+    (* mark_debug = "true", keep = "true" *) wire        out_tready;
 
-    wire       engine_soft_reset /* verilator public_flat */;
-    wire       engine_start      /* verilator public_flat */;
-    wire       engine_mode       /* verilator public_flat */;
-    reg  [2:0] ctrl_reg;
+    (* mark_debug = "true", keep = "true" *) wire       engine_soft_reset /* verilator public_flat */;
+    (* mark_debug = "true", keep = "true" *) wire       engine_start      /* verilator public_flat */;
+    (* mark_debug = "true", keep = "true" *) wire       engine_mode       /* verilator public_flat */;
 
-    // Control register write selector: bit[12]==1 means this word updates control bits [15:13].
+    wire        clear;
+    wire [4:0]  sample_out;
+    wire        sample_valid;
+
+    (* mark_debug = "true", keep = "true" *) reg  [11:0] csr_regs [0:5];
+    integer i;
+
+    // Control register write selector: bit[15]==1 means this word updates control bits [15:13].
     always @(posedge clk or negedge arst_n) begin
         if (!arst_n) begin
-            ctrl_reg <= 3'b000;
-        end else if (brx_tvalid && brx_tready && brx_tdata[12]) begin
-            ctrl_reg <= brx_tdata[15:13];
+            for (i = 0; i < 6; i = i + 1) begin
+                csr_regs[i] <= 12'b0; // Add Default Values
+            end
+        end else if (brx_tvalid && brx_tready && brx_tdata[15]) begin
+            csr_regs[brx_tdata[14:12]] <= brx_tdata[11:0];
         end
     end
 
-    assign engine_soft_reset = ctrl_reg[2];   // saved from bit[15]
-    assign engine_start      = ctrl_reg[1];   // saved from bit[14]
-    assign engine_mode       = ctrl_reg[0];   // saved from bit[13]
+    assign engine_soft_reset = csr_regs[0][2];
+    assign engine_start      = csr_regs[0][1];
+    assign engine_mode       = csr_regs[0][0];
+
+    // -------------------------------------------------------------------------
+    // ADC Wrapper
+    // -------------------------------------------------------------------------
+    ADC_Big_Wrap # (
+        .DATA_W(DATA_W)
+    )
+    ADC_Big_Wrap_inst (
+        .clk(clk),
+        .rst_n(arst_n),
+
+        .slope_thresh(csr_regs[1][DATA_W-1 : 0]),
+        .rs_window(csr_regs[2][DATA_W-1 : 0]),
+        .max_window(csr_regs[3][DATA_W-1 : 0]),
+        .tolerance(csr_regs[4][DATA_W-1 : 0]),
+        .floor_offset(csr_regs[5][DATA_W-1 : 0]),
+        .command_ready(1'b1),        
+        
+        // ADC I/O
+        .adc_valid(adc_valid),
+        .adc_in_data(adc_data),
+
+        // Engine Outputs
+        .clear(clear),
+        .sample_out(sample_out),
+        .sample_valid(sample_valid)
+
+
+    );
 
     // -------------------------------------------------------------------------
     // ECG accelerator
@@ -109,17 +158,18 @@ module ecg_wrapper #(
     wire ap_done_w, ap_ready_w, ap_idle_w;
     always @(*) begin
         if (engine_mode == ADC_MODE) begin
-            in_tdata  = 16'h0;    // ADC mode not implemented, tie off input
-            in_tvalid = 1'b0;    // No valid input data in ADC mode
+            in_tdata  = {11'b0, sample_out};    // ADC mode: Input sample from ECG Sensor
+            in_tvalid = sample_valid;                   // ADC mode: Input Valid
 
         end else begin
             in_tdata  = {6'b0, brx_tdata[9:0]};  // UART mode: input sample from RX bridge
-            in_tvalid = brx_tvalid & !engine_soft_reset & !brx_tdata[12]; // Ignore control-register writes on data path
+            in_tvalid = brx_tvalid & !engine_soft_reset & !brx_tdata[15]; // Ignore control-register writes on data path
         end
     end
+    
     tiny_ecg_no_activ u_ecg (
         .ap_clk              (clk),
-        .ap_rst_n            (!engine_soft_reset & arst_n),                //sync reset inside HLS core, not exposed to wrapper
+        .ap_rst_n            (arst_n & !engine_soft_reset & !clear),   //sync reset inside HLS core, not exposed to wrapper
         .ap_start            (engine_start),                           //start signal from UART bridge, not exposed to wrapper
         .ap_done             (ap_done_w),
         .ap_ready            (ap_ready_w),
@@ -140,10 +190,10 @@ module ecg_wrapper #(
     reg [79:0] cap_data;     // latched at AXI-S handshake
     reg [2:0]  cap_status;   // {ap_idle, ap_ready, ap_done} at handshake
 
-    reg  [4:0] argmax_oh_c;
-    reg  [2:0] win_idx;
-    reg signed [9:0] win_val;
-    reg        out_hs_d;
+    (* mark_debug = "true", keep = "true" *) reg  [4:0] argmax_oh_c;
+    (* mark_debug = "true", keep = "true" *) reg  [2:0] win_idx;
+    (* mark_debug = "true", keep = "true" *) reg signed [9:0] win_val;
+    (* mark_debug = "true", keep = "true" *) reg        out_hs_d;
     integer k;
 
     always @(*) begin

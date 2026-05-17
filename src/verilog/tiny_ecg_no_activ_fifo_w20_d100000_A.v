@@ -108,7 +108,7 @@ module tiny_ecg_no_activ_fifo_w20_d100000_A
     // mOutPtr
     always @(posedge clk) begin
         if (reset == 1'b1)
-            mOutPtr <= 1'b0;
+            mOutPtr <= 'b0;
         else if (push & ~pop)
             mOutPtr <= mOutPtr + 1'b1;
         else if (~push & pop)
@@ -187,16 +187,25 @@ module tiny_ecg_no_activ_fifo_w20_d100000_A_ram
     (* ram_style = MEM_STYLE, rw_addr_collision = "yes" *)
     reg  [DATA_WIDTH-1:0] mem[0:DEPTH-1];
     reg  [ADDR_WIDTH-1:0] raddr_reg;
+    integer i;
 
     //write to ram
     always @(posedge clk) begin
-        if (we)
+        if(reset)
+        begin
+            for (i=0; i<DEPTH; i=i+1)
+                mem[i] <= 0;
+        end
+        else if (we)
             mem[waddr] <= din;
     end
 
     //buffer the raddr
     always @(posedge clk) begin
-        raddr_reg <= raddr;
+        if (reset == 1'b1)
+            raddr_reg <= 0;
+        else
+            raddr_reg <= raddr;
     end
 
     //read from ram, output register? 

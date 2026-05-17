@@ -24,6 +24,7 @@ reg [31:0] counter;
 reg [3:0]  bit_num;
 reg [0:9]  frame;
 reg [7:0]  data_rev;
+
 integer i;
 
 // Reverse the data bus

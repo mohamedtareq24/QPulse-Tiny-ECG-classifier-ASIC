@@ -15,9 +15,9 @@ module uart_rx (
     input  wire         rx,        // serial RX input
 
     output wire         rx_busy,   // receiver is busy
-    output wire         rx_done,   // high when reception is done
+    (* mark_debug = "true", keep = "true" *) output wire         rx_done,   // high when reception is done
     output wire         rx_err,    // high when framing error
-    output reg  [7:0]   rx_data    // received byte
+    (* mark_debug = "true", keep = "true" *)output wire  [7:0]   rx_data    // received byte
 );
 
     //-------------------------
@@ -156,16 +156,20 @@ module uart_rx (
     //-------------------------
     assign rx_busy = (state != IDLE)    ;
     assign rx_done = (state == DONE)    ;
+    assign rx_data = sipo               ;
     assign rx_err  = (state == ERR)     ;
 
-    always @(posedge clk or negedge arst_n) begin
-        if (!arst_n)
-            rx_data <= 8'h00;
-        else if (rst)
-            rx_data <= 8'h00;
-        else if (state == DONE)
-            rx_data <= sipo;
-    end
+    // always @(posedge clk or negedge arst_n) begin
+    //     if (!arst_n)
+    //         rx_data <= 8'h00;
+    //     else if (rst)
+    //         rx_data <= 8'h00;
+    //     // else if (state == DONE) begin
+    //     //     rx_data <= sipo ;
+    //     //     rx_done = 1'b1  ; // pulse done for 1 cycle
+    //     // end
+            
+    // end
 
     // Bit counter
     always @(posedge clk or negedge arst_n) begin

@@ -179,7 +179,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_101)) begin
+    if(ap_rst)
+    begin
+        i_fu_64 <= 'b0;
+    end
+    else if ((1'b1 == ap_condition_101)) begin
         if ((icmp_ln41_fu_89_p2 == 1'd0)) begin
             i_fu_64 <= i_2_fu_95_p2;
         end else if ((ap_loop_init == 1'b1)) begin

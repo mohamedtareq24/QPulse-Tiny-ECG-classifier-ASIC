@@ -366,7 +366,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln127_reg_596 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if(ap_rst)
+    begin
+        acc12_reg_199 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln127_reg_596 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         acc12_reg_199 <= acc_fu_450_p3;
     end else if (((1'd1 == and_ln360_fu_295_p2) & (input_layer_3_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
         acc12_reg_199 <= 10'd12;
@@ -374,7 +378,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln127_reg_596 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if(ap_rst)
+    begin
+        acc_2110_reg_210 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln127_reg_596 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         acc_2110_reg_210 <= acc_23_fu_442_p3;
     end else if (((1'd1 == and_ln360_fu_295_p2) & (input_layer_3_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
         acc_2110_reg_210 <= 10'd1020;
@@ -382,7 +390,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((1'd1 == and_ln360_reg_557) & (layer2_out_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state7) & (icmp_ln27_fu_527_p2 == 1'd0))) begin
+    if(ap_rst)
+    begin
+        i_iw15_reg_165 <= 'b0;
+    end
+    else if ((~((1'd1 == and_ln360_reg_557) & (layer2_out_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state7) & (icmp_ln27_fu_527_p2 == 1'd0))) begin
         i_iw15_reg_165 <= i_iw_reg_541;
     end else if ((~((ap_done_reg == 1'b1) | (real_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
         i_iw15_reg_165 <= 8'd0;
@@ -390,7 +402,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln127_reg_596 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if(ap_rst)
+    begin
+        in_index14_reg_188 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln127_reg_596 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         in_index14_reg_188 <= in_index_fu_470_p3;
     end else if (((1'd1 == and_ln360_fu_295_p2) & (input_layer_3_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
         in_index14_reg_188 <= 3'd0;
@@ -398,7 +414,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln127_reg_596 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if(ap_rst)
+    begin
+        ir13_reg_177 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln127_reg_596 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         ir13_reg_177 <= ir_reg_591;
     end else if (((1'd1 == and_ln360_fu_295_p2) & (input_layer_3_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
         ir13_reg_177 <= 4'd0;
@@ -406,7 +426,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_191)) begin
+    if(ap_rst)
+    begin
+        pX_3 <= 'b0;
+    end
+    else if ((1'b1 == ap_condition_191)) begin
         if ((icmp_ln384_fu_490_p2 == 1'd1)) begin
             pX_3 <= 32'd0;
         end else if ((icmp_ln384_fu_490_p2 == 1'd0)) begin
@@ -416,14 +440,27 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if(ap_rst)
+    begin
+        acc_23_reg_600 <= 'b0;
+        acc_reg_606 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         acc_23_reg_600 <= acc_23_fu_442_p3;
         acc_reg_606 <= acc_fu_450_p3;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((input_layer_3_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+    if(ap_rst)
+    begin
+        and_ln360_reg_557 <= 'b0;
+        i_iw_reg_541 <= 'b0;
+        icmp_ln360_reg_549 <= 'b0;
+        trunc_ln28_reg_536 <= 'b0;
+        void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_10 <= 'b0;
+    end
+    else if (((input_layer_3_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
         and_ln360_reg_557 <= and_ln360_fu_295_p2;
         i_iw_reg_541 <= i_iw_fu_253_p2;
         icmp_ln360_reg_549 <= icmp_ln360_fu_269_p2;
@@ -433,43 +470,72 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if(ap_rst)
+    begin
+        icmp_ln127_reg_596 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         icmp_ln127_reg_596 <= icmp_ln127_fu_329_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
+    if(ap_rst)
+    begin
+        ir_reg_591 <= 'b0;
+    end
+    else
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         ir_reg_591 <= ir_fu_323_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((1'd1 == and_ln360_reg_557) & (layer2_out_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state7))) begin
+    if(ap_rst)
+    begin
+        sX_3 <= 'b0;
+    end
+    else if ((~((1'd1 == and_ln360_reg_557) & (layer2_out_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state7))) begin
         sX_3 <= ap_phi_mux_storemerge_phi_fu_224_p4;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_11_o_ap_vld == 1'b1))) begin
+    if(ap_rst)
+    begin
+        void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_11 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_state3) & (grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_11_o_ap_vld == 1'b1))) begin
         void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_11 <= grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_11_o;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_12_o_ap_vld == 1'b1))) begin
+    if(ap_rst)
+    begin
+        void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_12 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_state3) & (grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_12_o_ap_vld == 1'b1))) begin
         void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_12 <= grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_12_o;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_13_o_ap_vld == 1'b1))) begin
+    if(ap_rst)
+    begin
+        void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_13 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_state3) & (grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_13_o_ap_vld == 1'b1))) begin
         void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_13 <= grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_13_o;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_14_ap_vld == 1'b1))) begin
+    if(ap_rst)
+    begin
+        void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_14 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_state3) & (grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_14_ap_vld == 1'b1))) begin
         void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_14 <= grp_conv_1d_cl_array_array_ap_fixed_2u_config2_Pipeline_KernelShiftWidth_fu_231_void_compute_output_buffer_1d_array_const_stream_weight_t_bias_t_kernel_data_14;
     end
 end

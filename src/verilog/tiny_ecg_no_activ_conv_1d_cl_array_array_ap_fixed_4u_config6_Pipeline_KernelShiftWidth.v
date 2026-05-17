@@ -188,7 +188,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if(ap_rst)
+    begin
+        i_iw_3_fu_52 <= 'b0;
+    end
+    else if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         if ((icmp_ln166_fu_76_p2 == 1'd0)) begin
             i_iw_3_fu_52 <= add_ln166_fu_82_p2;
         end else if ((ap_loop_init == 1'b1)) begin

@@ -83,13 +83,19 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == B_V_data_1_load_A)) begin
+    if (ap_rst == 1'b1) begin
+        B_V_data_1_payload_A <= 'b0;
+    end
+    else if ((1'b1 == B_V_data_1_load_A)) begin
         B_V_data_1_payload_A <= B_V_data_1_data_in;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == B_V_data_1_load_B)) begin
+    if(ap_rst == 1'b1) begin
+        B_V_data_1_payload_B <= 'b0;
+    end
+    else if ((1'b1 == B_V_data_1_load_B)) begin
         B_V_data_1_payload_B <= B_V_data_1_data_in;
     end
 end
@@ -195,13 +201,19 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == B_V_data_1_load_A)) begin
+    if(ap_rst == 1'b1) begin
+        B_V_data_1_payload_A <= 'b0;
+    end
+    else if ((1'b1 == B_V_data_1_load_A)) begin
         B_V_data_1_payload_A <= B_V_data_1_data_in;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == B_V_data_1_load_B)) begin
+    if(ap_rst == 1'b1) begin
+        B_V_data_1_payload_B <= 'b0;
+    end
+    else if ((1'b1 == B_V_data_1_load_B)) begin
         B_V_data_1_payload_B <= B_V_data_1_data_in;
     end
 end
