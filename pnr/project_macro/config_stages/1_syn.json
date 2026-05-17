@@ -1,30 +1,17 @@
 {
     "DESIGN_NAME": "project_macro",
-    "FP_PDN_MULTILAYER": false,
     "VERILOG_FILES": [
         "dir::../../verilog/rtl/project_macro.v",
         "dir::../../verilog/rtl/ecg_project_sources.v"
     ],
     "VERILOG_DEFINES": "SKY130",
+    "EXTRA_LEFS": [
+        "dir::../../../tt06-sar/lef/tt_um_TT06_SAR_wulffern.lef"
+    ],
     "CLOCK_PORT": "clk",
-    "CLOCK_PERIOD": 25,
-    "pdk::sky130*": {
-        "RT_MAX_LAYER": "met4",
-        "scl::sky130_fd_sc_hd": {
-            "CLOCK_PERIOD": 25
-        },
-        "scl::sky130_fd_sc_hdll": {
-            "CLOCK_PERIOD": 10
-        },
-        "scl::sky130_fd_sc_hs": {
-            "CLOCK_PERIOD": 8
-        },
-        "scl::sky130_fd_sc_ls": {
-            "CLOCK_PERIOD": 10,
-            "SYNTH_MAX_FANOUT": 5
-        },
-        "scl::sky130_fd_sc_ms": {
-            "CLOCK_PERIOD": 10
-        }
-    }
+    "CLOCK_PERIOD": 250,
+    "SYNTH_STRATEGY": "AREA 2",
+    "LINTER_DISABLE_WARNINGS": ["DECLFILENAME", "EOFNEWLINE", "NEEDTIMINGOPT"],
+    "PNR_SDC_FILE": "dir::pnr.sdc",
+    "SIGNOFF_SDC_FILE": "dir::signoff.sdc"
 }

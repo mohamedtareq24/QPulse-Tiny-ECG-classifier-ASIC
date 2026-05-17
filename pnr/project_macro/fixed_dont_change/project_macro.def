@@ -392,7 +392,7 @@ VIAS 3 ;
     - via3_4_1600_480_1_4_400_400 + VIARULE M2M3_PR + CUTSIZE 200 200  + LAYERS met2 via2 met3  + CUTSPACING 200 200  + ENCLOSURE 40 85 65 65  + ROWCOL 1 4  ;
     - via4_5_1600_480_1_4_400_400 + VIARULE M3M4_PR + CUTSIZE 200 200  + LAYERS met3 via3 met4  + CUTSPACING 200 200  + ENCLOSURE 90 60 100 65  + ROWCOL 1 4  ;
 END VIAS
-COMPONENTS 13427 ;
+COMPONENTS 13728 ;
     - PHY_EDGE_ROW_0_Left_371 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 10880 ) N ;
     - PHY_EDGE_ROW_0_Right_0 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 873080 10880 ) FN ;
     - PHY_EDGE_ROW_100_Left_471 sky130_fd_sc_hd__decap_3 + SOURCE DIST + FIXED ( 5520 282880 ) N ;
@@ -13630,429 +13630,1423 @@ COMPONENTS 13427 ;
     - TAP_TAPCELL_ROW_9_1107 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 804080 35360 ) FS ;
     - TAP_TAPCELL_ROW_9_1108 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 829840 35360 ) FS ;
     - TAP_TAPCELL_ROW_9_1109 sky130_fd_sc_hd__tapvpwrvgnd_1 + SOURCE DIST + FIXED ( 855600 35360 ) FS ;
-    - _000_ sky130_fd_sc_hd__conb_1 ;
-    - _001_ sky130_fd_sc_hd__conb_1 ;
-    - _002_ sky130_fd_sc_hd__conb_1 ;
-    - _003_ sky130_fd_sc_hd__conb_1 ;
-    - _004_ sky130_fd_sc_hd__conb_1 ;
-    - _005_ sky130_fd_sc_hd__conb_1 ;
-    - _006_ sky130_fd_sc_hd__conb_1 ;
-    - _007_ sky130_fd_sc_hd__conb_1 ;
-    - _008_ sky130_fd_sc_hd__conb_1 ;
-    - _009_ sky130_fd_sc_hd__conb_1 ;
-    - _010_ sky130_fd_sc_hd__conb_1 ;
-    - _011_ sky130_fd_sc_hd__conb_1 ;
-    - _012_ sky130_fd_sc_hd__conb_1 ;
-    - _013_ sky130_fd_sc_hd__conb_1 ;
-    - _014_ sky130_fd_sc_hd__conb_1 ;
-    - _015_ sky130_fd_sc_hd__conb_1 ;
-    - _016_ sky130_fd_sc_hd__conb_1 ;
-    - _017_ sky130_fd_sc_hd__conb_1 ;
-    - _018_ sky130_fd_sc_hd__conb_1 ;
-    - _019_ sky130_fd_sc_hd__conb_1 ;
-    - _020_ sky130_fd_sc_hd__conb_1 ;
-    - _021_ sky130_fd_sc_hd__conb_1 ;
-    - _022_ sky130_fd_sc_hd__conb_1 ;
-    - _023_ sky130_fd_sc_hd__conb_1 ;
-    - _024_ sky130_fd_sc_hd__conb_1 ;
-    - _025_ sky130_fd_sc_hd__conb_1 ;
-    - _026_ sky130_fd_sc_hd__conb_1 ;
-    - _027_ sky130_fd_sc_hd__conb_1 ;
-    - _028_ sky130_fd_sc_hd__conb_1 ;
-    - _029_ sky130_fd_sc_hd__conb_1 ;
-    - _030_ sky130_fd_sc_hd__conb_1 ;
-    - _031_ sky130_fd_sc_hd__conb_1 ;
-    - _032_ sky130_fd_sc_hd__conb_1 ;
-    - _033_ sky130_fd_sc_hd__conb_1 ;
-    - _034_ sky130_fd_sc_hd__conb_1 ;
-    - _035_ sky130_fd_sc_hd__conb_1 ;
-    - _036_ sky130_fd_sc_hd__conb_1 ;
-    - _037_ sky130_fd_sc_hd__conb_1 ;
-    - _038_ sky130_fd_sc_hd__conb_1 ;
-    - _039_ sky130_fd_sc_hd__conb_1 ;
-    - _040_ sky130_fd_sc_hd__conb_1 ;
-    - _041_ sky130_fd_sc_hd__conb_1 ;
-    - _042_ sky130_fd_sc_hd__conb_1 ;
-    - _043_ sky130_fd_sc_hd__conb_1 ;
-    - _044_ sky130_fd_sc_hd__conb_1 ;
-    - _045_ sky130_fd_sc_hd__conb_1 ;
-    - _046_ sky130_fd_sc_hd__conb_1 ;
-    - _047_ sky130_fd_sc_hd__conb_1 ;
-    - _048_ sky130_fd_sc_hd__conb_1 ;
-    - _049_ sky130_fd_sc_hd__conb_1 ;
-    - _050_ sky130_fd_sc_hd__conb_1 ;
-    - _051_ sky130_fd_sc_hd__conb_1 ;
-    - _052_ sky130_fd_sc_hd__conb_1 ;
-    - _053_ sky130_fd_sc_hd__conb_1 ;
-    - _054_ sky130_fd_sc_hd__conb_1 ;
-    - _055_ sky130_fd_sc_hd__conb_1 ;
-    - _056_ sky130_fd_sc_hd__conb_1 ;
-    - _057_ sky130_fd_sc_hd__conb_1 ;
-    - _058_ sky130_fd_sc_hd__conb_1 ;
-    - _059_ sky130_fd_sc_hd__conb_1 ;
-    - _060_ sky130_fd_sc_hd__conb_1 ;
-    - _061_ sky130_fd_sc_hd__conb_1 ;
-    - _062_ sky130_fd_sc_hd__conb_1 ;
-    - _063_ sky130_fd_sc_hd__conb_1 ;
-    - _064_ sky130_fd_sc_hd__conb_1 ;
-    - _065_ sky130_fd_sc_hd__conb_1 ;
-    - _066_ sky130_fd_sc_hd__conb_1 ;
-    - _067_ sky130_fd_sc_hd__conb_1 ;
-    - _068_ sky130_fd_sc_hd__conb_1 ;
-    - _069_ sky130_fd_sc_hd__conb_1 ;
-    - _070_ sky130_fd_sc_hd__conb_1 ;
-    - _071_ sky130_fd_sc_hd__conb_1 ;
-    - _072_ sky130_fd_sc_hd__conb_1 ;
-    - _073_ sky130_fd_sc_hd__conb_1 ;
-    - _074_ sky130_fd_sc_hd__conb_1 ;
-    - _075_ sky130_fd_sc_hd__conb_1 ;
-    - _076_ sky130_fd_sc_hd__conb_1 ;
-    - _077_ sky130_fd_sc_hd__conb_1 ;
-    - _078_ sky130_fd_sc_hd__conb_1 ;
-    - _079_ sky130_fd_sc_hd__conb_1 ;
-    - _080_ sky130_fd_sc_hd__conb_1 ;
-    - _081_ sky130_fd_sc_hd__conb_1 ;
-    - _082_ sky130_fd_sc_hd__conb_1 ;
-    - _083_ sky130_fd_sc_hd__conb_1 ;
-    - _084_ sky130_fd_sc_hd__conb_1 ;
-    - _085_ sky130_fd_sc_hd__conb_1 ;
-    - _086_ sky130_fd_sc_hd__conb_1 ;
-    - _087_ sky130_fd_sc_hd__conb_1 ;
-    - _088_ sky130_fd_sc_hd__conb_1 ;
-    - _089_ sky130_fd_sc_hd__conb_1 ;
-    - _090_ sky130_fd_sc_hd__conb_1 ;
-    - _091_ sky130_fd_sc_hd__conb_1 ;
-    - _092_ sky130_fd_sc_hd__conb_1 ;
-    - _093_ sky130_fd_sc_hd__conb_1 ;
-    - _094_ sky130_fd_sc_hd__conb_1 ;
-    - _095_ sky130_fd_sc_hd__conb_1 ;
-    - _096_ sky130_fd_sc_hd__conb_1 ;
-    - _097_ sky130_fd_sc_hd__conb_1 ;
-    - _098_ sky130_fd_sc_hd__conb_1 ;
-    - _099_ sky130_fd_sc_hd__conb_1 ;
-    - _100_ sky130_fd_sc_hd__conb_1 ;
-    - _101_ sky130_fd_sc_hd__conb_1 ;
-    - _102_ sky130_fd_sc_hd__conb_1 ;
-    - _103_ sky130_fd_sc_hd__conb_1 ;
-    - _104_ sky130_fd_sc_hd__conb_1 ;
-    - _105_ sky130_fd_sc_hd__conb_1 ;
-    - _106_ sky130_fd_sc_hd__conb_1 ;
-    - _107_ sky130_fd_sc_hd__conb_1 ;
-    - _108_ sky130_fd_sc_hd__conb_1 ;
-    - _109_ sky130_fd_sc_hd__conb_1 ;
-    - _110_ sky130_fd_sc_hd__conb_1 ;
-    - _111_ sky130_fd_sc_hd__conb_1 ;
-    - _112_ sky130_fd_sc_hd__conb_1 ;
-    - _113_ sky130_fd_sc_hd__conb_1 ;
-    - _114_ sky130_fd_sc_hd__conb_1 ;
-    - _115_ sky130_fd_sc_hd__conb_1 ;
-    - _116_ sky130_fd_sc_hd__conb_1 ;
-    - _117_ sky130_fd_sc_hd__conb_1 ;
-    - _118_ sky130_fd_sc_hd__conb_1 ;
-    - _119_ sky130_fd_sc_hd__conb_1 ;
-    - _120_ sky130_fd_sc_hd__conb_1 ;
-    - _121_ sky130_fd_sc_hd__conb_1 ;
-    - _122_ sky130_fd_sc_hd__conb_1 ;
-    - _123_ sky130_fd_sc_hd__conb_1 ;
-    - _124_ sky130_fd_sc_hd__conb_1 ;
-    - _125_ sky130_fd_sc_hd__conb_1 ;
-    - _126_ sky130_fd_sc_hd__conb_1 ;
-    - _127_ sky130_fd_sc_hd__conb_1 ;
-    - _128_ sky130_fd_sc_hd__conb_1 ;
-    - _129_ sky130_fd_sc_hd__conb_1 ;
-    - _130_ sky130_fd_sc_hd__conb_1 ;
-    - _131_ sky130_fd_sc_hd__conb_1 ;
-    - _132_ sky130_fd_sc_hd__conb_1 ;
-    - _133_ sky130_fd_sc_hd__conb_1 ;
-    - _134_ sky130_fd_sc_hd__conb_1 ;
-    - _135_ sky130_fd_sc_hd__conb_1 ;
-    - _136_ sky130_fd_sc_hd__conb_1 ;
-    - _137_ sky130_fd_sc_hd__conb_1 ;
-    - _138_ sky130_fd_sc_hd__conb_1 ;
-    - _139_ sky130_fd_sc_hd__conb_1 ;
-    - _140_ sky130_fd_sc_hd__conb_1 ;
-    - _141_ sky130_fd_sc_hd__conb_1 ;
-    - _142_ sky130_fd_sc_hd__conb_1 ;
-    - _143_ sky130_fd_sc_hd__conb_1 ;
-    - _144_ sky130_fd_sc_hd__conb_1 ;
-    - _145_ sky130_fd_sc_hd__conb_1 ;
-    - _146_ sky130_fd_sc_hd__conb_1 ;
-    - _147_ sky130_fd_sc_hd__conb_1 ;
-    - _148_ sky130_fd_sc_hd__conb_1 ;
-    - _149_ sky130_fd_sc_hd__conb_1 ;
-    - _150_ sky130_fd_sc_hd__conb_1 ;
-    - _151_ sky130_fd_sc_hd__conb_1 ;
-    - _152_ sky130_fd_sc_hd__conb_1 ;
-    - _153_ sky130_fd_sc_hd__conb_1 ;
-    - _154_ sky130_fd_sc_hd__conb_1 ;
-    - _155_ sky130_fd_sc_hd__conb_1 ;
-    - _156_ sky130_fd_sc_hd__conb_1 ;
-    - _157_ sky130_fd_sc_hd__conb_1 ;
-    - _158_ sky130_fd_sc_hd__conb_1 ;
-    - _159_ sky130_fd_sc_hd__conb_1 ;
-    - _160_ sky130_fd_sc_hd__conb_1 ;
-    - _161_ sky130_fd_sc_hd__conb_1 ;
-    - _162_ sky130_fd_sc_hd__conb_1 ;
-    - _163_ sky130_fd_sc_hd__conb_1 ;
-    - _164_ sky130_fd_sc_hd__conb_1 ;
-    - _165_ sky130_fd_sc_hd__conb_1 ;
-    - _166_ sky130_fd_sc_hd__conb_1 ;
-    - _167_ sky130_fd_sc_hd__conb_1 ;
-    - _168_ sky130_fd_sc_hd__conb_1 ;
-    - _169_ sky130_fd_sc_hd__conb_1 ;
-    - _170_ sky130_fd_sc_hd__conb_1 ;
-    - _171_ sky130_fd_sc_hd__conb_1 ;
-    - _172_ sky130_fd_sc_hd__conb_1 ;
-    - _173_ sky130_fd_sc_hd__conb_1 ;
-    - _174_ sky130_fd_sc_hd__conb_1 ;
-    - _175_ sky130_fd_sc_hd__conb_1 ;
-    - _176_ sky130_fd_sc_hd__conb_1 ;
-    - _177_ sky130_fd_sc_hd__conb_1 ;
-    - _178_ sky130_fd_sc_hd__conb_1 ;
-    - _179_ sky130_fd_sc_hd__conb_1 ;
-    - _180_ sky130_fd_sc_hd__conb_1 ;
-    - _181_ sky130_fd_sc_hd__conb_1 ;
-    - _182_ sky130_fd_sc_hd__conb_1 ;
-    - _183_ sky130_fd_sc_hd__conb_1 ;
-    - _184_ sky130_fd_sc_hd__conb_1 ;
-    - _185_ sky130_fd_sc_hd__conb_1 ;
-    - _186_ sky130_fd_sc_hd__conb_1 ;
-    - _187_ sky130_fd_sc_hd__conb_1 ;
-    - _188_ sky130_fd_sc_hd__conb_1 ;
-    - _189_ sky130_fd_sc_hd__conb_1 ;
+    - _128_ sky130_fd_sc_hd__nand2_2 + PLACED ( 862040 130560 ) FN ;
+    - _129_ sky130_fd_sc_hd__xor2_4 + PLACED ( 856060 138720 ) S ;
+    - _130_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 853760 141440 ) FN ;
+    - _131_ sky130_fd_sc_hd__inv_2 + PLACED ( 862040 133280 ) FS ;
+    - _132_ sky130_fd_sc_hd__a31o_2 + PLACED ( 857900 127840 ) FS ;
+    - _133_ sky130_fd_sc_hd__a21boi_4 + PLACED ( 853760 130560 ) N ;
+    - _134_ sky130_fd_sc_hd__nand2_2 + PLACED ( 861120 179520 ) N ;
+    - _135_ sky130_fd_sc_hd__xor2_4 + PLACED ( 856060 176800 ) FS ;
+    - _136_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 856060 182240 ) S ;
+    - _137_ sky130_fd_sc_hd__a22o_2 + PLACED ( 858820 168640 ) FN ;
+    - _138_ sky130_fd_sc_hd__o21a_2 + PLACED ( 856060 171360 ) FS ;
+    - _139_ sky130_fd_sc_hd__nand2_2 + PLACED ( 805460 1006400 ) FN ;
+    - _140_ sky130_fd_sc_hd__xor2_4 + PLACED ( 804540 998240 ) S ;
+    - _141_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 800400 1000960 ) FN ;
+    - _142_ sky130_fd_sc_hd__a22o_2 + PLACED ( 810520 1000960 ) N ;
+    - _143_ sky130_fd_sc_hd__o21a_2 + PLACED ( 807300 995520 ) N ;
+    - _144_ sky130_fd_sc_hd__nand2_2 + PLACED ( 746120 1003680 ) S ;
+    - _145_ sky130_fd_sc_hd__xor2_4 + PLACED ( 746580 995520 ) FN ;
+    - _146_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 741980 1000960 ) FN ;
+    - _147_ sky130_fd_sc_hd__a22o_2 + PLACED ( 748880 998240 ) S ;
+    - _148_ sky130_fd_sc_hd__o21a_2 + PLACED ( 749340 1003680 ) S ;
+    - _149_ sky130_fd_sc_hd__nand2_2 + PLACED ( 691380 1003680 ) FS ;
+    - _150_ sky130_fd_sc_hd__xor2_4 + PLACED ( 690920 998240 ) S ;
+    - _151_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 689080 1000960 ) FN ;
+    - _152_ sky130_fd_sc_hd__a22o_2 + PLACED ( 694600 1003680 ) FS ;
+    - _153_ sky130_fd_sc_hd__o21a_2 + PLACED ( 699200 1000960 ) FN ;
+    - _154_ sky130_fd_sc_hd__nand2_2 + PLACED ( 617780 1006400 ) FN ;
+    - _155_ sky130_fd_sc_hd__xor2_4 + PLACED ( 613180 998240 ) S ;
+    - _156_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 611800 1000960 ) FN ;
+    - _157_ sky130_fd_sc_hd__a22o_2 + PLACED ( 618240 1003680 ) S ;
+    - _158_ sky130_fd_sc_hd__o21a_2 + PLACED ( 615020 1003680 ) FS ;
+    - _159_ sky130_fd_sc_hd__nand2_2 + PLACED ( 564420 1000960 ) FN ;
+    - _160_ sky130_fd_sc_hd__xor2_4 + PLACED ( 568560 995520 ) FN ;
+    - _161_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 559820 998240 ) S ;
+    - _162_ sky130_fd_sc_hd__a22o_2 + PLACED ( 571780 1000960 ) N ;
+    - _163_ sky130_fd_sc_hd__o21a_2 + PLACED ( 575460 1000960 ) N ;
+    - _164_ sky130_fd_sc_hd__nand2_2 + PLACED ( 499560 1003680 ) S ;
+    - _165_ sky130_fd_sc_hd__xor2_4 + PLACED ( 499560 998240 ) S ;
+    - _166_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 492660 1000960 ) FN ;
+    - _167_ sky130_fd_sc_hd__a22o_2 + PLACED ( 504160 1000960 ) N ;
+    - _168_ sky130_fd_sc_hd__o21a_2 + PLACED ( 504620 995520 ) N ;
+    - _169_ sky130_fd_sc_hd__nand2_2 + PLACED ( 447580 1006400 ) N ;
+    - _170_ sky130_fd_sc_hd__xor2_4 + PLACED ( 446200 1000960 ) N ;
+    - _171_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 445280 1003680 ) S ;
+    - _172_ sky130_fd_sc_hd__a22o_2 + PLACED ( 449880 1006400 ) N ;
+    - _173_ sky130_fd_sc_hd__o21a_2 + PLACED ( 450800 995520 ) FN ;
+    - _174_ sky130_fd_sc_hd__nand2_2 + PLACED ( 377200 1003680 ) S ;
+    - _175_ sky130_fd_sc_hd__xor2_4 + PLACED ( 368920 1000960 ) FN ;
+    - _176_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 367080 1003680 ) S ;
+    - _177_ sky130_fd_sc_hd__a22o_2 + PLACED ( 373520 1006400 ) FN ;
+    - _178_ sky130_fd_sc_hd__o21a_2 + PLACED ( 372140 995520 ) N ;
+    - _179_ sky130_fd_sc_hd__nand2_2 + PLACED ( 318780 1003680 ) S ;
+    - _180_ sky130_fd_sc_hd__xor2_4 + PLACED ( 317400 1000960 ) FN ;
+    - _181_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 315100 998240 ) S ;
+    - _182_ sky130_fd_sc_hd__a22o_2 + PLACED ( 323380 1006400 ) N ;
+    - _183_ sky130_fd_sc_hd__o21a_2 + PLACED ( 325220 998240 ) FS ;
+    - _184_ sky130_fd_sc_hd__nand2_2 + PLACED ( 263580 1003680 ) S ;
+    - _185_ sky130_fd_sc_hd__xor2_4 + PLACED ( 269560 998240 ) S ;
+    - _186_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 259900 1000960 ) FN ;
+    - _187_ sky130_fd_sc_hd__a22o_2 + PLACED ( 271860 1000960 ) N ;
+    - _188_ sky130_fd_sc_hd__o21a_2 + PLACED ( 276460 1000960 ) FN ;
+    - _189_ sky130_fd_sc_hd__nand2_2 + PLACED ( 193660 1006400 ) FN ;
+    - _190_ sky130_fd_sc_hd__xor2_4 + PLACED ( 192280 998240 ) S ;
+    - _191_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 188600 1000960 ) FN ;
+    - _192_ sky130_fd_sc_hd__a22o_2 + PLACED ( 199180 1000960 ) FN ;
+    - _193_ sky130_fd_sc_hd__o21a_2 + PLACED ( 195500 995520 ) N ;
+    - _194_ sky130_fd_sc_hd__nand2_2 + PLACED ( 138460 1006400 ) FN ;
+    - _195_ sky130_fd_sc_hd__xor2_4 + PLACED ( 137080 1000960 ) FN ;
+    - _196_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 134780 1003680 ) S ;
+    - _197_ sky130_fd_sc_hd__a22o_2 + PLACED ( 141220 1006400 ) FN ;
+    - _198_ sky130_fd_sc_hd__o21a_2 + PLACED ( 140760 995520 ) N ;
+    - _199_ sky130_fd_sc_hd__nand2_2 + PLACED ( 98900 1000960 ) N ;
+    - _200_ sky130_fd_sc_hd__xor2_4 + PLACED ( 98440 1003680 ) FS ;
+    - _201_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 104880 1000960 ) N ;
+    - _202_ sky130_fd_sc_hd__a22o_2 + PLACED ( 91540 1003680 ) S ;
+    - _203_ sky130_fd_sc_hd__o21a_2 + PLACED ( 88320 998240 ) FS ;
+    - _204_ sky130_fd_sc_hd__nand2_2 + PLACED ( 126040 968320 ) N ;
+    - _205_ sky130_fd_sc_hd__xor2_4 + PLACED ( 122360 971040 ) FS ;
+    - _206_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 129260 962880 ) N ;
+    - _207_ sky130_fd_sc_hd__a22o_2 + PLACED ( 121900 973760 ) FN ;
+    - _208_ sky130_fd_sc_hd__o21a_2 + PLACED ( 118220 973760 ) N ;
+    - _209_ sky130_fd_sc_hd__nand2_2 + PLACED ( 724500 24480 ) FS ;
+    - _210_ sky130_fd_sc_hd__xor2_4 + PLACED ( 716680 46240 ) FS ;
+    - _211_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 722660 27200 ) N ;
+    - _212_ sky130_fd_sc_hd__a22o_2 + PLACED ( 721740 48960 ) N ;
+    - _213_ sky130_fd_sc_hd__o21a_2 + PLACED ( 718520 48960 ) N ;
+    - _214_ sky130_fd_sc_hd__nand2_2 + PLACED ( 754400 19040 ) S ;
+    - _215_ sky130_fd_sc_hd__xor2_4 + PLACED ( 748420 27200 ) N ;
+    - _216_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 748880 21760 ) FN ;
+    - _217_ sky130_fd_sc_hd__a22o_2 + PLACED ( 753020 29920 ) FS ;
+    - _218_ sky130_fd_sc_hd__o21a_2 + PLACED ( 749340 29920 ) FS ;
+    - _219_ sky130_fd_sc_hd__nand2_2 + PLACED ( 698740 24480 ) S ;
+    - _220_ sky130_fd_sc_hd__xor2_4 + PLACED ( 696900 21760 ) FN ;
+    - _221_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 694140 27200 ) FN ;
+    - _222_ sky130_fd_sc_hd__a22o_2 + PLACED ( 701500 24480 ) S ;
+    - _223_ sky130_fd_sc_hd__o21a_2 + PLACED ( 701500 29920 ) FS ;
+    - _224_ sky130_fd_sc_hd__nand2_2 + PLACED ( 641700 24480 ) S ;
+    - _225_ sky130_fd_sc_hd__xor2_4 + PLACED ( 645380 27200 ) FN ;
+    - _226_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 631580 24480 ) S ;
+    - _227_ sky130_fd_sc_hd__a22o_2 + PLACED ( 649060 21760 ) N ;
+    - _228_ sky130_fd_sc_hd__o21a_2 + PLACED ( 650440 29920 ) FS ;
+    - _229_ sky130_fd_sc_hd__nand2_2 + PLACED ( 592940 24480 ) FS ;
+    - _230_ sky130_fd_sc_hd__xor2_4 + PLACED ( 600300 27200 ) FN ;
+    - _231_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 590180 27200 ) FN ;
+    - _232_ sky130_fd_sc_hd__a22o_2 + PLACED ( 601220 21760 ) FN ;
+    - _233_ sky130_fd_sc_hd__o21a_2 + PLACED ( 602600 29920 ) FS ;
+    - _234_ sky130_fd_sc_hd__nand2_2 + PLACED ( 518420 24480 ) S ;
+    - _235_ sky130_fd_sc_hd__xor2_4 + PLACED ( 521180 24480 ) S ;
+    - _236_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 516580 27200 ) FN ;
+    - _237_ sky130_fd_sc_hd__a22o_2 + PLACED ( 526700 27200 ) FN ;
+    - _238_ sky130_fd_sc_hd__o21a_2 + PLACED ( 523020 21760 ) N ;
+    - _239_ sky130_fd_sc_hd__nand2_2 + PLACED ( 470120 21760 ) FN ;
+    - _240_ sky130_fd_sc_hd__xor2_4 + PLACED ( 474260 24480 ) S ;
+    - _241_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 464140 27200 ) FN ;
+    - _242_ sky130_fd_sc_hd__a22o_2 + PLACED ( 477480 27200 ) N ;
+    - _243_ sky130_fd_sc_hd__o21a_2 + PLACED ( 478860 32640 ) N ;
+    - _244_ sky130_fd_sc_hd__nand2_2 + PLACED ( 420440 21760 ) N ;
+    - _245_ sky130_fd_sc_hd__xor2_4 + PLACED ( 420440 27200 ) FN ;
+    - _246_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 418600 24480 ) S ;
+    - _247_ sky130_fd_sc_hd__a22o_2 + PLACED ( 423660 21760 ) N ;
+    - _248_ sky130_fd_sc_hd__o21a_2 + PLACED ( 424580 32640 ) N ;
+    - _249_ sky130_fd_sc_hd__nand2_2 + PLACED ( 344080 21760 ) FN ;
+    - _250_ sky130_fd_sc_hd__xor2_4 + PLACED ( 341320 27200 ) FN ;
+    - _251_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 340860 24480 ) S ;
+    - _252_ sky130_fd_sc_hd__a22o_2 + PLACED ( 346380 21760 ) FN ;
+    - _253_ sky130_fd_sc_hd__o21a_2 + PLACED ( 345000 32640 ) N ;
+    - _254_ sky130_fd_sc_hd__nand2_2 + PLACED ( 291180 21760 ) FN ;
+    - _255_ sky130_fd_sc_hd__xor2_4 + PLACED ( 289340 29920 ) S ;
+    - _256_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 285200 27200 ) FN ;
+    - _257_ sky130_fd_sc_hd__a22o_2 + PLACED ( 292560 24480 ) S ;
+    - _258_ sky130_fd_sc_hd__o21a_2 + PLACED ( 291640 35360 ) FS ;
+    - _259_ sky130_fd_sc_hd__nand2_2 + PLACED ( 237820 24480 ) S ;
+    - _260_ sky130_fd_sc_hd__xor2_4 + PLACED ( 239200 27200 ) FN ;
+    - _261_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 229080 27200 ) FN ;
+    - _262_ sky130_fd_sc_hd__a22o_2 + PLACED ( 241040 24480 ) S ;
+    - _263_ sky130_fd_sc_hd__o21a_2 + PLACED ( 244260 21760 ) N ;
+    - _264_ sky130_fd_sc_hd__nand2_2 + PLACED ( 183540 24480 ) S ;
+    - _265_ sky130_fd_sc_hd__xor2_4 + PLACED ( 188140 27200 ) FN ;
+    - _266_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 182160 21760 ) FN ;
+    - _267_ sky130_fd_sc_hd__a22o_2 + PLACED ( 192280 21760 ) FN ;
+    - _268_ sky130_fd_sc_hd__o21a_2 + PLACED ( 191820 29920 ) FS ;
+    - _269_ sky130_fd_sc_hd__nand2_2 + PLACED ( 121900 21760 ) FN ;
+    - _270_ sky130_fd_sc_hd__xor2_4 + PLACED ( 135240 24480 ) S ;
+    - _271_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 116380 24480 ) S ;
+    - _272_ sky130_fd_sc_hd__a22o_2 + PLACED ( 137080 19040 ) S ;
+    - _273_ sky130_fd_sc_hd__o21a_2 + PLACED ( 139380 27200 ) N ;
+    - _274_ sky130_fd_sc_hd__nand2_2 + PLACED ( 91080 21760 ) N ;
+    - _275_ sky130_fd_sc_hd__xor2_4 + PLACED ( 85560 27200 ) N ;
+    - _276_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 93380 24480 ) FS ;
+    - _277_ sky130_fd_sc_hd__a22o_2 + PLACED ( 87400 21760 ) FN ;
+    - _278_ sky130_fd_sc_hd__o21a_2 + PLACED ( 84180 21760 ) N ;
+    - _279_ sky130_fd_sc_hd__nand2_2 + PLACED ( 865720 231200 ) S ;
+    - _280_ sky130_fd_sc_hd__xnor2_2 + PLACED ( 858360 228480 ) FN ;
+    - _281_ sky130_fd_sc_hd__nand2_2 + PLACED ( 116380 57120 ) FS ;
+    - _282_ sky130_fd_sc_hd__xor2_4 + PLACED ( 111320 54400 ) N ;
+    - _283_ sky130_fd_sc_hd__xnor2_4 + PLACED ( 118680 57120 ) FS ;
+    - _284_ sky130_fd_sc_hd__a22o_2 + PLACED ( 110400 48960 ) FN ;
+    - _285_ sky130_fd_sc_hd__o21a_2 + PLACED ( 108100 54400 ) N ;
+    - _286_ sky130_fd_sc_hd__a21o_2 + PLACED ( 859280 233920 ) N ;
+    - _287_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 850540 125120 ) N ;
+    - _288_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 852380 152320 ) N ;
+    - _289_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 849160 168640 ) N ;
+    - _290_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 807300 527680 ) FN ;
+    - _291_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 804540 1003680 ) FS ;
+    - _292_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 769580 1000960 ) FN ;
+    - _293_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 752100 1000960 ) FN ;
+    - _294_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 717600 1000960 ) FN ;
+    - _295_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 693220 995520 ) FN ;
+    - _296_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 638480 1000960 ) FN ;
+    - _297_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 612720 995520 ) N ;
+    - _298_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 588340 998240 ) S ;
+    - _299_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 572700 998240 ) S ;
+    - _300_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 521640 998240 ) S ;
+    - _301_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 501860 992800 ) FS ;
+    - _302_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 473800 1003680 ) S ;
+    - _303_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 447580 998240 ) S ;
+    - _304_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 395140 1000960 ) FN ;
+    - _305_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 368000 998240 ) FS ;
+    - _306_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 343160 1003680 ) S ;
+    - _307_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 322920 1003680 ) FS ;
+    - _308_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 297160 998240 ) S ;
+    - _309_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 270940 992800 ) S ;
+    - _310_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 214820 1000960 ) FN ;
+    - _311_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 191820 1003680 ) FS ;
+    - _312_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 163300 1000960 ) FN ;
+    - _313_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 138460 998240 ) FS ;
+    - _314_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 111780 1006400 ) FN ;
+    - _315_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 85560 1000960 ) N ;
+    - _316_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 113160 992800 ) FS ;
+    - _317_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 116840 976480 ) FS ;
+    - _318_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 389160 609280 ) N ;
+    - _319_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 716680 51680 ) FS ;
+    - _320_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 732780 29920 ) FS ;
+    - _321_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 748880 32640 ) N ;
+    - _322_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 719900 21760 ) FN ;
+    - _323_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 696440 32640 ) N ;
+    - _324_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 667000 27200 ) FN ;
+    - _325_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 649980 24480 ) FS ;
+    - _326_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 621000 27200 ) FN ;
+    - _327_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 600760 24480 ) FS ;
+    - _328_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 544640 27200 ) FN ;
+    - _329_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 521180 29920 ) FS ;
+    - _330_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 494960 27200 ) FN ;
+    - _331_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 476560 29920 ) FS ;
+    - _332_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 446660 27200 ) FN ;
+    - _333_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 422280 29920 ) FS ;
+    - _334_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 367540 27200 ) FN ;
+    - _335_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 340860 29920 ) FS ;
+    - _336_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 314640 27200 ) FN ;
+    - _337_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 287500 32640 ) N ;
+    - _338_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 262660 27200 ) FN ;
+    - _339_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 241960 29920 ) FS ;
+    - _340_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 211140 27200 ) FN ;
+    - _341_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 189520 24480 ) FS ;
+    - _342_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 160540 24480 ) S ;
+    - _343_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 136160 21760 ) N ;
+    - _344_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 111780 21760 ) FN ;
+    - _345_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 83260 24480 ) FS ;
+    - _346_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 106260 27200 ) N ;
+    - _347_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 853760 223040 ) N ;
+    - _348_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 856060 231200 ) FS ;
+    - _349_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 109020 51680 ) FS ;
+    - _350_ sky130_fd_sc_hd__dfrtp_2 + PLACED ( 132480 65280 ) N ;
+    - _540_ sky130_fd_sc_hd__buf_2 + PLACED ( 148580 70720 ) N ;
+    - fanout40 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 112700 59840 ) FN ;
+    - fanout42 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 112700 57120 ) FS ;
+    - fanout44 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 859740 225760 ) S ;
+    - fanout47 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 482540 27200 ) N ;
+    - fanout50 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 91540 998240 ) S ;
+    - fanout53 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 303140 1003680 ) S ;
+    - fanout54 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 483460 1003680 ) S ;
+    - fanout57 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 395140 612000 ) S ;
+    - fanout62 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 244720 24480 ) S ;
+    - fanout64 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 470580 24480 ) S ;
+    - fanout66 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 861580 174080 ) FN ;
+    - fanout68 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 864340 233920 ) N ;
+    - fanout71 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 273240 1003680 ) S ;
+    - fanout73 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 455400 1003680 ) S ;
+    - fanout74 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 809140 1006400 ) FN ;
+    - fanout76 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 814200 1003680 ) S ;
+    - input1 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 10120 10880 ) N ;
+    - input10 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 241960 10880 ) N ;
+    - input11 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 298080 10880 ) FN ;
+    - input12 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 357880 10880 ) N ;
+    - input13 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 414000 10880 ) N ;
+    - input14 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 473800 10880 ) N ;
+    - input15 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 529920 10880 ) FN ;
+    - input16 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 869400 10880 ) FN ;
+    - input17 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 869400 125120 ) FN ;
+    - input18 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 869400 239360 ) FN ;
+    - input19 sky130_fd_sc_hd__buf_4 + SOURCE TIMING + PLACED ( 870320 353600 ) FN ;
+    - input2 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 589720 10880 ) N ;
+    - input20 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 20240 1017280 ) N ;
+    - input21 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 627440 1017280 ) N ;
+    - input22 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 688620 1017280 ) N ;
+    - input23 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 748880 1017280 ) N ;
+    - input24 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 809600 1017280 ) N ;
+    - input25 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 79120 1017280 ) N ;
+    - input26 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 141680 1017280 ) N ;
+    - input27 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 202400 1017280 ) N ;
+    - input28 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 263580 1017280 ) N ;
+    - input29 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 323840 1017280 ) N ;
+    - input3 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 645840 10880 ) N ;
+    - input30 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 384560 1017280 ) N ;
+    - input31 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 445280 1017280 ) N ;
+    - input32 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 504160 1017280 ) FN ;
+    - input33 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 566720 1017280 ) N ;
+    - input34 sky130_fd_sc_hd__buf_4 + SOURCE TIMING + PLACED ( 6900 516800 ) N ;
+    - input4 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 705640 10880 ) N ;
+    - input5 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 761760 10880 ) FN ;
+    - input6 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 821560 10880 ) N ;
+    - input7 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 66240 10880 ) N ;
+    - input8 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 126040 10880 ) N ;
+    - input9 sky130_fd_sc_hd__clkdlybuf4s25_1 + SOURCE TIMING + PLACED ( 182160 10880 ) N ;
+    - load_slew41 sky130_fd_sc_hd__buf_2 + SOURCE TIMING + PLACED ( 118220 27200 ) N ;
+    - load_slew43 sky130_fd_sc_hd__buf_2 + SOURCE TIMING + PLACED ( 295320 27200 ) N ;
+    - load_slew46 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 856980 225760 ) S ;
+    - load_slew49 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 524860 32640 ) N ;
+    - load_slew51 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 202860 1000960 ) N ;
+    - load_slew52 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 95220 1003680 ) FS ;
+    - load_slew55 sky130_fd_sc_hd__buf_2 + SOURCE TIMING + PLACED ( 621920 1000960 ) N ;
+    - load_slew56 sky130_fd_sc_hd__buf_2 + SOURCE TIMING + PLACED ( 483460 1000960 ) N ;
+    - load_slew59 sky130_fd_sc_hd__buf_2 + SOURCE TIMING + PLACED ( 398360 1003680 ) S ;
+    - load_slew63 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 186760 24480 ) S ;
+    - load_slew69 sky130_fd_sc_hd__buf_2 + SOURCE TIMING + PLACED ( 640780 21760 ) FN ;
+    - load_slew72 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 195960 1006400 ) FN ;
+    - max_cap78 sky130_fd_sc_hd__buf_12 + SOURCE TIMING + PLACED ( 864340 356320 ) S ;
+    - output35 sky130_fd_sc_hd__buf_1 + SOURCE TIMING + PLACED ( 871700 484160 ) FN ;
+    - project_macro sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 715360 ) FS ;
+    - project_macro_100 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 333960 1017280 ) FN ;
+    - project_macro_101 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 394680 1017280 ) FN ;
+    - project_macro_102 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 454940 1017280 ) FN ;
+    - project_macro_103 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 516120 1017280 ) FN ;
+    - project_macro_104 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 576840 1017280 ) FN ;
+    - project_macro_105 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 637560 1017280 ) FN ;
+    - project_macro_106 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 698280 1017280 ) FN ;
+    - project_macro_107 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 759000 1017280 ) FN ;
+    - project_macro_108 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 819720 1017280 ) FN ;
+    - project_macro_109 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 39100 10880 ) FN ;
+    - project_macro_110 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 97060 10880 ) FN ;
+    - project_macro_111 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 155020 10880 ) FN ;
+    - project_macro_112 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 212980 10880 ) FN ;
+    - project_macro_113 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 270940 10880 ) FN ;
+    - project_macro_114 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 328900 10880 ) FN ;
+    - project_macro_115 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 386860 10880 ) FN ;
+    - project_macro_116 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 444820 10880 ) FN ;
+    - project_macro_117 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 502780 10880 ) FN ;
+    - project_macro_118 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 560740 10880 ) FN ;
+    - project_macro_119 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 618700 10880 ) FN ;
+    - project_macro_120 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 676660 10880 ) FN ;
+    - project_macro_121 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 734620 10880 ) FN ;
+    - project_macro_122 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 792580 10880 ) FN ;
+    - project_macro_123 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 850540 10880 ) FN ;
+    - project_macro_124 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 19780 10880 ) FN ;
+    - project_macro_125 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 77740 10880 ) FN ;
+    - project_macro_126 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 135700 10880 ) FN ;
+    - project_macro_127 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 193660 10880 ) FN ;
+    - project_macro_128 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 251620 10880 ) FN ;
+    - project_macro_129 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 309580 10880 ) FN ;
+    - project_macro_130 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 367540 10880 ) FN ;
+    - project_macro_131 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 425500 10880 ) FN ;
+    - project_macro_132 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 483460 10880 ) FN ;
+    - project_macro_133 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 541420 10880 ) FN ;
+    - project_macro_134 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 599380 10880 ) FN ;
+    - project_macro_135 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 657340 10880 ) FN ;
+    - project_macro_136 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 715300 10880 ) FN ;
+    - project_macro_137 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 773260 10880 ) FN ;
+    - project_macro_138 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 831220 10880 ) FN ;
+    - project_macro_139 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 68000 ) FS ;
+    - project_macro_140 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 182240 ) FS ;
+    - project_macro_141 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 296480 ) FS ;
+    - project_macro_142 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 410720 ) FS ;
+    - project_macro_143 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 524960 ) FS ;
+    - project_macro_144 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 639200 ) FS ;
+    - project_macro_145 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 753440 ) FS ;
+    - project_macro_146 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 867680 ) FS ;
+    - project_macro_147 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 981920 ) FS ;
+    - project_macro_148 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 163200 ) N ;
+    - project_macro_149 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 277440 ) N ;
+    - project_macro_150 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 391680 ) N ;
+    - project_macro_151 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 505920 ) N ;
+    - project_macro_152 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 734400 ) N ;
+    - project_macro_153 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 848640 ) N ;
+    - project_macro_154 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 962880 ) N ;
+    - project_macro_155 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 29920 ) FS ;
+    - project_macro_156 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 144160 ) FS ;
+    - project_macro_157 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 258400 ) FS ;
+    - project_macro_158 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 372640 ) FS ;
+    - project_macro_159 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 601120 ) FS ;
+    - project_macro_160 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 60720 1017280 ) N ;
+    - project_macro_161 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 70840 1017280 ) N ;
+    - project_macro_162 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 121900 1017280 ) N ;
+    - project_macro_163 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 131560 1017280 ) N ;
+    - project_macro_164 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 182160 1017280 ) N ;
+    - project_macro_165 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 192280 1017280 ) N ;
+    - project_macro_166 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 242880 1017280 ) N ;
+    - project_macro_167 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 253000 1017280 ) N ;
+    - project_macro_168 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 303600 1017280 ) N ;
+    - project_macro_169 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 313260 1017280 ) N ;
+    - project_macro_170 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 364320 1017280 ) N ;
+    - project_macro_171 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 374440 1017280 ) N ;
+    - project_macro_172 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 425040 1017280 ) N ;
+    - project_macro_173 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 435160 1017280 ) N ;
+    - project_macro_174 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 485760 1017280 ) N ;
+    - project_macro_175 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 495880 1017280 ) N ;
+    - project_macro_176 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 546940 1017280 ) N ;
+    - project_macro_177 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 556600 1017280 ) N ;
+    - project_macro_178 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 607200 1017280 ) N ;
+    - project_macro_179 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 617320 1017280 ) N ;
+    - project_macro_180 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 667920 1017280 ) N ;
+    - project_macro_181 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 678040 1017280 ) N ;
+    - project_macro_182 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 728640 1017280 ) N ;
+    - project_macro_183 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 738300 1017280 ) N ;
+    - project_macro_184 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 789360 1017280 ) N ;
+    - project_macro_185 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 799480 1017280 ) N ;
+    - project_macro_186 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 850080 1017280 ) N ;
+    - project_macro_187 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 860200 1017280 ) N ;
+    - project_macro_188 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 40480 1017280 ) N ;
+    - project_macro_189 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 101200 1017280 ) N ;
+    - project_macro_190 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 161920 1017280 ) N ;
+    - project_macro_191 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 222640 1017280 ) N ;
+    - project_macro_192 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 283360 1017280 ) N ;
+    - project_macro_193 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 344080 1017280 ) N ;
+    - project_macro_194 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 405260 1017280 ) N ;
+    - project_macro_195 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 465520 1017280 ) N ;
+    - project_macro_196 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 526240 1017280 ) N ;
+    - project_macro_197 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 586960 1017280 ) N ;
+    - project_macro_198 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 647680 1017280 ) N ;
+    - project_macro_199 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 708400 1017280 ) N ;
+    - project_macro_200 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 769120 1017280 ) N ;
+    - project_macro_201 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 830300 1017280 ) N ;
+    - project_macro_202 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 48760 10880 ) N ;
+    - project_macro_203 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 58420 10880 ) N ;
+    - project_macro_204 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 106720 10880 ) N ;
+    - project_macro_205 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 116380 10880 ) N ;
+    - project_macro_206 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 164680 10880 ) N ;
+    - project_macro_207 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 174340 10880 ) N ;
+    - project_macro_208 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 222640 10880 ) N ;
+    - project_macro_209 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 232300 10880 ) N ;
+    - project_macro_210 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 280600 10880 ) N ;
+    - project_macro_211 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 290260 10880 ) N ;
+    - project_macro_212 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 338560 10880 ) N ;
+    - project_macro_213 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 348220 10880 ) N ;
+    - project_macro_214 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 396520 10880 ) N ;
+    - project_macro_215 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 406180 10880 ) N ;
+    - project_macro_216 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 454480 10880 ) N ;
+    - project_macro_217 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 464140 10880 ) N ;
+    - project_macro_218 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 512440 10880 ) N ;
+    - project_macro_219 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 522100 10880 ) N ;
+    - project_macro_220 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 570400 10880 ) N ;
+    - project_macro_221 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 580060 10880 ) N ;
+    - project_macro_222 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 628360 10880 ) N ;
+    - project_macro_223 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 638020 10880 ) N ;
+    - project_macro_224 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 686320 10880 ) N ;
+    - project_macro_225 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 695980 10880 ) N ;
+    - project_macro_226 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 744280 10880 ) N ;
+    - project_macro_227 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 753940 10880 ) N ;
+    - project_macro_228 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 802240 10880 ) N ;
+    - project_macro_229 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 811900 10880 ) N ;
+    - project_macro_230 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 860200 10880 ) N ;
+    - project_macro_231 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 869860 13600 ) FS ;
+    - project_macro_232 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 29440 10880 ) N ;
+    - project_macro_233 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 87400 10880 ) N ;
+    - project_macro_234 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 145360 10880 ) N ;
+    - project_macro_235 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 203320 10880 ) N ;
+    - project_macro_236 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 261280 10880 ) N ;
+    - project_macro_237 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 319240 10880 ) N ;
+    - project_macro_238 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 377200 10880 ) N ;
+    - project_macro_239 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 435160 10880 ) N ;
+    - project_macro_240 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 493120 10880 ) N ;
+    - project_macro_241 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 551080 10880 ) N ;
+    - project_macro_242 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 609040 10880 ) N ;
+    - project_macro_243 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 667000 10880 ) N ;
+    - project_macro_244 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 724960 10880 ) N ;
+    - project_macro_245 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 782920 10880 ) N ;
+    - project_macro_246 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 840880 10880 ) N ;
+    - project_macro_247 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 87040 ) FN ;
+    - project_macro_248 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 106080 ) S ;
+    - project_macro_249 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 201280 ) FN ;
+    - project_macro_250 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 220320 ) S ;
+    - project_macro_251 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 315520 ) FN ;
+    - project_macro_252 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 334560 ) S ;
+    - project_macro_253 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 429760 ) FN ;
+    - project_macro_254 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 448800 ) S ;
+    - project_macro_255 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 544000 ) FN ;
+    - project_macro_256 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 563040 ) S ;
+    - project_macro_257 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 658240 ) FN ;
+    - project_macro_258 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 677280 ) S ;
+    - project_macro_259 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 772480 ) FN ;
+    - project_macro_260 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 791520 ) S ;
+    - project_macro_261 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 886720 ) FN ;
+    - project_macro_262 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 905760 ) S ;
+    - project_macro_263 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 1000960 ) FN ;
+    - project_macro_264 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 1017280 ) FN ;
+    - project_macro_265 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 48960 ) FN ;
+    - project_macro_266 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 620160 ) FN ;
+    - project_macro_79 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 829600 ) FS ;
+    - project_macro_80 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 871700 943840 ) FS ;
+    - project_macro_81 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 50600 1017280 ) FN ;
+    - project_macro_82 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 111320 1017280 ) FN ;
+    - project_macro_83 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 171580 1017280 ) FN ;
+    - project_macro_84 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 232760 1017280 ) FN ;
+    - project_macro_85 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 293480 1017280 ) FN ;
+    - project_macro_86 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 354200 1017280 ) FN ;
+    - project_macro_87 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 414920 1017280 ) FN ;
+    - project_macro_88 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 475640 1017280 ) FN ;
+    - project_macro_89 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 536360 1017280 ) FN ;
+    - project_macro_90 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 596620 1017280 ) FN ;
+    - project_macro_91 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 657800 1017280 ) FN ;
+    - project_macro_92 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 718520 1017280 ) FN ;
+    - project_macro_93 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 779240 1017280 ) FN ;
+    - project_macro_94 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 839960 1017280 ) FN ;
+    - project_macro_95 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 29900 1017280 ) FN ;
+    - project_macro_96 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 91080 1017280 ) FN ;
+    - project_macro_97 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 151800 1017280 ) FN ;
+    - project_macro_98 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 212520 1017280 ) FN ;
+    - project_macro_99 sky130_fd_sc_hd__conb_1 + SOURCE TIMING + PLACED ( 273240 1017280 ) FN ;
+    - wire36 sky130_fd_sc_hd__buf_4 + SOURCE TIMING + PLACED ( 205160 873120 ) FS ;
+    - wire37 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 870320 486880 ) FS ;
+    - wire38 sky130_fd_sc_hd__buf_6 + SOURCE TIMING + PLACED ( 400660 214880 ) FS ;
+    - wire39 sky130_fd_sc_hd__buf_6 + SOURCE TIMING + PLACED ( 516580 405280 ) FS ;
+    - wire45 sky130_fd_sc_hd__buf_4 + SOURCE TIMING + PLACED ( 781540 59840 ) FN ;
+    - wire48 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 691840 65280 ) N ;
+    - wire58 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 433320 1003680 ) FS ;
+    - wire60 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 398360 666400 ) FS ;
+    - wire61 sky130_fd_sc_hd__buf_4 + SOURCE TIMING + PLACED ( 522100 587520 ) N ;
+    - wire65 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 443900 24480 ) S ;
+    - wire67 sky130_fd_sc_hd__buf_4 + SOURCE TIMING + PLACED ( 791660 65280 ) FN ;
+    - wire70 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 817420 146880 ) FN ;
+    - wire75 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 649980 1003680 ) S ;
+    - wire77 sky130_fd_sc_hd__clkbuf_4 + SOURCE TIMING + PLACED ( 611340 1003680 ) S ;
 END COMPONENTS
 PINS 233 ;
-    - clk + NET clk + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_dm[0] + NET gpio_bot_dm[0] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[10] + NET gpio_bot_dm[10] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[11] + NET gpio_bot_dm[11] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[12] + NET gpio_bot_dm[12] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[13] + NET gpio_bot_dm[13] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[14] + NET gpio_bot_dm[14] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[15] + NET gpio_bot_dm[15] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[16] + NET gpio_bot_dm[16] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[17] + NET gpio_bot_dm[17] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[18] + NET gpio_bot_dm[18] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[19] + NET gpio_bot_dm[19] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[1] + NET gpio_bot_dm[1] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[20] + NET gpio_bot_dm[20] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[21] + NET gpio_bot_dm[21] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[22] + NET gpio_bot_dm[22] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[23] + NET gpio_bot_dm[23] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[24] + NET gpio_bot_dm[24] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[25] + NET gpio_bot_dm[25] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[26] + NET gpio_bot_dm[26] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[27] + NET gpio_bot_dm[27] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[28] + NET gpio_bot_dm[28] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[29] + NET gpio_bot_dm[29] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[2] + NET gpio_bot_dm[2] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[30] + NET gpio_bot_dm[30] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[31] + NET gpio_bot_dm[31] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[32] + NET gpio_bot_dm[32] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[33] + NET gpio_bot_dm[33] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[34] + NET gpio_bot_dm[34] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[35] + NET gpio_bot_dm[35] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[36] + NET gpio_bot_dm[36] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[37] + NET gpio_bot_dm[37] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[38] + NET gpio_bot_dm[38] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[39] + NET gpio_bot_dm[39] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[3] + NET gpio_bot_dm[3] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[40] + NET gpio_bot_dm[40] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[41] + NET gpio_bot_dm[41] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[42] + NET gpio_bot_dm[42] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[43] + NET gpio_bot_dm[43] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[44] + NET gpio_bot_dm[44] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[4] + NET gpio_bot_dm[4] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[5] + NET gpio_bot_dm[5] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[6] + NET gpio_bot_dm[6] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[7] + NET gpio_bot_dm[7] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[8] + NET gpio_bot_dm[8] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_dm[9] + NET gpio_bot_dm[9] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_in[0] + NET gpio_bot_in[0] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[10] + NET gpio_bot_in[10] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[11] + NET gpio_bot_in[11] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[12] + NET gpio_bot_in[12] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[13] + NET gpio_bot_in[13] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[14] + NET gpio_bot_in[14] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[1] + NET gpio_bot_in[1] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[2] + NET gpio_bot_in[2] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[3] + NET gpio_bot_in[3] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[4] + NET gpio_bot_in[4] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[5] + NET gpio_bot_in[5] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[6] + NET gpio_bot_in[6] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[7] + NET gpio_bot_in[7] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[8] + NET gpio_bot_in[8] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_in[9] + NET gpio_bot_in[9] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_bot_oeb[0] + NET gpio_bot_oeb[0] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[10] + NET gpio_bot_oeb[10] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[11] + NET gpio_bot_oeb[11] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[12] + NET gpio_bot_oeb[12] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[13] + NET gpio_bot_oeb[13] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[14] + NET gpio_bot_oeb[14] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[1] + NET gpio_bot_oeb[1] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[2] + NET gpio_bot_oeb[2] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[3] + NET gpio_bot_oeb[3] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[4] + NET gpio_bot_oeb[4] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[5] + NET gpio_bot_oeb[5] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[6] + NET gpio_bot_oeb[6] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[7] + NET gpio_bot_oeb[7] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[8] + NET gpio_bot_oeb[8] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_oeb[9] + NET gpio_bot_oeb[9] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[0] + NET gpio_bot_out[0] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[10] + NET gpio_bot_out[10] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[11] + NET gpio_bot_out[11] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[12] + NET gpio_bot_out[12] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[13] + NET gpio_bot_out[13] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[14] + NET gpio_bot_out[14] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[1] + NET gpio_bot_out[1] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[2] + NET gpio_bot_out[2] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[3] + NET gpio_bot_out[3] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[4] + NET gpio_bot_out[4] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[5] + NET gpio_bot_out[5] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[6] + NET gpio_bot_out[6] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[7] + NET gpio_bot_out[7] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[8] + NET gpio_bot_out[8] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_bot_out[9] + NET gpio_bot_out[9] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[0] + NET gpio_rt_dm[0] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[10] + NET gpio_rt_dm[10] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[11] + NET gpio_rt_dm[11] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[12] + NET gpio_rt_dm[12] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[13] + NET gpio_rt_dm[13] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[14] + NET gpio_rt_dm[14] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[15] + NET gpio_rt_dm[15] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[16] + NET gpio_rt_dm[16] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[17] + NET gpio_rt_dm[17] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[18] + NET gpio_rt_dm[18] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[19] + NET gpio_rt_dm[19] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[1] + NET gpio_rt_dm[1] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[20] + NET gpio_rt_dm[20] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[21] + NET gpio_rt_dm[21] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[22] + NET gpio_rt_dm[22] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[23] + NET gpio_rt_dm[23] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[24] + NET gpio_rt_dm[24] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[25] + NET gpio_rt_dm[25] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[26] + NET gpio_rt_dm[26] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[2] + NET gpio_rt_dm[2] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[3] + NET gpio_rt_dm[3] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[4] + NET gpio_rt_dm[4] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[5] + NET gpio_rt_dm[5] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[6] + NET gpio_rt_dm[6] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[7] + NET gpio_rt_dm[7] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[8] + NET gpio_rt_dm[8] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_dm[9] + NET gpio_rt_dm[9] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_in[0] + NET gpio_rt_in[0] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_rt_in[1] + NET gpio_rt_in[1] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_rt_in[2] + NET gpio_rt_in[2] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_rt_in[3] + NET gpio_rt_in[3] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_rt_in[4] + NET gpio_rt_in[4] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_rt_in[5] + NET gpio_rt_in[5] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_rt_in[6] + NET gpio_rt_in[6] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_rt_in[7] + NET gpio_rt_in[7] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_rt_in[8] + NET gpio_rt_in[8] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_rt_oeb[0] + NET gpio_rt_oeb[0] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_oeb[1] + NET gpio_rt_oeb[1] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_oeb[2] + NET gpio_rt_oeb[2] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_oeb[3] + NET gpio_rt_oeb[3] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_oeb[4] + NET gpio_rt_oeb[4] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_oeb[5] + NET gpio_rt_oeb[5] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_oeb[6] + NET gpio_rt_oeb[6] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_oeb[7] + NET gpio_rt_oeb[7] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_oeb[8] + NET gpio_rt_oeb[8] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_out[0] + NET gpio_rt_out[0] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_out[1] + NET gpio_rt_out[1] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_out[2] + NET gpio_rt_out[2] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_out[3] + NET gpio_rt_out[3] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_out[4] + NET gpio_rt_out[4] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_out[5] + NET gpio_rt_out[5] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_out[6] + NET gpio_rt_out[6] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_out[7] + NET gpio_rt_out[7] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_rt_out[8] + NET gpio_rt_out[8] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[0] + NET gpio_top_dm[0] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[10] + NET gpio_top_dm[10] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[11] + NET gpio_top_dm[11] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[12] + NET gpio_top_dm[12] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[13] + NET gpio_top_dm[13] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[14] + NET gpio_top_dm[14] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[15] + NET gpio_top_dm[15] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[16] + NET gpio_top_dm[16] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[17] + NET gpio_top_dm[17] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[18] + NET gpio_top_dm[18] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[19] + NET gpio_top_dm[19] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[1] + NET gpio_top_dm[1] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[20] + NET gpio_top_dm[20] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[21] + NET gpio_top_dm[21] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[22] + NET gpio_top_dm[22] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[23] + NET gpio_top_dm[23] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[24] + NET gpio_top_dm[24] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[25] + NET gpio_top_dm[25] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[26] + NET gpio_top_dm[26] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[27] + NET gpio_top_dm[27] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[28] + NET gpio_top_dm[28] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[29] + NET gpio_top_dm[29] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[2] + NET gpio_top_dm[2] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[30] + NET gpio_top_dm[30] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[31] + NET gpio_top_dm[31] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[32] + NET gpio_top_dm[32] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[33] + NET gpio_top_dm[33] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[34] + NET gpio_top_dm[34] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[35] + NET gpio_top_dm[35] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[36] + NET gpio_top_dm[36] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[37] + NET gpio_top_dm[37] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[38] + NET gpio_top_dm[38] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[39] + NET gpio_top_dm[39] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[3] + NET gpio_top_dm[3] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[40] + NET gpio_top_dm[40] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[41] + NET gpio_top_dm[41] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[4] + NET gpio_top_dm[4] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[5] + NET gpio_top_dm[5] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[6] + NET gpio_top_dm[6] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[7] + NET gpio_top_dm[7] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[8] + NET gpio_top_dm[8] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_dm[9] + NET gpio_top_dm[9] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_in[0] + NET gpio_top_in[0] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[10] + NET gpio_top_in[10] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[11] + NET gpio_top_in[11] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[12] + NET gpio_top_in[12] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[13] + NET gpio_top_in[13] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[1] + NET gpio_top_in[1] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[2] + NET gpio_top_in[2] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[3] + NET gpio_top_in[3] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[4] + NET gpio_top_in[4] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[5] + NET gpio_top_in[5] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[6] + NET gpio_top_in[6] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[7] + NET gpio_top_in[7] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[8] + NET gpio_top_in[8] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_in[9] + NET gpio_top_in[9] + DIRECTION INPUT + USE SIGNAL ;
-    - gpio_top_oeb[0] + NET gpio_top_oeb[0] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[10] + NET gpio_top_oeb[10] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[11] + NET gpio_top_oeb[11] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[12] + NET gpio_top_oeb[12] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[13] + NET gpio_top_oeb[13] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[1] + NET gpio_top_oeb[1] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[2] + NET gpio_top_oeb[2] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[3] + NET gpio_top_oeb[3] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[4] + NET gpio_top_oeb[4] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[5] + NET gpio_top_oeb[5] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[6] + NET gpio_top_oeb[6] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[7] + NET gpio_top_oeb[7] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[8] + NET gpio_top_oeb[8] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_oeb[9] + NET gpio_top_oeb[9] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[0] + NET gpio_top_out[0] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[10] + NET gpio_top_out[10] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[11] + NET gpio_top_out[11] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[12] + NET gpio_top_out[12] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[13] + NET gpio_top_out[13] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[1] + NET gpio_top_out[1] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[2] + NET gpio_top_out[2] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[3] + NET gpio_top_out[3] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[4] + NET gpio_top_out[4] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[5] + NET gpio_top_out[5] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[6] + NET gpio_top_out[6] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[7] + NET gpio_top_out[7] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[8] + NET gpio_top_out[8] + DIRECTION OUTPUT + USE SIGNAL ;
-    - gpio_top_out[9] + NET gpio_top_out[9] + DIRECTION OUTPUT + USE SIGNAL ;
-    - por_n + NET por_n + DIRECTION INPUT + USE SIGNAL ;
-    - reset_n + NET reset_n + DIRECTION INPUT + USE SIGNAL ;
+    - clk + NET clk + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 300 171700 ) N ;
+    - gpio_bot_dm[0] + NET net109 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 38870 140 ) N ;
+    - gpio_bot_dm[10] + NET net208 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 222410 140 ) N ;
+    - gpio_bot_dm[11] + NET net209 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 232070 140 ) N ;
+    - gpio_bot_dm[12] + NET net113 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 270710 140 ) N ;
+    - gpio_bot_dm[13] + NET net210 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 280370 140 ) N ;
+    - gpio_bot_dm[14] + NET net211 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 290030 140 ) N ;
+    - gpio_bot_dm[15] + NET net114 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 328670 140 ) N ;
+    - gpio_bot_dm[16] + NET net212 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 338330 140 ) N ;
+    - gpio_bot_dm[17] + NET net213 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 347990 140 ) N ;
+    - gpio_bot_dm[18] + NET net115 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 386630 140 ) N ;
+    - gpio_bot_dm[19] + NET net214 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 396290 140 ) N ;
+    - gpio_bot_dm[1] + NET net202 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 48530 140 ) N ;
+    - gpio_bot_dm[20] + NET net215 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 405950 140 ) N ;
+    - gpio_bot_dm[21] + NET net116 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 444590 140 ) N ;
+    - gpio_bot_dm[22] + NET net216 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 454250 140 ) N ;
+    - gpio_bot_dm[23] + NET net217 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 463910 140 ) N ;
+    - gpio_bot_dm[24] + NET net117 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 502550 140 ) N ;
+    - gpio_bot_dm[25] + NET net218 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 512210 140 ) N ;
+    - gpio_bot_dm[26] + NET net219 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 521870 140 ) N ;
+    - gpio_bot_dm[27] + NET net118 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 560510 140 ) N ;
+    - gpio_bot_dm[28] + NET net220 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 570170 140 ) N ;
+    - gpio_bot_dm[29] + NET net221 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 579830 140 ) N ;
+    - gpio_bot_dm[2] + NET net203 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 58190 140 ) N ;
+    - gpio_bot_dm[30] + NET net119 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 618470 140 ) N ;
+    - gpio_bot_dm[31] + NET net222 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 628130 140 ) N ;
+    - gpio_bot_dm[32] + NET net223 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 637790 140 ) N ;
+    - gpio_bot_dm[33] + NET net120 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 676430 140 ) N ;
+    - gpio_bot_dm[34] + NET net224 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 686090 140 ) N ;
+    - gpio_bot_dm[35] + NET net225 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 695750 140 ) N ;
+    - gpio_bot_dm[36] + NET net121 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 734390 140 ) N ;
+    - gpio_bot_dm[37] + NET net226 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 744050 140 ) N ;
+    - gpio_bot_dm[38] + NET net227 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 753710 140 ) N ;
+    - gpio_bot_dm[39] + NET net122 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 792350 140 ) N ;
+    - gpio_bot_dm[3] + NET net110 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 96830 140 ) N ;
+    - gpio_bot_dm[40] + NET net228 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 802010 140 ) N ;
+    - gpio_bot_dm[41] + NET net229 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 811670 140 ) N ;
+    - gpio_bot_dm[42] + NET net123 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 850310 140 ) N ;
+    - gpio_bot_dm[43] + NET net230 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 859970 140 ) N ;
+    - gpio_bot_dm[44] + NET net231 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 869630 140 ) N ;
+    - gpio_bot_dm[4] + NET net204 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 106490 140 ) N ;
+    - gpio_bot_dm[5] + NET net205 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 116150 140 ) N ;
+    - gpio_bot_dm[6] + NET net111 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 154790 140 ) N ;
+    - gpio_bot_dm[7] + NET net206 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 164450 140 ) N ;
+    - gpio_bot_dm[8] + NET net207 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 174110 140 ) N ;
+    - gpio_bot_dm[9] + NET net112 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 212750 140 ) N ;
+    - gpio_bot_in[0] + NET gpio_bot_in[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 9890 140 ) N ;
+    - gpio_bot_in[10] + NET gpio_bot_in[10] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 589490 140 ) N ;
+    - gpio_bot_in[11] + NET gpio_bot_in[11] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 647450 140 ) N ;
+    - gpio_bot_in[12] + NET gpio_bot_in[12] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 705410 140 ) N ;
+    - gpio_bot_in[13] + NET gpio_bot_in[13] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 763370 140 ) N ;
+    - gpio_bot_in[14] + NET gpio_bot_in[14] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 821330 140 ) N ;
+    - gpio_bot_in[1] + NET gpio_bot_in[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 67850 140 ) N ;
+    - gpio_bot_in[2] + NET gpio_bot_in[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 125810 140 ) N ;
+    - gpio_bot_in[3] + NET gpio_bot_in[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 183770 140 ) N ;
+    - gpio_bot_in[4] + NET gpio_bot_in[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 241730 140 ) N ;
+    - gpio_bot_in[5] + NET gpio_bot_in[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 299690 140 ) N ;
+    - gpio_bot_in[6] + NET gpio_bot_in[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 357650 140 ) N ;
+    - gpio_bot_in[7] + NET gpio_bot_in[7] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 415610 140 ) N ;
+    - gpio_bot_in[8] + NET gpio_bot_in[8] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 473570 140 ) N ;
+    - gpio_bot_in[9] + NET gpio_bot_in[9] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 531530 140 ) N ;
+    - gpio_bot_oeb[0] + NET net232 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 29210 140 ) N ;
+    - gpio_bot_oeb[10] + NET net242 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 608810 140 ) N ;
+    - gpio_bot_oeb[11] + NET net243 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 666770 140 ) N ;
+    - gpio_bot_oeb[12] + NET net244 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 724730 140 ) N ;
+    - gpio_bot_oeb[13] + NET net245 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 782690 140 ) N ;
+    - gpio_bot_oeb[14] + NET net246 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 840650 140 ) N ;
+    - gpio_bot_oeb[1] + NET net233 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 87170 140 ) N ;
+    - gpio_bot_oeb[2] + NET net234 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 145130 140 ) N ;
+    - gpio_bot_oeb[3] + NET net235 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 203090 140 ) N ;
+    - gpio_bot_oeb[4] + NET net236 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 261050 140 ) N ;
+    - gpio_bot_oeb[5] + NET net237 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 319010 140 ) N ;
+    - gpio_bot_oeb[6] + NET net238 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 376970 140 ) N ;
+    - gpio_bot_oeb[7] + NET net239 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 434930 140 ) N ;
+    - gpio_bot_oeb[8] + NET net240 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 492890 140 ) N ;
+    - gpio_bot_oeb[9] + NET net241 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 550850 140 ) N ;
+    - gpio_bot_out[0] + NET net124 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 19550 140 ) N ;
+    - gpio_bot_out[10] + NET net134 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 599150 140 ) N ;
+    - gpio_bot_out[11] + NET net135 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 657110 140 ) N ;
+    - gpio_bot_out[12] + NET net136 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 715070 140 ) N ;
+    - gpio_bot_out[13] + NET net137 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 773030 140 ) N ;
+    - gpio_bot_out[14] + NET net138 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 830990 140 ) N ;
+    - gpio_bot_out[1] + NET net125 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 77510 140 ) N ;
+    - gpio_bot_out[2] + NET net126 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 135470 140 ) N ;
+    - gpio_bot_out[3] + NET net127 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 193430 140 ) N ;
+    - gpio_bot_out[4] + NET net128 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 251390 140 ) N ;
+    - gpio_bot_out[5] + NET net129 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 309350 140 ) N ;
+    - gpio_bot_out[6] + NET net130 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 367310 140 ) N ;
+    - gpio_bot_out[7] + NET net131 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 425270 140 ) N ;
+    - gpio_bot_out[8] + NET net132 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 483230 140 ) N ;
+    - gpio_bot_out[9] + NET net133 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 541190 140 ) N ;
+    - gpio_rt_dm[0] + NET net139 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 68340 ) N ;
+    - gpio_rt_dm[10] + NET net253 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 430100 ) N ;
+    - gpio_rt_dm[11] + NET net254 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 449140 ) N ;
+    - gpio_rt_dm[12] + NET net143 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 525300 ) N ;
+    - gpio_rt_dm[13] + NET net255 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 544340 ) N ;
+    - gpio_rt_dm[14] + NET net256 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 563380 ) N ;
+    - gpio_rt_dm[15] + NET net144 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 639540 ) N ;
+    - gpio_rt_dm[16] + NET net257 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 658580 ) N ;
+    - gpio_rt_dm[17] + NET net258 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 677620 ) N ;
+    - gpio_rt_dm[18] + NET net145 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 753780 ) N ;
+    - gpio_rt_dm[19] + NET net259 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 772820 ) N ;
+    - gpio_rt_dm[1] + NET net247 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 87380 ) N ;
+    - gpio_rt_dm[20] + NET net260 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 791860 ) N ;
+    - gpio_rt_dm[21] + NET net146 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 868020 ) N ;
+    - gpio_rt_dm[22] + NET net261 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 887060 ) N ;
+    - gpio_rt_dm[23] + NET net262 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 906100 ) N ;
+    - gpio_rt_dm[24] + NET net147 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 982260 ) N ;
+    - gpio_rt_dm[25] + NET net263 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 1001300 ) N ;
+    - gpio_rt_dm[26] + NET net264 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 1020340 ) N ;
+    - gpio_rt_dm[2] + NET net248 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 106420 ) N ;
+    - gpio_rt_dm[3] + NET net140 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 182580 ) N ;
+    - gpio_rt_dm[4] + NET net249 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 201620 ) N ;
+    - gpio_rt_dm[5] + NET net250 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 220660 ) N ;
+    - gpio_rt_dm[6] + NET net141 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 296820 ) N ;
+    - gpio_rt_dm[7] + NET net251 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 315860 ) N ;
+    - gpio_rt_dm[8] + NET net252 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 334900 ) N ;
+    - gpio_rt_dm[9] + NET net142 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 411060 ) N ;
+    - gpio_rt_in[0] + NET gpio_rt_in[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 11220 ) N ;
+    - gpio_rt_in[1] + NET gpio_rt_in[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 125460 ) N ;
+    - gpio_rt_in[2] + NET gpio_rt_in[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 239700 ) N ;
+    - gpio_rt_in[3] + NET gpio_rt_in[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 353940 ) N ;
+    - gpio_rt_in[4] + NET gpio_rt_in[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 468180 ) N ;
+    - gpio_rt_in[5] + NET gpio_rt_in[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 582420 ) N ;
+    - gpio_rt_in[6] + NET gpio_rt_in[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 696660 ) N ;
+    - gpio_rt_in[7] + NET gpio_rt_in[7] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 810900 ) N ;
+    - gpio_rt_in[8] + NET gpio_rt_in[8] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 925140 ) N ;
+    - gpio_rt_oeb[0] + NET net265 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 49300 ) N ;
+    - gpio_rt_oeb[1] + NET net148 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 163540 ) N ;
+    - gpio_rt_oeb[2] + NET net149 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 277780 ) N ;
+    - gpio_rt_oeb[3] + NET net150 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 392020 ) N ;
+    - gpio_rt_oeb[4] + NET net151 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 506260 ) N ;
+    - gpio_rt_oeb[5] + NET net266 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 620500 ) N ;
+    - gpio_rt_oeb[6] + NET net152 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 734740 ) N ;
+    - gpio_rt_oeb[7] + NET net153 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 848980 ) N ;
+    - gpio_rt_oeb[8] + NET net154 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 963220 ) N ;
+    - gpio_rt_out[0] + NET net155 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 30260 ) N ;
+    - gpio_rt_out[1] + NET net156 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 144500 ) N ;
+    - gpio_rt_out[2] + NET net157 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 258740 ) N ;
+    - gpio_rt_out[3] + NET net158 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 372980 ) N ;
+    - gpio_rt_out[4] + NET gpio_rt_out[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 487220 ) N ;
+    - gpio_rt_out[5] + NET net159 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 601460 ) N ;
+    - gpio_rt_out[6] + NET net + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 715700 ) N ;
+    - gpio_rt_out[7] + NET net79 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 829940 ) N ;
+    - gpio_rt_out[8] + NET net80 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 879700 944180 ) N ;
+    - gpio_top_dm[0] + NET net81 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 50370 1031520 ) N ;
+    - gpio_top_dm[10] + NET net166 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 242650 1031520 ) N ;
+    - gpio_top_dm[11] + NET net167 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 252770 1031520 ) N ;
+    - gpio_top_dm[12] + NET net85 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 293250 1031520 ) N ;
+    - gpio_top_dm[13] + NET net168 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 303370 1031520 ) N ;
+    - gpio_top_dm[14] + NET net169 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 313490 1031520 ) N ;
+    - gpio_top_dm[15] + NET net86 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 353970 1031520 ) N ;
+    - gpio_top_dm[16] + NET net170 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 364090 1031520 ) N ;
+    - gpio_top_dm[17] + NET net171 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 374210 1031520 ) N ;
+    - gpio_top_dm[18] + NET net87 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 414690 1031520 ) N ;
+    - gpio_top_dm[19] + NET net172 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 424810 1031520 ) N ;
+    - gpio_top_dm[1] + NET net160 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 60490 1031520 ) N ;
+    - gpio_top_dm[20] + NET net173 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 434930 1031520 ) N ;
+    - gpio_top_dm[21] + NET net88 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 475410 1031520 ) N ;
+    - gpio_top_dm[22] + NET net174 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 485530 1031520 ) N ;
+    - gpio_top_dm[23] + NET net175 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 495650 1031520 ) N ;
+    - gpio_top_dm[24] + NET net89 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 536130 1031520 ) N ;
+    - gpio_top_dm[25] + NET net176 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 546250 1031520 ) N ;
+    - gpio_top_dm[26] + NET net177 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 556370 1031520 ) N ;
+    - gpio_top_dm[27] + NET net90 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 596850 1031520 ) N ;
+    - gpio_top_dm[28] + NET net178 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 606970 1031520 ) N ;
+    - gpio_top_dm[29] + NET net179 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 617090 1031520 ) N ;
+    - gpio_top_dm[2] + NET net161 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 70610 1031520 ) N ;
+    - gpio_top_dm[30] + NET net91 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 657570 1031520 ) N ;
+    - gpio_top_dm[31] + NET net180 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 667690 1031520 ) N ;
+    - gpio_top_dm[32] + NET net181 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 677810 1031520 ) N ;
+    - gpio_top_dm[33] + NET net92 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 718290 1031520 ) N ;
+    - gpio_top_dm[34] + NET net182 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 728410 1031520 ) N ;
+    - gpio_top_dm[35] + NET net183 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 738530 1031520 ) N ;
+    - gpio_top_dm[36] + NET net93 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 779010 1031520 ) N ;
+    - gpio_top_dm[37] + NET net184 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 789130 1031520 ) N ;
+    - gpio_top_dm[38] + NET net185 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 799250 1031520 ) N ;
+    - gpio_top_dm[39] + NET net94 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 839730 1031520 ) N ;
+    - gpio_top_dm[3] + NET net82 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 111090 1031520 ) N ;
+    - gpio_top_dm[40] + NET net186 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 849850 1031520 ) N ;
+    - gpio_top_dm[41] + NET net187 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 859970 1031520 ) N ;
+    - gpio_top_dm[4] + NET net162 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 121210 1031520 ) N ;
+    - gpio_top_dm[5] + NET net163 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 131330 1031520 ) N ;
+    - gpio_top_dm[6] + NET net83 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 171810 1031520 ) N ;
+    - gpio_top_dm[7] + NET net164 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 181930 1031520 ) N ;
+    - gpio_top_dm[8] + NET net165 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 192050 1031520 ) N ;
+    - gpio_top_dm[9] + NET net84 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 232530 1031520 ) N ;
+    - gpio_top_in[0] + NET gpio_top_in[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 20010 1031520 ) N ;
+    - gpio_top_in[10] + NET gpio_top_in[10] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 627210 1031520 ) N ;
+    - gpio_top_in[11] + NET gpio_top_in[11] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 687930 1031520 ) N ;
+    - gpio_top_in[12] + NET gpio_top_in[12] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 748650 1031520 ) N ;
+    - gpio_top_in[13] + NET gpio_top_in[13] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 809370 1031520 ) N ;
+    - gpio_top_in[1] + NET gpio_top_in[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 80730 1031520 ) N ;
+    - gpio_top_in[2] + NET gpio_top_in[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 141450 1031520 ) N ;
+    - gpio_top_in[3] + NET gpio_top_in[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 202170 1031520 ) N ;
+    - gpio_top_in[4] + NET gpio_top_in[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 262890 1031520 ) N ;
+    - gpio_top_in[5] + NET gpio_top_in[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 323610 1031520 ) N ;
+    - gpio_top_in[6] + NET gpio_top_in[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 384330 1031520 ) N ;
+    - gpio_top_in[7] + NET gpio_top_in[7] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 445050 1031520 ) N ;
+    - gpio_top_in[8] + NET gpio_top_in[8] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 505770 1031520 ) N ;
+    - gpio_top_in[9] + NET gpio_top_in[9] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 566490 1031520 ) N ;
+    - gpio_top_oeb[0] + NET net188 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 40250 1031520 ) N ;
+    - gpio_top_oeb[10] + NET net198 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 647450 1031520 ) N ;
+    - gpio_top_oeb[11] + NET net199 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 708170 1031520 ) N ;
+    - gpio_top_oeb[12] + NET net200 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 768890 1031520 ) N ;
+    - gpio_top_oeb[13] + NET net201 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 829610 1031520 ) N ;
+    - gpio_top_oeb[1] + NET net189 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 100970 1031520 ) N ;
+    - gpio_top_oeb[2] + NET net190 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 161690 1031520 ) N ;
+    - gpio_top_oeb[3] + NET net191 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 222410 1031520 ) N ;
+    - gpio_top_oeb[4] + NET net192 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 283130 1031520 ) N ;
+    - gpio_top_oeb[5] + NET net193 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 343850 1031520 ) N ;
+    - gpio_top_oeb[6] + NET net194 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 404570 1031520 ) N ;
+    - gpio_top_oeb[7] + NET net195 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 465290 1031520 ) N ;
+    - gpio_top_oeb[8] + NET net196 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 526010 1031520 ) N ;
+    - gpio_top_oeb[9] + NET net197 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 586730 1031520 ) N ;
+    - gpio_top_out[0] + NET net95 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 30130 1031520 ) N ;
+    - gpio_top_out[10] + NET net105 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 637330 1031520 ) N ;
+    - gpio_top_out[11] + NET net106 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 698050 1031520 ) N ;
+    - gpio_top_out[12] + NET net107 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 758770 1031520 ) N ;
+    - gpio_top_out[13] + NET net108 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 819490 1031520 ) N ;
+    - gpio_top_out[1] + NET net96 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 90850 1031520 ) N ;
+    - gpio_top_out[2] + NET net97 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 151570 1031520 ) N ;
+    - gpio_top_out[3] + NET net98 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 212290 1031520 ) N ;
+    - gpio_top_out[4] + NET net99 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 273010 1031520 ) N ;
+    - gpio_top_out[5] + NET net100 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 333730 1031520 ) N ;
+    - gpio_top_out[6] + NET net101 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 394450 1031520 ) N ;
+    - gpio_top_out[7] + NET net102 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 455170 1031520 ) N ;
+    - gpio_top_out[8] + NET net103 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 515890 1031520 ) N ;
+    - gpio_top_out[9] + NET net104 + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -140 -140 ) ( 140 140 )
+        + PLACED ( 576610 1031520 ) N ;
+    - por_n + NET por_n + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 300 859860 ) N ;
+    - reset_n + NET reset_n + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -300 -300 ) ( 300 300 )
+        + PLACED ( 300 515780 ) N ;
     - vccd1 + NET vccd1 + SPECIAL + DIRECTION INOUT + USE POWER
       + PORT
         + LAYER met4 ( -800 -504800 ) ( 800 504800 )
@@ -25620,237 +26614,547 @@ SPECIALNETS 2 ;
       NEW met2 0 + SHAPE STRIPE ( 25140 10880 ) via3_4_1600_480_1_4_400_400
       NEW met1 0 + SHAPE STRIPE ( 25140 10880 ) via2_3_1600_480_1_5_320_320 ;
 END SPECIALNETS
-NETS 231 ;
-    - clk ( PIN clk ) + USE SIGNAL ;
-    - gpio_bot_dm[0] ( PIN gpio_bot_dm[0] ) ( _186_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[10] ( PIN gpio_bot_dm[10] ) ( _000_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[11] ( PIN gpio_bot_dm[11] ) ( _001_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[12] ( PIN gpio_bot_dm[12] ) ( _114_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[13] ( PIN gpio_bot_dm[13] ) ( _002_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[14] ( PIN gpio_bot_dm[14] ) ( _003_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[15] ( PIN gpio_bot_dm[15] ) ( _115_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[16] ( PIN gpio_bot_dm[16] ) ( _004_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[17] ( PIN gpio_bot_dm[17] ) ( _005_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[18] ( PIN gpio_bot_dm[18] ) ( _116_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[19] ( PIN gpio_bot_dm[19] ) ( _006_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[1] ( PIN gpio_bot_dm[1] ) ( _108_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[20] ( PIN gpio_bot_dm[20] ) ( _007_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[21] ( PIN gpio_bot_dm[21] ) ( _117_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[22] ( PIN gpio_bot_dm[22] ) ( _008_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[23] ( PIN gpio_bot_dm[23] ) ( _009_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[24] ( PIN gpio_bot_dm[24] ) ( _118_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[25] ( PIN gpio_bot_dm[25] ) ( _010_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[26] ( PIN gpio_bot_dm[26] ) ( _011_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[27] ( PIN gpio_bot_dm[27] ) ( _119_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[28] ( PIN gpio_bot_dm[28] ) ( _012_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[29] ( PIN gpio_bot_dm[29] ) ( _013_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[2] ( PIN gpio_bot_dm[2] ) ( _109_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[30] ( PIN gpio_bot_dm[30] ) ( _120_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[31] ( PIN gpio_bot_dm[31] ) ( _014_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[32] ( PIN gpio_bot_dm[32] ) ( _015_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[33] ( PIN gpio_bot_dm[33] ) ( _121_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[34] ( PIN gpio_bot_dm[34] ) ( _016_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[35] ( PIN gpio_bot_dm[35] ) ( _017_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[36] ( PIN gpio_bot_dm[36] ) ( _122_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[37] ( PIN gpio_bot_dm[37] ) ( _018_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[38] ( PIN gpio_bot_dm[38] ) ( _019_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[39] ( PIN gpio_bot_dm[39] ) ( _123_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[3] ( PIN gpio_bot_dm[3] ) ( _187_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[40] ( PIN gpio_bot_dm[40] ) ( _020_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[41] ( PIN gpio_bot_dm[41] ) ( _021_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[42] ( PIN gpio_bot_dm[42] ) ( _124_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[43] ( PIN gpio_bot_dm[43] ) ( _022_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[44] ( PIN gpio_bot_dm[44] ) ( _023_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[4] ( PIN gpio_bot_dm[4] ) ( _110_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[5] ( PIN gpio_bot_dm[5] ) ( _111_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[6] ( PIN gpio_bot_dm[6] ) ( _188_ LO ) + USE SIGNAL ;
-    - gpio_bot_dm[7] ( PIN gpio_bot_dm[7] ) ( _112_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[8] ( PIN gpio_bot_dm[8] ) ( _113_ HI ) + USE SIGNAL ;
-    - gpio_bot_dm[9] ( PIN gpio_bot_dm[9] ) ( _189_ LO ) + USE SIGNAL ;
-    - gpio_bot_in[0] ( PIN gpio_bot_in[0] ) + USE SIGNAL ;
-    - gpio_bot_in[10] ( PIN gpio_bot_in[10] ) + USE SIGNAL ;
-    - gpio_bot_in[11] ( PIN gpio_bot_in[11] ) + USE SIGNAL ;
-    - gpio_bot_in[12] ( PIN gpio_bot_in[12] ) + USE SIGNAL ;
-    - gpio_bot_in[13] ( PIN gpio_bot_in[13] ) + USE SIGNAL ;
-    - gpio_bot_in[14] ( PIN gpio_bot_in[14] ) + USE SIGNAL ;
-    - gpio_bot_in[1] ( PIN gpio_bot_in[1] ) + USE SIGNAL ;
-    - gpio_bot_in[2] ( PIN gpio_bot_in[2] ) + USE SIGNAL ;
-    - gpio_bot_in[3] ( PIN gpio_bot_in[3] ) + USE SIGNAL ;
-    - gpio_bot_in[4] ( PIN gpio_bot_in[4] ) + USE SIGNAL ;
-    - gpio_bot_in[5] ( PIN gpio_bot_in[5] ) + USE SIGNAL ;
-    - gpio_bot_in[6] ( PIN gpio_bot_in[6] ) + USE SIGNAL ;
-    - gpio_bot_in[7] ( PIN gpio_bot_in[7] ) + USE SIGNAL ;
-    - gpio_bot_in[8] ( PIN gpio_bot_in[8] ) + USE SIGNAL ;
-    - gpio_bot_in[9] ( PIN gpio_bot_in[9] ) + USE SIGNAL ;
-    - gpio_bot_oeb[0] ( PIN gpio_bot_oeb[0] ) ( _024_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[10] ( PIN gpio_bot_oeb[10] ) ( _034_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[11] ( PIN gpio_bot_oeb[11] ) ( _035_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[12] ( PIN gpio_bot_oeb[12] ) ( _036_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[13] ( PIN gpio_bot_oeb[13] ) ( _037_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[14] ( PIN gpio_bot_oeb[14] ) ( _038_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[1] ( PIN gpio_bot_oeb[1] ) ( _025_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[2] ( PIN gpio_bot_oeb[2] ) ( _026_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[3] ( PIN gpio_bot_oeb[3] ) ( _027_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[4] ( PIN gpio_bot_oeb[4] ) ( _028_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[5] ( PIN gpio_bot_oeb[5] ) ( _029_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[6] ( PIN gpio_bot_oeb[6] ) ( _030_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[7] ( PIN gpio_bot_oeb[7] ) ( _031_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[8] ( PIN gpio_bot_oeb[8] ) ( _032_ HI ) + USE SIGNAL ;
-    - gpio_bot_oeb[9] ( PIN gpio_bot_oeb[9] ) ( _033_ HI ) + USE SIGNAL ;
-    - gpio_bot_out[0] ( PIN gpio_bot_out[0] ) ( _125_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[10] ( PIN gpio_bot_out[10] ) ( _135_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[11] ( PIN gpio_bot_out[11] ) ( _136_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[12] ( PIN gpio_bot_out[12] ) ( _137_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[13] ( PIN gpio_bot_out[13] ) ( _138_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[14] ( PIN gpio_bot_out[14] ) ( _139_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[1] ( PIN gpio_bot_out[1] ) ( _126_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[2] ( PIN gpio_bot_out[2] ) ( _127_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[3] ( PIN gpio_bot_out[3] ) ( _128_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[4] ( PIN gpio_bot_out[4] ) ( _129_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[5] ( PIN gpio_bot_out[5] ) ( _130_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[6] ( PIN gpio_bot_out[6] ) ( _131_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[7] ( PIN gpio_bot_out[7] ) ( _132_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[8] ( PIN gpio_bot_out[8] ) ( _133_ LO ) + USE SIGNAL ;
-    - gpio_bot_out[9] ( PIN gpio_bot_out[9] ) ( _134_ LO ) + USE SIGNAL ;
-    - gpio_rt_dm[0] ( PIN gpio_rt_dm[0] ) ( _140_ LO ) + USE SIGNAL ;
-    - gpio_rt_dm[10] ( PIN gpio_rt_dm[10] ) ( _045_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[11] ( PIN gpio_rt_dm[11] ) ( _046_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[12] ( PIN gpio_rt_dm[12] ) ( _144_ LO ) + USE SIGNAL ;
-    - gpio_rt_dm[13] ( PIN gpio_rt_dm[13] ) ( _047_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[14] ( PIN gpio_rt_dm[14] ) ( _048_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[15] ( PIN gpio_rt_dm[15] ) ( _145_ LO ) + USE SIGNAL ;
-    - gpio_rt_dm[16] ( PIN gpio_rt_dm[16] ) ( _049_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[17] ( PIN gpio_rt_dm[17] ) ( _050_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[18] ( PIN gpio_rt_dm[18] ) ( _146_ LO ) + USE SIGNAL ;
-    - gpio_rt_dm[19] ( PIN gpio_rt_dm[19] ) ( _051_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[1] ( PIN gpio_rt_dm[1] ) ( _039_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[20] ( PIN gpio_rt_dm[20] ) ( _052_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[21] ( PIN gpio_rt_dm[21] ) ( _147_ LO ) + USE SIGNAL ;
-    - gpio_rt_dm[22] ( PIN gpio_rt_dm[22] ) ( _053_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[23] ( PIN gpio_rt_dm[23] ) ( _054_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[24] ( PIN gpio_rt_dm[24] ) ( _148_ LO ) + USE SIGNAL ;
-    - gpio_rt_dm[25] ( PIN gpio_rt_dm[25] ) ( _055_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[26] ( PIN gpio_rt_dm[26] ) ( _056_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[2] ( PIN gpio_rt_dm[2] ) ( _040_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[3] ( PIN gpio_rt_dm[3] ) ( _141_ LO ) + USE SIGNAL ;
-    - gpio_rt_dm[4] ( PIN gpio_rt_dm[4] ) ( _041_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[5] ( PIN gpio_rt_dm[5] ) ( _042_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[6] ( PIN gpio_rt_dm[6] ) ( _142_ LO ) + USE SIGNAL ;
-    - gpio_rt_dm[7] ( PIN gpio_rt_dm[7] ) ( _043_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[8] ( PIN gpio_rt_dm[8] ) ( _044_ HI ) + USE SIGNAL ;
-    - gpio_rt_dm[9] ( PIN gpio_rt_dm[9] ) ( _143_ LO ) + USE SIGNAL ;
-    - gpio_rt_in[0] ( PIN gpio_rt_in[0] ) + USE SIGNAL ;
-    - gpio_rt_in[1] ( PIN gpio_rt_in[1] ) + USE SIGNAL ;
-    - gpio_rt_in[2] ( PIN gpio_rt_in[2] ) + USE SIGNAL ;
-    - gpio_rt_in[3] ( PIN gpio_rt_in[3] ) + USE SIGNAL ;
+NETS 532 ;
+    - _000_ ( _349_ D ) ( _285_ X ) + USE SIGNAL ;
+    - _001_ ( _327_ D ) ( _233_ X ) + USE SIGNAL ;
+    - _002_ ( _325_ D ) ( _228_ X ) + USE SIGNAL ;
+    - _003_ ( _323_ D ) ( _223_ X ) + USE SIGNAL ;
+    - _004_ ( _321_ D ) ( _218_ X ) + USE SIGNAL ;
+    - _005_ ( _319_ D ) ( _213_ X ) + USE SIGNAL ;
+    - _006_ ( _317_ D ) ( _208_ X ) + USE SIGNAL ;
+    - _007_ ( _315_ D ) ( _203_ X ) + USE SIGNAL ;
+    - _008_ ( _313_ D ) ( _198_ X ) + USE SIGNAL ;
+    - _009_ ( _311_ D ) ( _193_ X ) + USE SIGNAL ;
+    - _010_ ( _309_ D ) ( _188_ X ) + USE SIGNAL ;
+    - _011_ ( _345_ D ) ( _278_ X ) + USE SIGNAL ;
+    - _012_ ( _307_ D ) ( _183_ X ) + USE SIGNAL ;
+    - _013_ ( _305_ D ) ( _178_ X ) + USE SIGNAL ;
+    - _014_ ( _303_ D ) ( _173_ X ) + USE SIGNAL ;
+    - _015_ ( _301_ D ) ( _168_ X ) + USE SIGNAL ;
+    - _016_ ( _299_ D ) ( _163_ X ) + USE SIGNAL ;
+    - _017_ ( _297_ D ) ( _158_ X ) + USE SIGNAL ;
+    - _018_ ( _295_ D ) ( _153_ X ) + USE SIGNAL ;
+    - _019_ ( _293_ D ) ( _148_ X ) + USE SIGNAL ;
+    - _020_ ( _291_ D ) ( _143_ X ) + USE SIGNAL ;
+    - _021_ ( _289_ D ) ( _138_ X ) + USE SIGNAL ;
+    - _022_ ( _343_ D ) ( _273_ X ) + USE SIGNAL ;
+    - _023_ ( _287_ D ) ( _133_ Y ) + USE SIGNAL ;
+    - _024_ ( _341_ D ) ( _268_ X ) + USE SIGNAL ;
+    - _025_ ( _339_ D ) ( _263_ X ) + USE SIGNAL ;
+    - _026_ ( _337_ D ) ( _258_ X ) + USE SIGNAL ;
+    - _027_ ( _335_ D ) ( _253_ X ) + USE SIGNAL ;
+    - _028_ ( _333_ D ) ( _248_ X ) + USE SIGNAL ;
+    - _029_ ( _331_ D ) ( _243_ X ) + USE SIGNAL ;
+    - _030_ ( _329_ D ) ( _238_ X ) + USE SIGNAL ;
+    - _031_ ( _347_ D ) ( _280_ Y ) + USE SIGNAL ;
+    - _032_ ( _348_ D ) ( _286_ X ) + USE SIGNAL ;
+    - _033_ ( _133_ A2 ) ( _130_ A ) ( _128_ Y ) + USE SIGNAL ;
+    - _034_ ( _130_ B ) ( _129_ X ) + USE SIGNAL ;
+    - _035_ ( _133_ A1 ) ( _131_ Y ) + USE SIGNAL ;
+    - _036_ ( _133_ B1_N ) ( _132_ X ) + USE SIGNAL ;
+    - _037_ ( _136_ A ) ( _134_ Y ) + USE SIGNAL ;
+    - _038_ ( _136_ B ) ( _135_ X ) + USE SIGNAL ;
+    - _039_ ( _138_ B1 ) ( _137_ X ) + USE SIGNAL ;
+    - _040_ ( _141_ A ) ( _139_ Y ) + USE SIGNAL ;
+    - _041_ ( _141_ B ) ( _140_ X ) + USE SIGNAL ;
+    - _042_ ( _143_ B1 ) ( _142_ X ) + USE SIGNAL ;
+    - _043_ ( _146_ A ) ( _144_ Y ) + USE SIGNAL ;
+    - _044_ ( _146_ B ) ( _145_ X ) + USE SIGNAL ;
+    - _045_ ( _148_ B1 ) ( _147_ X ) + USE SIGNAL ;
+    - _046_ ( _151_ A ) ( _149_ Y ) + USE SIGNAL ;
+    - _047_ ( _151_ B ) ( _150_ X ) + USE SIGNAL ;
+    - _048_ ( _153_ B1 ) ( _152_ X ) + USE SIGNAL ;
+    - _049_ ( _156_ A ) ( _154_ Y ) + USE SIGNAL ;
+    - _050_ ( _156_ B ) ( _155_ X ) + USE SIGNAL ;
+    - _051_ ( _158_ B1 ) ( _157_ X ) + USE SIGNAL ;
+    - _052_ ( _161_ A ) ( _159_ Y ) + USE SIGNAL ;
+    - _053_ ( _161_ B ) ( _160_ X ) + USE SIGNAL ;
+    - _054_ ( _163_ B1 ) ( _162_ X ) + USE SIGNAL ;
+    - _055_ ( _166_ A ) ( _164_ Y ) + USE SIGNAL ;
+    - _056_ ( _166_ B ) ( _165_ X ) + USE SIGNAL ;
+    - _057_ ( _168_ B1 ) ( _167_ X ) + USE SIGNAL ;
+    - _058_ ( _171_ A ) ( _169_ Y ) + USE SIGNAL ;
+    - _059_ ( _171_ B ) ( _170_ X ) + USE SIGNAL ;
+    - _060_ ( _173_ B1 ) ( _172_ X ) + USE SIGNAL ;
+    - _061_ ( _176_ A ) ( _174_ Y ) + USE SIGNAL ;
+    - _062_ ( _176_ B ) ( _175_ X ) + USE SIGNAL ;
+    - _063_ ( _178_ B1 ) ( _177_ X ) + USE SIGNAL ;
+    - _064_ ( _181_ A ) ( _179_ Y ) + USE SIGNAL ;
+    - _065_ ( _181_ B ) ( _180_ X ) + USE SIGNAL ;
+    - _066_ ( _183_ B1 ) ( _182_ X ) + USE SIGNAL ;
+    - _067_ ( _186_ A ) ( _184_ Y ) + USE SIGNAL ;
+    - _068_ ( _186_ B ) ( _185_ X ) + USE SIGNAL ;
+    - _069_ ( _188_ B1 ) ( _187_ X ) + USE SIGNAL ;
+    - _070_ ( _191_ A ) ( _189_ Y ) + USE SIGNAL ;
+    - _071_ ( _191_ B ) ( _190_ X ) + USE SIGNAL ;
+    - _072_ ( _193_ B1 ) ( _192_ X ) + USE SIGNAL ;
+    - _073_ ( _196_ A ) ( _194_ Y ) + USE SIGNAL ;
+    - _074_ ( _196_ B ) ( _195_ X ) + USE SIGNAL ;
+    - _075_ ( _198_ B1 ) ( _197_ X ) + USE SIGNAL ;
+    - _076_ ( _201_ A ) ( _199_ Y ) + USE SIGNAL ;
+    - _077_ ( _201_ B ) ( _200_ X ) + USE SIGNAL ;
+    - _078_ ( _203_ B1 ) ( _202_ X ) + USE SIGNAL ;
+    - _079_ ( _206_ A ) ( _204_ Y ) + USE SIGNAL ;
+    - _080_ ( _206_ B ) ( _205_ X ) + USE SIGNAL ;
+    - _081_ ( _208_ B1 ) ( _207_ X ) + USE SIGNAL ;
+    - _082_ ( _211_ A ) ( _209_ Y ) + USE SIGNAL ;
+    - _083_ ( _211_ B ) ( _210_ X ) + USE SIGNAL ;
+    - _084_ ( _213_ B1 ) ( _212_ X ) + USE SIGNAL ;
+    - _085_ ( _216_ A ) ( _214_ Y ) + USE SIGNAL ;
+    - _086_ ( _216_ B ) ( _215_ X ) + USE SIGNAL ;
+    - _087_ ( _218_ B1 ) ( _217_ X ) + USE SIGNAL ;
+    - _088_ ( _221_ A ) ( _219_ Y ) + USE SIGNAL ;
+    - _089_ ( _221_ B ) ( _220_ X ) + USE SIGNAL ;
+    - _090_ ( _223_ B1 ) ( _222_ X ) + USE SIGNAL ;
+    - _091_ ( _226_ A ) ( _224_ Y ) + USE SIGNAL ;
+    - _092_ ( _226_ B ) ( _225_ X ) + USE SIGNAL ;
+    - _093_ ( _228_ B1 ) ( _227_ X ) + USE SIGNAL ;
+    - _094_ ( _231_ A ) ( _229_ Y ) + USE SIGNAL ;
+    - _095_ ( _231_ B ) ( _230_ X ) + USE SIGNAL ;
+    - _096_ ( _233_ B1 ) ( _232_ X ) + USE SIGNAL ;
+    - _097_ ( _236_ A ) ( _234_ Y ) + USE SIGNAL ;
+    - _098_ ( _236_ B ) ( _235_ X ) + USE SIGNAL ;
+    - _099_ ( _238_ B1 ) ( _237_ X ) + USE SIGNAL ;
+    - _100_ ( _241_ A ) ( _239_ Y ) + USE SIGNAL ;
+    - _101_ ( _241_ B ) ( _240_ X ) + USE SIGNAL ;
+    - _102_ ( _243_ B1 ) ( _242_ X ) + USE SIGNAL ;
+    - _103_ ( _246_ A ) ( _244_ Y ) + USE SIGNAL ;
+    - _104_ ( _246_ B ) ( _245_ X ) + USE SIGNAL ;
+    - _105_ ( _248_ B1 ) ( _247_ X ) + USE SIGNAL ;
+    - _106_ ( _251_ A ) ( _249_ Y ) + USE SIGNAL ;
+    - _107_ ( _251_ B ) ( _250_ X ) + USE SIGNAL ;
+    - _108_ ( _253_ B1 ) ( _252_ X ) + USE SIGNAL ;
+    - _109_ ( _256_ A ) ( _254_ Y ) + USE SIGNAL ;
+    - _110_ ( _256_ B ) ( _255_ X ) + USE SIGNAL ;
+    - _111_ ( _258_ B1 ) ( _257_ X ) + USE SIGNAL ;
+    - _112_ ( _261_ A ) ( _259_ Y ) + USE SIGNAL ;
+    - _113_ ( _261_ B ) ( _260_ X ) + USE SIGNAL ;
+    - _114_ ( _263_ B1 ) ( _262_ X ) + USE SIGNAL ;
+    - _115_ ( _266_ A ) ( _264_ Y ) + USE SIGNAL ;
+    - _116_ ( _266_ B ) ( _265_ X ) + USE SIGNAL ;
+    - _117_ ( _268_ B1 ) ( _267_ X ) + USE SIGNAL ;
+    - _118_ ( _271_ A ) ( _269_ Y ) + USE SIGNAL ;
+    - _119_ ( _271_ B ) ( _270_ X ) + USE SIGNAL ;
+    - _120_ ( _273_ B1 ) ( _272_ X ) + USE SIGNAL ;
+    - _121_ ( _276_ A ) ( _274_ Y ) + USE SIGNAL ;
+    - _122_ ( _276_ B ) ( _275_ X ) + USE SIGNAL ;
+    - _123_ ( _278_ B1 ) ( _277_ X ) + USE SIGNAL ;
+    - _124_ ( _280_ B ) ( _279_ Y ) + USE SIGNAL ;
+    - _125_ ( _283_ A ) ( _281_ Y ) + USE SIGNAL ;
+    - _126_ ( _283_ B ) ( _282_ X ) + USE SIGNAL ;
+    - _127_ ( _285_ B1 ) ( _284_ X ) + USE SIGNAL ;
+    - clk ( PIN clk ) ( _350_ CLK ) ( _349_ CLK ) ( _348_ CLK ) ( _347_ CLK ) ( _346_ CLK ) ( _345_ CLK )
+      ( _344_ CLK ) ( _343_ CLK ) ( _342_ CLK ) ( _341_ CLK ) ( _340_ CLK ) ( _339_ CLK ) ( _338_ CLK ) ( _337_ CLK )
+      ( _336_ CLK ) ( _335_ CLK ) ( _334_ CLK ) ( _333_ CLK ) ( _332_ CLK ) ( _331_ CLK ) ( _330_ CLK ) ( _329_ CLK )
+      ( _328_ CLK ) ( _327_ CLK ) ( _326_ CLK ) ( _325_ CLK ) ( _324_ CLK ) ( _323_ CLK ) ( _322_ CLK ) ( _321_ CLK )
+      ( _320_ CLK ) ( _319_ CLK ) ( _318_ CLK ) ( _317_ CLK ) ( _316_ CLK ) ( _315_ CLK ) ( _314_ CLK ) ( _313_ CLK )
+      ( _312_ CLK ) ( _311_ CLK ) ( _310_ CLK ) ( _309_ CLK ) ( _308_ CLK ) ( _307_ CLK ) ( _306_ CLK ) ( _305_ CLK )
+      ( _304_ CLK ) ( _303_ CLK ) ( _302_ CLK ) ( _301_ CLK ) ( _300_ CLK ) ( _299_ CLK ) ( _298_ CLK ) ( _297_ CLK )
+      ( _296_ CLK ) ( _295_ CLK ) ( _294_ CLK ) ( _293_ CLK ) ( _292_ CLK ) ( _291_ CLK ) ( _290_ CLK ) ( _289_ CLK )
+      ( _288_ CLK ) ( _287_ CLK ) + USE CLOCK ;
+    - gpio_bot_in[0] ( PIN gpio_bot_in[0] ) ( input1 A ) + USE SIGNAL ;
+    - gpio_bot_in[10] ( PIN gpio_bot_in[10] ) ( input2 A ) + USE SIGNAL ;
+    - gpio_bot_in[11] ( PIN gpio_bot_in[11] ) ( input3 A ) + USE SIGNAL ;
+    - gpio_bot_in[12] ( PIN gpio_bot_in[12] ) ( input4 A ) + USE SIGNAL ;
+    - gpio_bot_in[13] ( PIN gpio_bot_in[13] ) ( input5 A ) + USE SIGNAL ;
+    - gpio_bot_in[14] ( PIN gpio_bot_in[14] ) ( input6 A ) + USE SIGNAL ;
+    - gpio_bot_in[1] ( PIN gpio_bot_in[1] ) ( input7 A ) + USE SIGNAL ;
+    - gpio_bot_in[2] ( PIN gpio_bot_in[2] ) ( input8 A ) + USE SIGNAL ;
+    - gpio_bot_in[3] ( PIN gpio_bot_in[3] ) ( input9 A ) + USE SIGNAL ;
+    - gpio_bot_in[4] ( PIN gpio_bot_in[4] ) ( input10 A ) + USE SIGNAL ;
+    - gpio_bot_in[5] ( PIN gpio_bot_in[5] ) ( input11 A ) + USE SIGNAL ;
+    - gpio_bot_in[6] ( PIN gpio_bot_in[6] ) ( input12 A ) + USE SIGNAL ;
+    - gpio_bot_in[7] ( PIN gpio_bot_in[7] ) ( input13 A ) + USE SIGNAL ;
+    - gpio_bot_in[8] ( PIN gpio_bot_in[8] ) ( input14 A ) + USE SIGNAL ;
+    - gpio_bot_in[9] ( PIN gpio_bot_in[9] ) ( input15 A ) + USE SIGNAL ;
+    - gpio_rt_in[0] ( PIN gpio_rt_in[0] ) ( input16 A ) + USE SIGNAL ;
+    - gpio_rt_in[1] ( PIN gpio_rt_in[1] ) ( input17 A ) + USE SIGNAL ;
+    - gpio_rt_in[2] ( PIN gpio_rt_in[2] ) ( input18 A ) + USE SIGNAL ;
+    - gpio_rt_in[3] ( PIN gpio_rt_in[3] ) ( input19 A ) + USE SIGNAL ;
     - gpio_rt_in[4] ( PIN gpio_rt_in[4] ) + USE SIGNAL ;
     - gpio_rt_in[5] ( PIN gpio_rt_in[5] ) + USE SIGNAL ;
     - gpio_rt_in[6] ( PIN gpio_rt_in[6] ) + USE SIGNAL ;
     - gpio_rt_in[7] ( PIN gpio_rt_in[7] ) + USE SIGNAL ;
     - gpio_rt_in[8] ( PIN gpio_rt_in[8] ) + USE SIGNAL ;
-    - gpio_rt_oeb[0] ( PIN gpio_rt_oeb[0] ) ( _057_ HI ) + USE SIGNAL ;
-    - gpio_rt_oeb[1] ( PIN gpio_rt_oeb[1] ) ( _058_ HI ) + USE SIGNAL ;
-    - gpio_rt_oeb[2] ( PIN gpio_rt_oeb[2] ) ( _059_ HI ) + USE SIGNAL ;
-    - gpio_rt_oeb[3] ( PIN gpio_rt_oeb[3] ) ( _060_ HI ) + USE SIGNAL ;
-    - gpio_rt_oeb[4] ( PIN gpio_rt_oeb[4] ) ( _061_ HI ) + USE SIGNAL ;
-    - gpio_rt_oeb[5] ( PIN gpio_rt_oeb[5] ) ( _062_ HI ) + USE SIGNAL ;
-    - gpio_rt_oeb[6] ( PIN gpio_rt_oeb[6] ) ( _063_ HI ) + USE SIGNAL ;
-    - gpio_rt_oeb[7] ( PIN gpio_rt_oeb[7] ) ( _064_ HI ) + USE SIGNAL ;
-    - gpio_rt_oeb[8] ( PIN gpio_rt_oeb[8] ) ( _065_ HI ) + USE SIGNAL ;
-    - gpio_rt_out[0] ( PIN gpio_rt_out[0] ) ( _149_ LO ) + USE SIGNAL ;
-    - gpio_rt_out[1] ( PIN gpio_rt_out[1] ) ( _150_ LO ) + USE SIGNAL ;
-    - gpio_rt_out[2] ( PIN gpio_rt_out[2] ) ( _151_ LO ) + USE SIGNAL ;
-    - gpio_rt_out[3] ( PIN gpio_rt_out[3] ) ( _152_ LO ) + USE SIGNAL ;
-    - gpio_rt_out[4] ( PIN gpio_rt_out[4] ) ( _153_ LO ) + USE SIGNAL ;
-    - gpio_rt_out[5] ( PIN gpio_rt_out[5] ) ( _154_ LO ) + USE SIGNAL ;
-    - gpio_rt_out[6] ( PIN gpio_rt_out[6] ) ( _155_ LO ) + USE SIGNAL ;
-    - gpio_rt_out[7] ( PIN gpio_rt_out[7] ) ( _156_ LO ) + USE SIGNAL ;
-    - gpio_rt_out[8] ( PIN gpio_rt_out[8] ) ( _157_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[0] ( PIN gpio_top_dm[0] ) ( _158_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[10] ( PIN gpio_top_dm[10] ) ( _072_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[11] ( PIN gpio_top_dm[11] ) ( _073_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[12] ( PIN gpio_top_dm[12] ) ( _162_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[13] ( PIN gpio_top_dm[13] ) ( _074_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[14] ( PIN gpio_top_dm[14] ) ( _075_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[15] ( PIN gpio_top_dm[15] ) ( _163_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[16] ( PIN gpio_top_dm[16] ) ( _076_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[17] ( PIN gpio_top_dm[17] ) ( _077_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[18] ( PIN gpio_top_dm[18] ) ( _164_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[19] ( PIN gpio_top_dm[19] ) ( _078_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[1] ( PIN gpio_top_dm[1] ) ( _066_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[20] ( PIN gpio_top_dm[20] ) ( _079_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[21] ( PIN gpio_top_dm[21] ) ( _165_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[22] ( PIN gpio_top_dm[22] ) ( _080_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[23] ( PIN gpio_top_dm[23] ) ( _081_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[24] ( PIN gpio_top_dm[24] ) ( _166_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[25] ( PIN gpio_top_dm[25] ) ( _082_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[26] ( PIN gpio_top_dm[26] ) ( _083_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[27] ( PIN gpio_top_dm[27] ) ( _167_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[28] ( PIN gpio_top_dm[28] ) ( _084_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[29] ( PIN gpio_top_dm[29] ) ( _085_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[2] ( PIN gpio_top_dm[2] ) ( _067_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[30] ( PIN gpio_top_dm[30] ) ( _168_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[31] ( PIN gpio_top_dm[31] ) ( _086_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[32] ( PIN gpio_top_dm[32] ) ( _087_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[33] ( PIN gpio_top_dm[33] ) ( _169_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[34] ( PIN gpio_top_dm[34] ) ( _088_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[35] ( PIN gpio_top_dm[35] ) ( _089_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[36] ( PIN gpio_top_dm[36] ) ( _170_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[37] ( PIN gpio_top_dm[37] ) ( _090_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[38] ( PIN gpio_top_dm[38] ) ( _091_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[39] ( PIN gpio_top_dm[39] ) ( _171_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[3] ( PIN gpio_top_dm[3] ) ( _159_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[40] ( PIN gpio_top_dm[40] ) ( _092_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[41] ( PIN gpio_top_dm[41] ) ( _093_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[4] ( PIN gpio_top_dm[4] ) ( _068_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[5] ( PIN gpio_top_dm[5] ) ( _069_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[6] ( PIN gpio_top_dm[6] ) ( _160_ LO ) + USE SIGNAL ;
-    - gpio_top_dm[7] ( PIN gpio_top_dm[7] ) ( _070_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[8] ( PIN gpio_top_dm[8] ) ( _071_ HI ) + USE SIGNAL ;
-    - gpio_top_dm[9] ( PIN gpio_top_dm[9] ) ( _161_ LO ) + USE SIGNAL ;
-    - gpio_top_in[0] ( PIN gpio_top_in[0] ) + USE SIGNAL ;
-    - gpio_top_in[10] ( PIN gpio_top_in[10] ) + USE SIGNAL ;
-    - gpio_top_in[11] ( PIN gpio_top_in[11] ) + USE SIGNAL ;
-    - gpio_top_in[12] ( PIN gpio_top_in[12] ) + USE SIGNAL ;
-    - gpio_top_in[13] ( PIN gpio_top_in[13] ) + USE SIGNAL ;
-    - gpio_top_in[1] ( PIN gpio_top_in[1] ) + USE SIGNAL ;
-    - gpio_top_in[2] ( PIN gpio_top_in[2] ) + USE SIGNAL ;
-    - gpio_top_in[3] ( PIN gpio_top_in[3] ) + USE SIGNAL ;
-    - gpio_top_in[4] ( PIN gpio_top_in[4] ) + USE SIGNAL ;
-    - gpio_top_in[5] ( PIN gpio_top_in[5] ) + USE SIGNAL ;
-    - gpio_top_in[6] ( PIN gpio_top_in[6] ) + USE SIGNAL ;
-    - gpio_top_in[7] ( PIN gpio_top_in[7] ) + USE SIGNAL ;
-    - gpio_top_in[8] ( PIN gpio_top_in[8] ) + USE SIGNAL ;
-    - gpio_top_in[9] ( PIN gpio_top_in[9] ) + USE SIGNAL ;
-    - gpio_top_oeb[0] ( PIN gpio_top_oeb[0] ) ( _094_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[10] ( PIN gpio_top_oeb[10] ) ( _104_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[11] ( PIN gpio_top_oeb[11] ) ( _105_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[12] ( PIN gpio_top_oeb[12] ) ( _106_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[13] ( PIN gpio_top_oeb[13] ) ( _107_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[1] ( PIN gpio_top_oeb[1] ) ( _095_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[2] ( PIN gpio_top_oeb[2] ) ( _096_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[3] ( PIN gpio_top_oeb[3] ) ( _097_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[4] ( PIN gpio_top_oeb[4] ) ( _098_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[5] ( PIN gpio_top_oeb[5] ) ( _099_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[6] ( PIN gpio_top_oeb[6] ) ( _100_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[7] ( PIN gpio_top_oeb[7] ) ( _101_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[8] ( PIN gpio_top_oeb[8] ) ( _102_ HI ) + USE SIGNAL ;
-    - gpio_top_oeb[9] ( PIN gpio_top_oeb[9] ) ( _103_ HI ) + USE SIGNAL ;
-    - gpio_top_out[0] ( PIN gpio_top_out[0] ) ( _172_ LO ) + USE SIGNAL ;
-    - gpio_top_out[10] ( PIN gpio_top_out[10] ) ( _182_ LO ) + USE SIGNAL ;
-    - gpio_top_out[11] ( PIN gpio_top_out[11] ) ( _183_ LO ) + USE SIGNAL ;
-    - gpio_top_out[12] ( PIN gpio_top_out[12] ) ( _184_ LO ) + USE SIGNAL ;
-    - gpio_top_out[13] ( PIN gpio_top_out[13] ) ( _185_ LO ) + USE SIGNAL ;
-    - gpio_top_out[1] ( PIN gpio_top_out[1] ) ( _173_ LO ) + USE SIGNAL ;
-    - gpio_top_out[2] ( PIN gpio_top_out[2] ) ( _174_ LO ) + USE SIGNAL ;
-    - gpio_top_out[3] ( PIN gpio_top_out[3] ) ( _175_ LO ) + USE SIGNAL ;
-    - gpio_top_out[4] ( PIN gpio_top_out[4] ) ( _176_ LO ) + USE SIGNAL ;
-    - gpio_top_out[5] ( PIN gpio_top_out[5] ) ( _177_ LO ) + USE SIGNAL ;
-    - gpio_top_out[6] ( PIN gpio_top_out[6] ) ( _178_ LO ) + USE SIGNAL ;
-    - gpio_top_out[7] ( PIN gpio_top_out[7] ) ( _179_ LO ) + USE SIGNAL ;
-    - gpio_top_out[8] ( PIN gpio_top_out[8] ) ( _180_ LO ) + USE SIGNAL ;
-    - gpio_top_out[9] ( PIN gpio_top_out[9] ) ( _181_ LO ) + USE SIGNAL ;
+    - gpio_rt_out[4] ( PIN gpio_rt_out[4] ) ( wire37 X ) + USE SIGNAL ;
+    - gpio_top_in[0] ( PIN gpio_top_in[0] ) ( input20 A ) + USE SIGNAL ;
+    - gpio_top_in[10] ( PIN gpio_top_in[10] ) ( input21 A ) + USE SIGNAL ;
+    - gpio_top_in[11] ( PIN gpio_top_in[11] ) ( input22 A ) + USE SIGNAL ;
+    - gpio_top_in[12] ( PIN gpio_top_in[12] ) ( input23 A ) + USE SIGNAL ;
+    - gpio_top_in[13] ( PIN gpio_top_in[13] ) ( input24 A ) + USE SIGNAL ;
+    - gpio_top_in[1] ( PIN gpio_top_in[1] ) ( input25 A ) + USE SIGNAL ;
+    - gpio_top_in[2] ( PIN gpio_top_in[2] ) ( input26 A ) + USE SIGNAL ;
+    - gpio_top_in[3] ( PIN gpio_top_in[3] ) ( input27 A ) + USE SIGNAL ;
+    - gpio_top_in[4] ( PIN gpio_top_in[4] ) ( input28 A ) + USE SIGNAL ;
+    - gpio_top_in[5] ( PIN gpio_top_in[5] ) ( input29 A ) + USE SIGNAL ;
+    - gpio_top_in[6] ( PIN gpio_top_in[6] ) ( input30 A ) + USE SIGNAL ;
+    - gpio_top_in[7] ( PIN gpio_top_in[7] ) ( input31 A ) + USE SIGNAL ;
+    - gpio_top_in[8] ( PIN gpio_top_in[8] ) ( input32 A ) + USE SIGNAL ;
+    - gpio_top_in[9] ( PIN gpio_top_in[9] ) ( input33 A ) + USE SIGNAL ;
+    - net ( PIN gpio_rt_out[6] ) ( project_macro LO ) + USE SIGNAL ;
+    - net1 ( input1 X ) ( _284_ A2 ) ( _281_ B ) + USE SIGNAL ;
+    - net10 ( input10 X ) ( _262_ A2 ) ( _259_ B ) + USE SIGNAL ;
+    - net100 ( PIN gpio_top_out[5] ) ( project_macro_100 LO ) + USE SIGNAL ;
+    - net101 ( PIN gpio_top_out[6] ) ( project_macro_101 LO ) + USE SIGNAL ;
+    - net102 ( PIN gpio_top_out[7] ) ( project_macro_102 LO ) + USE SIGNAL ;
+    - net103 ( PIN gpio_top_out[8] ) ( project_macro_103 LO ) + USE SIGNAL ;
+    - net104 ( PIN gpio_top_out[9] ) ( project_macro_104 LO ) + USE SIGNAL ;
+    - net105 ( PIN gpio_top_out[10] ) ( project_macro_105 LO ) + USE SIGNAL ;
+    - net106 ( PIN gpio_top_out[11] ) ( project_macro_106 LO ) + USE SIGNAL ;
+    - net107 ( PIN gpio_top_out[12] ) ( project_macro_107 LO ) + USE SIGNAL ;
+    - net108 ( PIN gpio_top_out[13] ) ( project_macro_108 LO ) + USE SIGNAL ;
+    - net109 ( PIN gpio_bot_dm[0] ) ( project_macro_109 LO ) + USE SIGNAL ;
+    - net11 ( input11 X ) ( _257_ A2 ) ( _254_ B ) + USE SIGNAL ;
+    - net110 ( PIN gpio_bot_dm[3] ) ( project_macro_110 LO ) + USE SIGNAL ;
+    - net111 ( PIN gpio_bot_dm[6] ) ( project_macro_111 LO ) + USE SIGNAL ;
+    - net112 ( PIN gpio_bot_dm[9] ) ( project_macro_112 LO ) + USE SIGNAL ;
+    - net113 ( PIN gpio_bot_dm[12] ) ( project_macro_113 LO ) + USE SIGNAL ;
+    - net114 ( PIN gpio_bot_dm[15] ) ( project_macro_114 LO ) + USE SIGNAL ;
+    - net115 ( PIN gpio_bot_dm[18] ) ( project_macro_115 LO ) + USE SIGNAL ;
+    - net116 ( PIN gpio_bot_dm[21] ) ( project_macro_116 LO ) + USE SIGNAL ;
+    - net117 ( PIN gpio_bot_dm[24] ) ( project_macro_117 LO ) + USE SIGNAL ;
+    - net118 ( PIN gpio_bot_dm[27] ) ( project_macro_118 LO ) + USE SIGNAL ;
+    - net119 ( PIN gpio_bot_dm[30] ) ( project_macro_119 LO ) + USE SIGNAL ;
+    - net12 ( input12 X ) ( _252_ A2 ) ( _249_ B ) + USE SIGNAL ;
+    - net120 ( PIN gpio_bot_dm[33] ) ( project_macro_120 LO ) + USE SIGNAL ;
+    - net121 ( PIN gpio_bot_dm[36] ) ( project_macro_121 LO ) + USE SIGNAL ;
+    - net122 ( PIN gpio_bot_dm[39] ) ( project_macro_122 LO ) + USE SIGNAL ;
+    - net123 ( PIN gpio_bot_dm[42] ) ( project_macro_123 LO ) + USE SIGNAL ;
+    - net124 ( PIN gpio_bot_out[0] ) ( project_macro_124 LO ) + USE SIGNAL ;
+    - net125 ( PIN gpio_bot_out[1] ) ( project_macro_125 LO ) + USE SIGNAL ;
+    - net126 ( PIN gpio_bot_out[2] ) ( project_macro_126 LO ) + USE SIGNAL ;
+    - net127 ( PIN gpio_bot_out[3] ) ( project_macro_127 LO ) + USE SIGNAL ;
+    - net128 ( PIN gpio_bot_out[4] ) ( project_macro_128 LO ) + USE SIGNAL ;
+    - net129 ( PIN gpio_bot_out[5] ) ( project_macro_129 LO ) + USE SIGNAL ;
+    - net13 ( input13 X ) ( _247_ A2 ) ( _244_ B ) + USE SIGNAL ;
+    - net130 ( PIN gpio_bot_out[6] ) ( project_macro_130 LO ) + USE SIGNAL ;
+    - net131 ( PIN gpio_bot_out[7] ) ( project_macro_131 LO ) + USE SIGNAL ;
+    - net132 ( PIN gpio_bot_out[8] ) ( project_macro_132 LO ) + USE SIGNAL ;
+    - net133 ( PIN gpio_bot_out[9] ) ( project_macro_133 LO ) + USE SIGNAL ;
+    - net134 ( PIN gpio_bot_out[10] ) ( project_macro_134 LO ) + USE SIGNAL ;
+    - net135 ( PIN gpio_bot_out[11] ) ( project_macro_135 LO ) + USE SIGNAL ;
+    - net136 ( PIN gpio_bot_out[12] ) ( project_macro_136 LO ) + USE SIGNAL ;
+    - net137 ( PIN gpio_bot_out[13] ) ( project_macro_137 LO ) + USE SIGNAL ;
+    - net138 ( PIN gpio_bot_out[14] ) ( project_macro_138 LO ) + USE SIGNAL ;
+    - net139 ( PIN gpio_rt_dm[0] ) ( project_macro_139 LO ) + USE SIGNAL ;
+    - net14 ( input14 X ) ( _242_ A2 ) ( _239_ B ) + USE SIGNAL ;
+    - net140 ( PIN gpio_rt_dm[3] ) ( project_macro_140 LO ) + USE SIGNAL ;
+    - net141 ( PIN gpio_rt_dm[6] ) ( project_macro_141 LO ) + USE SIGNAL ;
+    - net142 ( PIN gpio_rt_dm[9] ) ( project_macro_142 LO ) + USE SIGNAL ;
+    - net143 ( PIN gpio_rt_dm[12] ) ( project_macro_143 LO ) + USE SIGNAL ;
+    - net144 ( PIN gpio_rt_dm[15] ) ( project_macro_144 LO ) + USE SIGNAL ;
+    - net145 ( PIN gpio_rt_dm[18] ) ( project_macro_145 LO ) + USE SIGNAL ;
+    - net146 ( PIN gpio_rt_dm[21] ) ( project_macro_146 LO ) + USE SIGNAL ;
+    - net147 ( PIN gpio_rt_dm[24] ) ( project_macro_147 LO ) + USE SIGNAL ;
+    - net148 ( PIN gpio_rt_oeb[1] ) ( project_macro_148 LO ) + USE SIGNAL ;
+    - net149 ( PIN gpio_rt_oeb[2] ) ( project_macro_149 LO ) + USE SIGNAL ;
+    - net15 ( input15 X ) ( _237_ A2 ) ( _234_ B ) + USE SIGNAL ;
+    - net150 ( PIN gpio_rt_oeb[3] ) ( project_macro_150 LO ) + USE SIGNAL ;
+    - net151 ( PIN gpio_rt_oeb[4] ) ( project_macro_151 LO ) + USE SIGNAL ;
+    - net152 ( PIN gpio_rt_oeb[6] ) ( project_macro_152 LO ) + USE SIGNAL ;
+    - net153 ( PIN gpio_rt_oeb[7] ) ( project_macro_153 LO ) + USE SIGNAL ;
+    - net154 ( PIN gpio_rt_oeb[8] ) ( project_macro_154 LO ) + USE SIGNAL ;
+    - net155 ( PIN gpio_rt_out[0] ) ( project_macro_155 LO ) + USE SIGNAL ;
+    - net156 ( PIN gpio_rt_out[1] ) ( project_macro_156 LO ) + USE SIGNAL ;
+    - net157 ( PIN gpio_rt_out[2] ) ( project_macro_157 LO ) + USE SIGNAL ;
+    - net158 ( PIN gpio_rt_out[3] ) ( project_macro_158 LO ) + USE SIGNAL ;
+    - net159 ( PIN gpio_rt_out[5] ) ( project_macro_159 LO ) + USE SIGNAL ;
+    - net16 ( input16 X ) ( _137_ A1 ) ( _134_ A ) + USE SIGNAL ;
+    - net160 ( PIN gpio_top_dm[1] ) ( project_macro_160 HI ) + USE SIGNAL ;
+    - net161 ( PIN gpio_top_dm[2] ) ( project_macro_161 HI ) + USE SIGNAL ;
+    - net162 ( PIN gpio_top_dm[4] ) ( project_macro_162 HI ) + USE SIGNAL ;
+    - net163 ( PIN gpio_top_dm[5] ) ( project_macro_163 HI ) + USE SIGNAL ;
+    - net164 ( PIN gpio_top_dm[7] ) ( project_macro_164 HI ) + USE SIGNAL ;
+    - net165 ( PIN gpio_top_dm[8] ) ( project_macro_165 HI ) + USE SIGNAL ;
+    - net166 ( PIN gpio_top_dm[10] ) ( project_macro_166 HI ) + USE SIGNAL ;
+    - net167 ( PIN gpio_top_dm[11] ) ( project_macro_167 HI ) + USE SIGNAL ;
+    - net168 ( PIN gpio_top_dm[13] ) ( project_macro_168 HI ) + USE SIGNAL ;
+    - net169 ( PIN gpio_top_dm[14] ) ( project_macro_169 HI ) + USE SIGNAL ;
+    - net17 ( input17 X ) ( _132_ A3 ) ( _128_ B ) + USE SIGNAL ;
+    - net170 ( PIN gpio_top_dm[16] ) ( project_macro_170 HI ) + USE SIGNAL ;
+    - net171 ( PIN gpio_top_dm[17] ) ( project_macro_171 HI ) + USE SIGNAL ;
+    - net172 ( PIN gpio_top_dm[19] ) ( project_macro_172 HI ) + USE SIGNAL ;
+    - net173 ( PIN gpio_top_dm[20] ) ( project_macro_173 HI ) + USE SIGNAL ;
+    - net174 ( PIN gpio_top_dm[22] ) ( project_macro_174 HI ) + USE SIGNAL ;
+    - net175 ( PIN gpio_top_dm[23] ) ( project_macro_175 HI ) + USE SIGNAL ;
+    - net176 ( PIN gpio_top_dm[25] ) ( project_macro_176 HI ) + USE SIGNAL ;
+    - net177 ( PIN gpio_top_dm[26] ) ( project_macro_177 HI ) + USE SIGNAL ;
+    - net178 ( PIN gpio_top_dm[28] ) ( project_macro_178 HI ) + USE SIGNAL ;
+    - net179 ( PIN gpio_top_dm[29] ) ( project_macro_179 HI ) + USE SIGNAL ;
+    - net18 ( input18 X ) ( _286_ A2 ) ( _279_ B ) + USE SIGNAL ;
+    - net180 ( PIN gpio_top_dm[31] ) ( project_macro_180 HI ) + USE SIGNAL ;
+    - net181 ( PIN gpio_top_dm[32] ) ( project_macro_181 HI ) + USE SIGNAL ;
+    - net182 ( PIN gpio_top_dm[34] ) ( project_macro_182 HI ) + USE SIGNAL ;
+    - net183 ( PIN gpio_top_dm[35] ) ( project_macro_183 HI ) + USE SIGNAL ;
+    - net184 ( PIN gpio_top_dm[37] ) ( project_macro_184 HI ) + USE SIGNAL ;
+    - net185 ( PIN gpio_top_dm[38] ) ( project_macro_185 HI ) + USE SIGNAL ;
+    - net186 ( PIN gpio_top_dm[40] ) ( project_macro_186 HI ) + USE SIGNAL ;
+    - net187 ( PIN gpio_top_dm[41] ) ( project_macro_187 HI ) + USE SIGNAL ;
+    - net188 ( PIN gpio_top_oeb[0] ) ( project_macro_188 HI ) + USE SIGNAL ;
+    - net189 ( PIN gpio_top_oeb[1] ) ( project_macro_189 HI ) + USE SIGNAL ;
+    - net19 ( max_cap78 A ) ( fanout76 A ) ( input19 X ) + USE SIGNAL ;
+    - net190 ( PIN gpio_top_oeb[2] ) ( project_macro_190 HI ) + USE SIGNAL ;
+    - net191 ( PIN gpio_top_oeb[3] ) ( project_macro_191 HI ) + USE SIGNAL ;
+    - net192 ( PIN gpio_top_oeb[4] ) ( project_macro_192 HI ) + USE SIGNAL ;
+    - net193 ( PIN gpio_top_oeb[5] ) ( project_macro_193 HI ) + USE SIGNAL ;
+    - net194 ( PIN gpio_top_oeb[6] ) ( project_macro_194 HI ) + USE SIGNAL ;
+    - net195 ( PIN gpio_top_oeb[7] ) ( project_macro_195 HI ) + USE SIGNAL ;
+    - net196 ( PIN gpio_top_oeb[8] ) ( project_macro_196 HI ) + USE SIGNAL ;
+    - net197 ( PIN gpio_top_oeb[9] ) ( project_macro_197 HI ) + USE SIGNAL ;
+    - net198 ( PIN gpio_top_oeb[10] ) ( project_macro_198 HI ) + USE SIGNAL ;
+    - net199 ( PIN gpio_top_oeb[11] ) ( project_macro_199 HI ) + USE SIGNAL ;
+    - net2 ( input2 X ) ( _232_ A2 ) ( _229_ B ) + USE SIGNAL ;
+    - net20 ( input20 X ) ( _207_ A2 ) ( _204_ B ) + USE SIGNAL ;
+    - net200 ( PIN gpio_top_oeb[12] ) ( project_macro_200 HI ) + USE SIGNAL ;
+    - net201 ( PIN gpio_top_oeb[13] ) ( project_macro_201 HI ) + USE SIGNAL ;
+    - net202 ( PIN gpio_bot_dm[1] ) ( project_macro_202 HI ) + USE SIGNAL ;
+    - net203 ( PIN gpio_bot_dm[2] ) ( project_macro_203 HI ) + USE SIGNAL ;
+    - net204 ( PIN gpio_bot_dm[4] ) ( project_macro_204 HI ) + USE SIGNAL ;
+    - net205 ( PIN gpio_bot_dm[5] ) ( project_macro_205 HI ) + USE SIGNAL ;
+    - net206 ( PIN gpio_bot_dm[7] ) ( project_macro_206 HI ) + USE SIGNAL ;
+    - net207 ( PIN gpio_bot_dm[8] ) ( project_macro_207 HI ) + USE SIGNAL ;
+    - net208 ( PIN gpio_bot_dm[10] ) ( project_macro_208 HI ) + USE SIGNAL ;
+    - net209 ( PIN gpio_bot_dm[11] ) ( project_macro_209 HI ) + USE SIGNAL ;
+    - net21 ( input21 X ) ( _157_ A2 ) ( _154_ B ) + USE SIGNAL ;
+    - net210 ( PIN gpio_bot_dm[13] ) ( project_macro_210 HI ) + USE SIGNAL ;
+    - net211 ( PIN gpio_bot_dm[14] ) ( project_macro_211 HI ) + USE SIGNAL ;
+    - net212 ( PIN gpio_bot_dm[16] ) ( project_macro_212 HI ) + USE SIGNAL ;
+    - net213 ( PIN gpio_bot_dm[17] ) ( project_macro_213 HI ) + USE SIGNAL ;
+    - net214 ( PIN gpio_bot_dm[19] ) ( project_macro_214 HI ) + USE SIGNAL ;
+    - net215 ( PIN gpio_bot_dm[20] ) ( project_macro_215 HI ) + USE SIGNAL ;
+    - net216 ( PIN gpio_bot_dm[22] ) ( project_macro_216 HI ) + USE SIGNAL ;
+    - net217 ( PIN gpio_bot_dm[23] ) ( project_macro_217 HI ) + USE SIGNAL ;
+    - net218 ( PIN gpio_bot_dm[25] ) ( project_macro_218 HI ) + USE SIGNAL ;
+    - net219 ( PIN gpio_bot_dm[26] ) ( project_macro_219 HI ) + USE SIGNAL ;
+    - net22 ( input22 X ) ( _152_ A2 ) ( _149_ B ) + USE SIGNAL ;
+    - net220 ( PIN gpio_bot_dm[28] ) ( project_macro_220 HI ) + USE SIGNAL ;
+    - net221 ( PIN gpio_bot_dm[29] ) ( project_macro_221 HI ) + USE SIGNAL ;
+    - net222 ( PIN gpio_bot_dm[31] ) ( project_macro_222 HI ) + USE SIGNAL ;
+    - net223 ( PIN gpio_bot_dm[32] ) ( project_macro_223 HI ) + USE SIGNAL ;
+    - net224 ( PIN gpio_bot_dm[34] ) ( project_macro_224 HI ) + USE SIGNAL ;
+    - net225 ( PIN gpio_bot_dm[35] ) ( project_macro_225 HI ) + USE SIGNAL ;
+    - net226 ( PIN gpio_bot_dm[37] ) ( project_macro_226 HI ) + USE SIGNAL ;
+    - net227 ( PIN gpio_bot_dm[38] ) ( project_macro_227 HI ) + USE SIGNAL ;
+    - net228 ( PIN gpio_bot_dm[40] ) ( project_macro_228 HI ) + USE SIGNAL ;
+    - net229 ( PIN gpio_bot_dm[41] ) ( project_macro_229 HI ) + USE SIGNAL ;
+    - net23 ( input23 X ) ( _147_ A2 ) ( _144_ B ) + USE SIGNAL ;
+    - net230 ( PIN gpio_bot_dm[43] ) ( project_macro_230 HI ) + USE SIGNAL ;
+    - net231 ( PIN gpio_bot_dm[44] ) ( project_macro_231 HI ) + USE SIGNAL ;
+    - net232 ( PIN gpio_bot_oeb[0] ) ( project_macro_232 HI ) + USE SIGNAL ;
+    - net233 ( PIN gpio_bot_oeb[1] ) ( project_macro_233 HI ) + USE SIGNAL ;
+    - net234 ( PIN gpio_bot_oeb[2] ) ( project_macro_234 HI ) + USE SIGNAL ;
+    - net235 ( PIN gpio_bot_oeb[3] ) ( project_macro_235 HI ) + USE SIGNAL ;
+    - net236 ( PIN gpio_bot_oeb[4] ) ( project_macro_236 HI ) + USE SIGNAL ;
+    - net237 ( PIN gpio_bot_oeb[5] ) ( project_macro_237 HI ) + USE SIGNAL ;
+    - net238 ( PIN gpio_bot_oeb[6] ) ( project_macro_238 HI ) + USE SIGNAL ;
+    - net239 ( PIN gpio_bot_oeb[7] ) ( project_macro_239 HI ) + USE SIGNAL ;
+    - net24 ( input24 X ) ( _142_ A2 ) ( _139_ B ) + USE SIGNAL ;
+    - net240 ( PIN gpio_bot_oeb[8] ) ( project_macro_240 HI ) + USE SIGNAL ;
+    - net241 ( PIN gpio_bot_oeb[9] ) ( project_macro_241 HI ) + USE SIGNAL ;
+    - net242 ( PIN gpio_bot_oeb[10] ) ( project_macro_242 HI ) + USE SIGNAL ;
+    - net243 ( PIN gpio_bot_oeb[11] ) ( project_macro_243 HI ) + USE SIGNAL ;
+    - net244 ( PIN gpio_bot_oeb[12] ) ( project_macro_244 HI ) + USE SIGNAL ;
+    - net245 ( PIN gpio_bot_oeb[13] ) ( project_macro_245 HI ) + USE SIGNAL ;
+    - net246 ( PIN gpio_bot_oeb[14] ) ( project_macro_246 HI ) + USE SIGNAL ;
+    - net247 ( PIN gpio_rt_dm[1] ) ( project_macro_247 HI ) + USE SIGNAL ;
+    - net248 ( PIN gpio_rt_dm[2] ) ( project_macro_248 HI ) + USE SIGNAL ;
+    - net249 ( PIN gpio_rt_dm[4] ) ( project_macro_249 HI ) + USE SIGNAL ;
+    - net25 ( input25 X ) ( _202_ A2 ) ( _199_ B ) + USE SIGNAL ;
+    - net250 ( PIN gpio_rt_dm[5] ) ( project_macro_250 HI ) + USE SIGNAL ;
+    - net251 ( PIN gpio_rt_dm[7] ) ( project_macro_251 HI ) + USE SIGNAL ;
+    - net252 ( PIN gpio_rt_dm[8] ) ( project_macro_252 HI ) + USE SIGNAL ;
+    - net253 ( PIN gpio_rt_dm[10] ) ( project_macro_253 HI ) + USE SIGNAL ;
+    - net254 ( PIN gpio_rt_dm[11] ) ( project_macro_254 HI ) + USE SIGNAL ;
+    - net255 ( PIN gpio_rt_dm[13] ) ( project_macro_255 HI ) + USE SIGNAL ;
+    - net256 ( PIN gpio_rt_dm[14] ) ( project_macro_256 HI ) + USE SIGNAL ;
+    - net257 ( PIN gpio_rt_dm[16] ) ( project_macro_257 HI ) + USE SIGNAL ;
+    - net258 ( PIN gpio_rt_dm[17] ) ( project_macro_258 HI ) + USE SIGNAL ;
+    - net259 ( PIN gpio_rt_dm[19] ) ( project_macro_259 HI ) + USE SIGNAL ;
+    - net26 ( input26 X ) ( _197_ A2 ) ( _194_ B ) + USE SIGNAL ;
+    - net260 ( PIN gpio_rt_dm[20] ) ( project_macro_260 HI ) + USE SIGNAL ;
+    - net261 ( PIN gpio_rt_dm[22] ) ( project_macro_261 HI ) + USE SIGNAL ;
+    - net262 ( PIN gpio_rt_dm[23] ) ( project_macro_262 HI ) + USE SIGNAL ;
+    - net263 ( PIN gpio_rt_dm[25] ) ( project_macro_263 HI ) + USE SIGNAL ;
+    - net264 ( PIN gpio_rt_dm[26] ) ( project_macro_264 HI ) + USE SIGNAL ;
+    - net265 ( PIN gpio_rt_oeb[0] ) ( project_macro_265 HI ) + USE SIGNAL ;
+    - net266 ( PIN gpio_rt_oeb[5] ) ( project_macro_266 HI ) + USE SIGNAL ;
+    - net27 ( input27 X ) ( _192_ A2 ) ( _189_ B ) + USE SIGNAL ;
+    - net28 ( input28 X ) ( _187_ A2 ) ( _184_ B ) + USE SIGNAL ;
+    - net29 ( input29 X ) ( _182_ A2 ) ( _179_ B ) + USE SIGNAL ;
+    - net3 ( input3 X ) ( _227_ A2 ) ( _224_ B ) + USE SIGNAL ;
+    - net30 ( input30 X ) ( _177_ A2 ) ( _174_ B ) + USE SIGNAL ;
+    - net31 ( input31 X ) ( _172_ A2 ) ( _169_ B ) + USE SIGNAL ;
+    - net32 ( input32 X ) ( _167_ A2 ) ( _164_ B ) + USE SIGNAL ;
+    - net33 ( input33 X ) ( _162_ A2 ) ( _159_ B ) + USE SIGNAL ;
+    - net34 ( fanout57 A ) ( fanout47 A ) ( fanout42 A ) ( input34 X ) + USE SIGNAL ;
+    - net35 ( wire38 A ) ( _540_ X ) + USE SIGNAL ;
+    - net36 ( _318_ D ) ( wire36 X ) + USE SIGNAL ;
+    - net37 ( wire37 A ) ( output35 X ) + USE SIGNAL ;
+    - net38 ( output35 A ) ( wire38 X ) + USE SIGNAL ;
+    - net39 ( _213_ A2 ) ( _212_ B2 ) ( _210_ B ) ( wire39 X ) + USE SIGNAL ;
+    - net4 ( input4 X ) ( _222_ A2 ) ( _219_ B ) + USE SIGNAL ;
+    - net40 ( load_slew41 A ) ( _350_ RESET_B ) ( _349_ RESET_B ) ( _346_ RESET_B ) ( _345_ RESET_B ) ( _344_ RESET_B ) ( fanout40 X ) + USE SIGNAL ;
+    - net41 ( _343_ RESET_B ) ( _342_ RESET_B ) ( _340_ RESET_B ) ( _339_ RESET_B ) ( _338_ RESET_B ) ( load_slew41 X ) + USE SIGNAL ;
+    - net42 ( load_slew43 A ) ( fanout40 A ) ( _341_ RESET_B ) ( _337_ RESET_B ) ( fanout42 X ) + USE SIGNAL ;
+    - net43 ( _336_ RESET_B ) ( _335_ RESET_B ) ( _334_ RESET_B ) ( _333_ RESET_B ) ( _332_ RESET_B ) ( load_slew43 X ) + USE SIGNAL ;
+    - net44 ( load_slew46 A ) ( _347_ RESET_B ) ( fanout44 X ) + USE SIGNAL ;
+    - net45 ( _324_ RESET_B ) ( _323_ RESET_B ) ( _322_ RESET_B ) ( _321_ RESET_B ) ( _320_ RESET_B ) ( _319_ RESET_B ) ( wire45 X ) + USE SIGNAL ;
+    - net46 ( wire45 A ) ( _289_ RESET_B ) ( _288_ RESET_B ) ( _287_ RESET_B ) ( load_slew46 X ) + USE SIGNAL ;
+    - net47 ( load_slew49 A ) ( _331_ RESET_B ) ( _330_ RESET_B ) ( _329_ RESET_B ) ( fanout47 X ) + USE SIGNAL ;
+    - net48 ( fanout44 A ) ( _348_ RESET_B ) ( wire48 X ) + USE SIGNAL ;
+    - net49 ( wire48 A ) ( _328_ RESET_B ) ( _327_ RESET_B ) ( _326_ RESET_B ) ( _325_ RESET_B ) ( load_slew49 X ) + USE SIGNAL ;
+    - net5 ( input5 X ) ( _217_ A2 ) ( _214_ B ) + USE SIGNAL ;
+    - net50 ( load_slew52 A ) ( _315_ RESET_B ) ( fanout50 X ) + USE SIGNAL ;
+    - net51 ( _310_ RESET_B ) ( _309_ RESET_B ) ( _303_ RESET_B ) ( load_slew51 X ) + USE SIGNAL ;
+    - net52 ( load_slew51 A ) ( _317_ RESET_B ) ( _316_ RESET_B ) ( _314_ RESET_B ) ( _313_ RESET_B ) ( _312_ RESET_B ) ( _311_ RESET_B )
+      ( load_slew52 X ) + USE SIGNAL ;
+    - net53 ( _308_ RESET_B ) ( _307_ RESET_B ) ( _306_ RESET_B ) ( _305_ RESET_B ) ( _304_ RESET_B ) ( fanout53 X ) + USE SIGNAL ;
+    - net54 ( load_slew56 A ) ( _302_ RESET_B ) ( fanout54 X ) + USE SIGNAL ;
+    - net55 ( _296_ RESET_B ) ( _293_ RESET_B ) ( _292_ RESET_B ) ( _291_ RESET_B ) ( load_slew55 X ) + USE SIGNAL ;
+    - net56 ( load_slew55 A ) ( _301_ RESET_B ) ( _300_ RESET_B ) ( _299_ RESET_B ) ( _298_ RESET_B ) ( _297_ RESET_B ) ( load_slew56 X ) + USE SIGNAL ;
+    - net57 ( wire61 A ) ( wire60 A ) ( _318_ RESET_B ) ( fanout57 X ) + USE SIGNAL ;
+    - net58 ( fanout54 A ) ( _295_ RESET_B ) ( _294_ RESET_B ) ( wire58 X ) + USE SIGNAL ;
+    - net59 ( fanout53 A ) ( fanout50 A ) ( load_slew59 X ) + USE SIGNAL ;
+    - net6 ( input6 X ) ( _212_ A2 ) ( _209_ B ) + USE SIGNAL ;
+    - net60 ( load_slew59 A ) ( wire58 A ) ( wire60 X ) + USE SIGNAL ;
+    - net61 ( _290_ RESET_B ) ( wire61 X ) + USE SIGNAL ;
+    - net62 ( load_slew63 A ) ( _267_ A1 ) ( _264_ A ) ( _262_ A1 ) ( _259_ A ) ( fanout62 X ) + USE SIGNAL ;
+    - net63 ( _284_ A1 ) ( _281_ A ) ( _277_ A1 ) ( _274_ A ) ( _272_ A1 ) ( _269_ A ) ( load_slew63 X ) + USE SIGNAL ;
+    - net64 ( wire65 A ) ( _239_ A ) ( fanout64 X ) + USE SIGNAL ;
+    - net65 ( _257_ A1 ) ( _254_ A ) ( _252_ A1 ) ( _249_ A ) ( _247_ A1 ) ( _244_ A ) ( wire65 X ) + USE SIGNAL ;
+    - net66 ( wire67 A ) ( _137_ A2 ) ( _134_ B ) ( _132_ A2 ) ( _128_ A ) ( fanout66 X ) + USE SIGNAL ;
+    - net67 ( _222_ A1 ) ( _219_ A ) ( _217_ A1 ) ( _214_ A ) ( _212_ A1 ) ( _209_ A ) ( wire67 X ) + USE SIGNAL ;
+    - net68 ( wire70 A ) ( fanout66 A ) ( _286_ A1 ) ( _279_ A ) ( fanout68 X ) + USE SIGNAL ;
+    - net69 ( _242_ A1 ) ( _237_ A1 ) ( _234_ A ) ( _232_ A1 ) ( _229_ A ) ( load_slew69 X ) + USE SIGNAL ;
+    - net7 ( input7 X ) ( _277_ A2 ) ( _274_ B ) + USE SIGNAL ;
+    - net70 ( load_slew69 A ) ( _227_ A1 ) ( _224_ A ) ( wire70 X ) + USE SIGNAL ;
+    - net71 ( load_slew72 A ) ( _192_ A1 ) ( _189_ A ) ( _187_ A1 ) ( _184_ A ) ( fanout71 X ) + USE SIGNAL ;
+    - net72 ( _207_ A1 ) ( _204_ A ) ( _202_ A1 ) ( _199_ A ) ( _197_ A1 ) ( _194_ A ) ( load_slew72 X ) + USE SIGNAL ;
+    - net73 ( _182_ A1 ) ( _179_ A ) ( _177_ A1 ) ( _174_ A ) ( _172_ A1 ) ( _169_ A ) ( fanout73 X ) + USE SIGNAL ;
+    - net74 ( wire75 A ) ( _147_ A1 ) ( _144_ A ) ( _142_ A1 ) ( _139_ A ) ( fanout74 X ) + USE SIGNAL ;
+    - net75 ( _167_ A1 ) ( _164_ A ) ( _162_ A1 ) ( _159_ A ) ( _157_ A1 ) ( _154_ A ) ( wire75 X ) + USE SIGNAL ;
+    - net76 ( wire77 A ) ( fanout74 A ) ( _152_ A1 ) ( _149_ A ) ( fanout76 X ) + USE SIGNAL ;
+    - net77 ( fanout73 A ) ( fanout71 A ) ( wire77 X ) + USE SIGNAL ;
+    - net78 ( fanout68 A ) ( fanout64 A ) ( fanout62 A ) ( max_cap78 X ) + USE SIGNAL ;
+    - net79 ( PIN gpio_rt_out[7] ) ( project_macro_79 LO ) + USE SIGNAL ;
+    - net8 ( input8 X ) ( _272_ A2 ) ( _269_ B ) + USE SIGNAL ;
+    - net80 ( PIN gpio_rt_out[8] ) ( project_macro_80 LO ) + USE SIGNAL ;
+    - net81 ( PIN gpio_top_dm[0] ) ( project_macro_81 LO ) + USE SIGNAL ;
+    - net82 ( PIN gpio_top_dm[3] ) ( project_macro_82 LO ) + USE SIGNAL ;
+    - net83 ( PIN gpio_top_dm[6] ) ( project_macro_83 LO ) + USE SIGNAL ;
+    - net84 ( PIN gpio_top_dm[9] ) ( project_macro_84 LO ) + USE SIGNAL ;
+    - net85 ( PIN gpio_top_dm[12] ) ( project_macro_85 LO ) + USE SIGNAL ;
+    - net86 ( PIN gpio_top_dm[15] ) ( project_macro_86 LO ) + USE SIGNAL ;
+    - net87 ( PIN gpio_top_dm[18] ) ( project_macro_87 LO ) + USE SIGNAL ;
+    - net88 ( PIN gpio_top_dm[21] ) ( project_macro_88 LO ) + USE SIGNAL ;
+    - net89 ( PIN gpio_top_dm[24] ) ( project_macro_89 LO ) + USE SIGNAL ;
+    - net9 ( input9 X ) ( _267_ A2 ) ( _264_ B ) + USE SIGNAL ;
+    - net90 ( PIN gpio_top_dm[27] ) ( project_macro_90 LO ) + USE SIGNAL ;
+    - net91 ( PIN gpio_top_dm[30] ) ( project_macro_91 LO ) + USE SIGNAL ;
+    - net92 ( PIN gpio_top_dm[33] ) ( project_macro_92 LO ) + USE SIGNAL ;
+    - net93 ( PIN gpio_top_dm[36] ) ( project_macro_93 LO ) + USE SIGNAL ;
+    - net94 ( PIN gpio_top_dm[39] ) ( project_macro_94 LO ) + USE SIGNAL ;
+    - net95 ( PIN gpio_top_out[0] ) ( project_macro_95 LO ) + USE SIGNAL ;
+    - net96 ( PIN gpio_top_out[1] ) ( project_macro_96 LO ) + USE SIGNAL ;
+    - net97 ( PIN gpio_top_out[2] ) ( project_macro_97 LO ) + USE SIGNAL ;
+    - net98 ( PIN gpio_top_out[3] ) ( project_macro_98 LO ) + USE SIGNAL ;
+    - net99 ( PIN gpio_top_out[4] ) ( project_macro_99 LO ) + USE SIGNAL ;
     - por_n ( PIN por_n ) + USE SIGNAL ;
-    - reset_n ( PIN reset_n ) + USE SIGNAL ;
+    - reset_n ( PIN reset_n ) ( input34 A ) + USE SIGNAL ;
+    - spm_p ( _540_ A ) ( _350_ Q ) + USE SIGNAL ;
+    - u_spm.csa0.hsum2 ( _350_ D ) ( _283_ Y ) + USE SIGNAL ;
+    - u_spm.csa0.sc ( _349_ Q ) ( _285_ A1 ) ( _284_ B1 ) ( _282_ A ) + USE SIGNAL ;
+    - u_spm.csa0.y ( _346_ Q ) ( _285_ A2 ) ( _284_ B2 ) ( _282_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[10\].csa.hsum2 ( _328_ D ) ( _231_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[10\].csa.sc ( _327_ Q ) ( _233_ A1 ) ( _232_ B1 ) ( _230_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[10\].csa.sum ( _328_ Q ) ( _238_ A2 ) ( _237_ B2 ) ( _235_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[10\].csa.y ( _326_ Q ) ( _233_ A2 ) ( _232_ B2 ) ( _230_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[11\].csa.hsum2 ( _326_ D ) ( _226_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[11\].csa.sc ( _325_ Q ) ( _228_ A1 ) ( _227_ B1 ) ( _225_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[11\].csa.y ( _324_ Q ) ( _228_ A2 ) ( _227_ B2 ) ( _225_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[12\].csa.hsum2 ( _324_ D ) ( _221_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[12\].csa.sc ( _323_ Q ) ( _223_ A1 ) ( _222_ B1 ) ( _220_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[12\].csa.y ( _322_ Q ) ( _223_ A2 ) ( _222_ B2 ) ( _220_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[13\].csa.hsum2 ( _322_ D ) ( _216_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[13\].csa.sc ( _321_ Q ) ( _218_ A1 ) ( _217_ B1 ) ( _215_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[13\].csa.y ( _320_ Q ) ( _218_ A2 ) ( _217_ B2 ) ( _215_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[14\].csa.hsum2 ( _320_ D ) ( _211_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[14\].csa.sc ( _319_ Q ) ( _213_ A1 ) ( _212_ B1 ) ( _210_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[14\].csa.y ( wire39 A ) ( _318_ Q ) + USE SIGNAL ;
+    - u_spm.genblk1\[15\].csa.hsum2 ( wire36 A ) ( _206_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[15\].csa.sc ( _317_ Q ) ( _208_ A1 ) ( _207_ B1 ) ( _205_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[15\].csa.y ( _316_ Q ) ( _208_ A2 ) ( _207_ B2 ) ( _205_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[16\].csa.hsum2 ( _316_ D ) ( _201_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[16\].csa.sc ( _315_ Q ) ( _203_ A1 ) ( _202_ B1 ) ( _200_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[16\].csa.y ( _314_ Q ) ( _203_ A2 ) ( _202_ B2 ) ( _200_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[17\].csa.hsum2 ( _314_ D ) ( _196_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[17\].csa.sc ( _313_ Q ) ( _198_ A1 ) ( _197_ B1 ) ( _195_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[17\].csa.y ( _312_ Q ) ( _198_ A2 ) ( _197_ B2 ) ( _195_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[18\].csa.hsum2 ( _312_ D ) ( _191_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[18\].csa.sc ( _311_ Q ) ( _193_ A1 ) ( _192_ B1 ) ( _190_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[18\].csa.y ( _310_ Q ) ( _193_ A2 ) ( _192_ B2 ) ( _190_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[19\].csa.hsum2 ( _310_ D ) ( _186_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[19\].csa.sc ( _309_ Q ) ( _188_ A1 ) ( _187_ B1 ) ( _185_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[19\].csa.y ( _308_ Q ) ( _188_ A2 ) ( _187_ B2 ) ( _185_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[1\].csa.hsum2 ( _346_ D ) ( _276_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[1\].csa.sc ( _345_ Q ) ( _278_ A1 ) ( _277_ B1 ) ( _275_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[1\].csa.y ( _344_ Q ) ( _278_ A2 ) ( _277_ B2 ) ( _275_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[20\].csa.hsum2 ( _308_ D ) ( _181_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[20\].csa.sc ( _307_ Q ) ( _183_ A1 ) ( _182_ B1 ) ( _180_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[20\].csa.y ( _306_ Q ) ( _183_ A2 ) ( _182_ B2 ) ( _180_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[21\].csa.hsum2 ( _306_ D ) ( _176_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[21\].csa.sc ( _305_ Q ) ( _178_ A1 ) ( _177_ B1 ) ( _175_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[21\].csa.y ( _304_ Q ) ( _178_ A2 ) ( _177_ B2 ) ( _175_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[22\].csa.hsum2 ( _304_ D ) ( _171_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[22\].csa.sc ( _303_ Q ) ( _173_ A1 ) ( _172_ B1 ) ( _170_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[22\].csa.y ( _302_ Q ) ( _173_ A2 ) ( _172_ B2 ) ( _170_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[23\].csa.hsum2 ( _302_ D ) ( _166_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[23\].csa.sc ( _301_ Q ) ( _168_ A1 ) ( _167_ B1 ) ( _165_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[23\].csa.y ( _300_ Q ) ( _168_ A2 ) ( _167_ B2 ) ( _165_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[24\].csa.hsum2 ( _300_ D ) ( _161_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[24\].csa.sc ( _299_ Q ) ( _163_ A1 ) ( _162_ B1 ) ( _160_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[24\].csa.y ( _298_ Q ) ( _163_ A2 ) ( _162_ B2 ) ( _160_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[25\].csa.hsum2 ( _298_ D ) ( _156_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[25\].csa.sc ( _297_ Q ) ( _158_ A1 ) ( _157_ B1 ) ( _155_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[25\].csa.y ( _296_ Q ) ( _158_ A2 ) ( _157_ B2 ) ( _155_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[26\].csa.hsum2 ( _296_ D ) ( _151_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[26\].csa.sc ( _295_ Q ) ( _153_ A1 ) ( _152_ B1 ) ( _150_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[26\].csa.y ( _294_ Q ) ( _153_ A2 ) ( _152_ B2 ) ( _150_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[27\].csa.hsum2 ( _294_ D ) ( _146_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[27\].csa.sc ( _293_ Q ) ( _148_ A1 ) ( _147_ B1 ) ( _145_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[27\].csa.y ( _292_ Q ) ( _148_ A2 ) ( _147_ B2 ) ( _145_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[28\].csa.hsum2 ( _292_ D ) ( _141_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[28\].csa.sc ( _291_ Q ) ( _143_ A1 ) ( _142_ B1 ) ( _140_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[28\].csa.y ( _290_ Q ) ( _143_ A2 ) ( _142_ B2 ) ( _140_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[29\].csa.hsum2 ( _290_ D ) ( _136_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[29\].csa.sc ( _289_ Q ) ( _138_ A1 ) ( _137_ B1 ) ( _135_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[29\].csa.y ( _288_ Q ) ( _138_ A2 ) ( _137_ B2 ) ( _135_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[2\].csa.hsum2 ( _344_ D ) ( _271_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[2\].csa.sc ( _343_ Q ) ( _273_ A1 ) ( _272_ B1 ) ( _270_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[2\].csa.y ( _342_ Q ) ( _273_ A2 ) ( _272_ B2 ) ( _270_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[30\].csa.hsum2 ( _288_ D ) ( _130_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[30\].csa.sc ( _287_ Q ) ( _132_ B1 ) ( _129_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[30\].csa.y ( _347_ Q ) ( _132_ A1 ) ( _131_ A ) ( _129_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[3\].csa.hsum2 ( _342_ D ) ( _266_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[3\].csa.sc ( _341_ Q ) ( _268_ A1 ) ( _267_ B1 ) ( _265_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[3\].csa.y ( _340_ Q ) ( _268_ A2 ) ( _267_ B2 ) ( _265_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[4\].csa.hsum2 ( _340_ D ) ( _261_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[4\].csa.sc ( _339_ Q ) ( _263_ A1 ) ( _262_ B1 ) ( _260_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[4\].csa.y ( _338_ Q ) ( _263_ A2 ) ( _262_ B2 ) ( _260_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[5\].csa.hsum2 ( _338_ D ) ( _256_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[5\].csa.sc ( _337_ Q ) ( _258_ A1 ) ( _257_ B1 ) ( _255_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[5\].csa.y ( _336_ Q ) ( _258_ A2 ) ( _257_ B2 ) ( _255_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[6\].csa.hsum2 ( _336_ D ) ( _251_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[6\].csa.sc ( _335_ Q ) ( _253_ A1 ) ( _252_ B1 ) ( _250_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[6\].csa.y ( _334_ Q ) ( _253_ A2 ) ( _252_ B2 ) ( _250_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[7\].csa.hsum2 ( _334_ D ) ( _246_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[7\].csa.sc ( _333_ Q ) ( _248_ A1 ) ( _247_ B1 ) ( _245_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[7\].csa.y ( _332_ Q ) ( _248_ A2 ) ( _247_ B2 ) ( _245_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[8\].csa.hsum2 ( _332_ D ) ( _241_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[8\].csa.sc ( _331_ Q ) ( _243_ A1 ) ( _242_ B1 ) ( _240_ A ) + USE SIGNAL ;
+    - u_spm.genblk1\[8\].csa.y ( _330_ Q ) ( _243_ A2 ) ( _242_ B2 ) ( _240_ B ) + USE SIGNAL ;
+    - u_spm.genblk1\[9\].csa.hsum2 ( _330_ D ) ( _236_ Y ) + USE SIGNAL ;
+    - u_spm.genblk1\[9\].csa.sc ( _329_ Q ) ( _238_ A1 ) ( _237_ B1 ) ( _235_ A ) + USE SIGNAL ;
+    - u_spm.tcmp.z ( _348_ Q ) ( _286_ B1 ) ( _280_ A ) + USE SIGNAL ;
 END NETS
 END DESIGN

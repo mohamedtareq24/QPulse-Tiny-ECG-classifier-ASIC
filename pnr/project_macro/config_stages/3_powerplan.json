@@ -1,4 +1,7 @@
 {
+    "PDN_CFG": "dir::pdn_met4_only.tcl",
+    "PDN_MACRO_CONNECTIONS": ["u_adc vccd1 vssd1 VPWR VGND"],
+    "QUIT_ON_POWER_VIOLATIONS": false,
     "PDN_MULTILAYER": false,
     "FP_PDN_MULTILAYER": false,
     "PDN_CORE_RING": false,
@@ -13,5 +16,9 @@
     "PDN_HORIZONTAL_HALO": 0.0,
     "PDN_VERTICAL_HALO": 0.0,
     "VDD_NETS": ["vccd1"],
-    "GND_NETS": ["vssd1"]
+    "GND_NETS": ["vssd1"],
+    "PDN_OBSTRUCTIONS": [
+        ["met1", 92.5, 750.0, 230.0, 975.76],
+        ["met2", 92.5, 750.0, 230.0, 975.76]
+    ]
 }

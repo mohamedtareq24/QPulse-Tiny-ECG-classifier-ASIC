@@ -11,8 +11,7 @@ CONFIG_INPUTS := \
 	$(CONFIG_DIR)/4_placement.json \
 	$(CONFIG_DIR)/5_cts.json \
 	$(CONFIG_DIR)/6_routing.json \
-	$(CONFIG_DIR)/7_signoff.json \
-	$(CONFIG_DIR)/eco.json
+	$(CONFIG_DIR)/7_signoff.json
 
 .PHONY: all config force-config clean-config lock-config unlock-config status
 

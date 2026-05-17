@@ -1,103 +1,85 @@
-#------------------------------------------#
-# project_macro — PnR SDC
-# Target: project_macro inside openframe_multiproject
+#=============================================================
+# project_macro — PnR Constraints
 #
-# Clock: clk from green macro (left edge, clock buffer output)
-# I/O:   GPIO signals through orange macro muxes
+# Applies during: Synthesis → Placement → CTS → Routing
 #
-# Strategy: over-constrain during implementation so that the engine
-# works aggressively to fix slew/cap violations before routing is
-# finalised. The signoff.sdc relaxes back to realistic values.
+# All I/O delays account for two layers:
+#   1. OpenFrame wrapper external boundary (board + pad delays
+#      from the wrapper-level SDC, ext_delay = 4 ns)
+#   2. Internal infrastructure (purple + orange macros, measured
+#      from wrapper-level post-PnR STA)
 #
-# Key differences vs signoff.sdc:
-#   max_transition : 0.75 ns  (vs 1.5 ns at signoff)
-#   timing_derate  : ±7%      (vs ±5% at signoff)
-#   clock_uncertainty: 0.15 ns (vs 0.10 ns at signoff)
-#   clock_latency  : max=4.50, min=3.00 (slightly wider bounds)
-#------------------------------------------#
+# HOW TO USE THIS FILE:
+#   1. Find your grid position in the wrapper config.json
+#      (e.g. gen_row[2].gen_col[1].u_proj = Row 2, Col 1)
+#   2. Look up your clock latency in Section 5.1 of the guide.
+#   3. Replace the two <<...>> placeholders below.
+#   4. Leave everything else unchanged.
+#=============================================================
 
-# ----------------------------------------------------------------
-# Clock
-# ----------------------------------------------------------------
 set clk_port clk
-create_clock [get_ports $clk_port] -name clk -period 25
-puts "\[INFO\]: Creating clock {clk} for port $clk_port with period: 25"
+
+create_clock [get_ports $clk_port] \
+    -name clk \
+    -period $::env(CLOCK_PERIOD)
 
 set_propagated_clock [get_clocks {clk}]
 
-# Slightly more pessimistic uncertainty during PnR — accounts for
-# CTS skew that has not yet been resolved at this stage
+# ── Clock non-idealities (PnR — pessimistic) ──────────────
 set_clock_uncertainty 0.15 [get_clocks {clk}]
-puts "\[INFO\]: Setting clock uncertainty to: 0.15"
+set_max_transition    0.75 [current_design]
+set_max_fanout        16   [current_design]
 
-# Strict transition limit — forces the engine to aggressively insert
-# buffers and resize cells to resolve slew violations during routing,
-# so that signoff under the relaxed 1.5 ns limit is clean
-set_max_transition 0.75 [current_design]
-puts "\[INFO\]: Setting maximum transition to: 0.75"
-
-# Maximum fanout
-set_max_fanout 16 [current_design]
-puts "\[INFO\]: Setting maximum fanout to: 16"
-
-# Timing derate — 7% pessimism during PnR (vs 5% at signoff)
-# Wider derate accounts for routing uncertainty before wires are final
 set_timing_derate -early [expr {1 - 0.07}]
 set_timing_derate -late  [expr {1 + 0.07}]
-puts "\[INFO\]: Setting timing derate to: 7 %"
 
-# ----------------------------------------------------------------
-# Clock source latency
-# Path: GPIO pad → green macro clock buffer → project_macro clk pin
-# Slightly wider bounds than signoff to guard against pre-CTS
-# optimisation seeing an overly optimistic clock path
-# ----------------------------------------------------------------
-set_clock_latency -source -max 4.50 [get_clocks {clk}]
-set_clock_latency -source -min 3.00 [get_clocks {clk}]
-puts "\[INFO\]: Setting clock latency max=4.50 min=3.00"
+# ── Clock source latency ──────────────────────────────────
+# Measured propagation from the external clock source to your
+# macro's clk port. Includes: board + Caravel pad buffer +
+# green column chain + ICG cell.
+#
+# *** REPLACE WITH YOUR VALUES FROM SECTION 5.1 ***
+set_clock_latency -source -max 10.305 [get_clocks {clk}]
+set_clock_latency -source -min 6.200 [get_clocks {clk}]
 
 set_input_transition 0.80 [get_ports $clk_port]
 
-# ----------------------------------------------------------------
-# Reset and POR — half-cycle constraint
-# ----------------------------------------------------------------
-set_input_delay [expr {25 * 0.5}] -clock [get_clocks {clk}] [get_ports {reset_n}]
-set_input_delay [expr {25 * 0.5}] -clock [get_clocks {clk}] [get_ports {por_n}]
+# ── Reset and POR ─────────────────────────────────────────
+set_input_delay [expr {$::env(CLOCK_PERIOD) * 0.5}] \
+    -clock [get_clocks {clk}] [get_ports {reset_n por_n}]
 
-# ----------------------------------------------------------------
-# GPIO Input delays
-# Same retrieved values as signoff — these are physical path delays
-# through the orange macro and padframe; they do not change between
-# PnR and signoff stages.
-#   max=4.55 ns : pad input buffer + orange mux worst-case (SS corner)
-#   min=1.26 ns : same path best-case (FF corner)
-# ----------------------------------------------------------------
-set in_ext_delay 0
 
-# Bottom GPIOs (15 signals → right pads via bottom orange macro)
-set_input_delay -max [expr {$in_ext_delay + 4.55}] \
+# ── GPIO input delays ─────────────────────────────────────
+# Total path: external board (4 ns) + Caravel pad buffer
+# (4.55/1.26 ns) + purple broadcast buffer + orange local
+# buffer → YOUR gpio_*_in port.
+# Values differ per edge (different purple macro distance).
+# They are the same for all 12 project locations.
+#
+# Bottom edge (gpio_bot_in) → via Right Purple + Bottom Orange
+#   max = 8.55 + 6.57 = 15.12 ns  (slow corner)
+#   min = 5.26 + 1.82 =  7.08 ns  (fast corner)
+set_input_delay -max 15.12 \
     -clock [get_clocks {clk}] [get_ports {gpio_bot_in[*]}]
-set_input_delay -min [expr {$in_ext_delay + 1.26}] \
+set_input_delay -min 7.08 \
     -clock [get_clocks {clk}] [get_ports {gpio_bot_in[*]}]
 
-# Right GPIOs (9 signals → top pads via right orange macro)
-set_input_delay -max [expr {$in_ext_delay + 4.55}] \
+# Right edge (gpio_rt_in) → via Top Purple + Right Orange
+#   max = 8.55 + 6.50 = 15.05 ns
+#   min = 5.26 + 1.94 =  7.20 ns
+set_input_delay -max 15.05 \
     -clock [get_clocks {clk}] [get_ports {gpio_rt_in[*]}]
-set_input_delay -min [expr {$in_ext_delay + 1.26}] \
+set_input_delay -min 7.20 \
     -clock [get_clocks {clk}] [get_ports {gpio_rt_in[*]}]
 
-# Top GPIOs (14 signals → left pads via top orange macro)
-set_input_delay -max [expr {$in_ext_delay + 4.55}] \
+# Top edge (gpio_top_in) → via Left Purple + Top Orange
+#   max = 8.55 + 5.70 = 14.25 ns
+#   min = 5.26 + 0.96 =  6.22 ns
+set_input_delay -max 14.25 \
     -clock [get_clocks {clk}] [get_ports {gpio_top_in[*]}]
-set_input_delay -min [expr {$in_ext_delay + 1.26}] \
+set_input_delay -min 6.22 \
     -clock [get_clocks {clk}] [get_ports {gpio_top_in[*]}]
 
-# ----------------------------------------------------------------
-# Input transitions
-# Retrieved values — physical characterisation of orange macro output
-#   max=0.38 ns : worst-case slew driving into project_macro input
-#   min=0.05 ns : best-case (FF corner)
-# ----------------------------------------------------------------
 set_input_transition -max 0.38 [get_ports {gpio_bot_in[*]}]
 set_input_transition -min 0.05 [get_ports {gpio_bot_in[*]}]
 set_input_transition -max 0.38 [get_ports {gpio_rt_in[*]}]
@@ -105,59 +87,35 @@ set_input_transition -min 0.05 [get_ports {gpio_rt_in[*]}]
 set_input_transition -max 0.38 [get_ports {gpio_top_in[*]}]
 set_input_transition -min 0.05 [get_ports {gpio_top_in[*]}]
 
-# ----------------------------------------------------------------
-# GPIO Output delays
-# Same retrieved values as signoff — physical path delays through the
-# orange mux and pad output buffer. Constant across PnR and signoff.
-#   gpio_out max=9.12, min=3.90
-#   gpio_oeb max=9.32, min=2.34  (oeb tighter: gates the output driver)
-#   gpio_dm  treated same as gpio_oeb
-# ----------------------------------------------------------------
-set out_ext_delay 0
+# ── GPIO output delays ────────────────────────────────────
+# Total path: YOUR gpio_*_out → orange sel-gate + orange MUX
+# chain (9.61 ns) + purple mux → OpenFrame gpio_out port →
+# external board (4 ns) + receiving device setup (9.12 ns).
+# The same for all 12 project locations and all three edges.
+#
+#   gpio_*_out: max = 9.61 + 13.12 = 22.73 ns
+#               min = 2.92 +  7.90 = 10.82 ns
+#   gpio_*_oeb: max = 9.81 + 13.32 = 23.13 ns  (+0.2 ns margin)
+#               min = 2.92 +  6.34 =  9.26 ns
+set_output_delay -max 22.73 \
+    -clock [get_clocks {clk}] \
+    [get_ports {gpio_bot_out[*] gpio_rt_out[*] gpio_top_out[*]}]
+set_output_delay -min 10.82 \
+    -clock [get_clocks {clk}] \
+    [get_ports {gpio_bot_out[*] gpio_rt_out[*] gpio_top_out[*]}]
 
-# Bottom GPIOs
-set_output_delay -max [expr {$out_ext_delay + 9.12}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_bot_out[*]}]
-set_output_delay -min [expr {$out_ext_delay + 3.90}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_bot_out[*]}]
-set_output_delay -max [expr {$out_ext_delay + 9.32}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_bot_oeb[*]}]
-set_output_delay -min [expr {$out_ext_delay + 2.34}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_bot_oeb[*]}]
-set_output_delay -max [expr {$out_ext_delay + 9.12}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_bot_dm[*]}]
-set_output_delay -min [expr {$out_ext_delay + 2.34}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_bot_dm[*]}]
+set_output_delay -max 23.13 \
+    -clock [get_clocks {clk}] \
+    [get_ports {gpio_bot_oeb[*] gpio_rt_oeb[*] gpio_top_oeb[*]}]
+set_output_delay -min 9.26 \
+    -clock [get_clocks {clk}] \
+    [get_ports {gpio_bot_oeb[*] gpio_rt_oeb[*] gpio_top_oeb[*]}]
 
-# Right GPIOs
-set_output_delay -max [expr {$out_ext_delay + 9.12}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_rt_out[*]}]
-set_output_delay -min [expr {$out_ext_delay + 3.90}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_rt_out[*]}]
-set_output_delay -max [expr {$out_ext_delay + 9.32}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_rt_oeb[*]}]
-set_output_delay -min [expr {$out_ext_delay + 2.34}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_rt_oeb[*]}]
-set_output_delay -max [expr {$out_ext_delay + 9.12}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_rt_dm[*]}]
-set_output_delay -min [expr {$out_ext_delay + 2.34}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_rt_dm[*]}]
+set_output_delay -max 22.73 \
+    -clock [get_clocks {clk}] \
+    [get_ports {gpio_bot_dm[*] gpio_rt_dm[*] gpio_top_dm[*]}]
+set_output_delay -min 10.82 \
+    -clock [get_clocks {clk}] \
+    [get_ports {gpio_bot_dm[*] gpio_rt_dm[*] gpio_top_dm[*]}]
 
-# Top GPIOs
-set_output_delay -max [expr {$out_ext_delay + 9.12}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_top_out[*]}]
-set_output_delay -min [expr {$out_ext_delay + 3.90}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_top_out[*]}]
-set_output_delay -max [expr {$out_ext_delay + 9.32}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_top_oeb[*]}]
-set_output_delay -min [expr {$out_ext_delay + 2.34}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_top_oeb[*]}]
-set_output_delay -max [expr {$out_ext_delay + 9.12}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_top_dm[*]}]
-set_output_delay -min [expr {$out_ext_delay + 2.34}] \
-    -clock [get_clocks {clk}] [get_ports {gpio_top_dm[*]}]
-
-# ----------------------------------------------------------------
-# Output loads — input capacitance of the orange macro mux
-# ----------------------------------------------------------------
 set_load 0.19 [all_outputs]

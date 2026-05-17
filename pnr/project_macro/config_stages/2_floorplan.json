@@ -2,5 +2,7 @@
     "FP_SIZING": "absolute",
     "DIE_AREA": "0 0 880 1031.66",
     "IO_PIN_ORDER_CFG": "dir::pin_order.cfg",
-    "FP_DEF_TEMPLATE": "dir::fixed_dont_change/project_macro.def"
+    "FP_DEF_TEMPLATE": "dir::fixed_dont_change/project_macro.def",
+    "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
+    "RT_MAX_LAYER": "met4"
 }

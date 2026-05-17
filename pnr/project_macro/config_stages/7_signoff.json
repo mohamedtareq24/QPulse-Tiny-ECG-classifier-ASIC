@@ -1,4 +1,7 @@
 {
+    "EXTRA_GDS_FILES": [
+        "dir::../../../tt06-sar/gds/tt_um_TT06_SAR_wulffern.gds"
+    ],
     "MAGIC_DEF_LABELS": false,
     "MAGIC_DRC_USE_GDS": true
 }
