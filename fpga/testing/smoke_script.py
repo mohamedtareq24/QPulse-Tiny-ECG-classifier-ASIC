@@ -19,8 +19,8 @@ from pathlib import Path
 import serial
 
 
-DEFAULT_VECTOR_FILE = Path(__file__).parent / "ecg_hil_uvm" / "tv" / "cdatafile" / "c.tiny_ecg_no_activ.autotvin_input_layer_3.dat"
-DEFAULT_REF_FILE = Path(__file__).parent / "ecg_hil_uvm" / "tv" / "ref_onehot.txt"
+DEFAULT_VECTOR_FILE = Path(__file__).parent / "ecg_uvm" / "tv" / "cdatafile" / "c.tiny_ecg_no_activ.autotvin_input_layer_3.dat"
+DEFAULT_REF_FILE = Path(__file__).parent / "ecg_uvm" / "tv" / "ref_onehot.txt"
 
 
 def _parse_transaction_samples(path: Path, txn_index: int) -> list[int]:

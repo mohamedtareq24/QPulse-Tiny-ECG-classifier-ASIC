@@ -20,4 +20,4 @@
 [SEQ PRE_BODY] name=initial_ap_start type=ECGCsrApStartPulseSequence kind=csr-only packets=1
 [uvm_test_top.env.scoreboard]: Scoreboard summary: epochs=20000 matches=20000 mismatches=0 ignored_early_outputs=0
 [uvm_test_top.env.class_coverage]: Class coverage summary: observed_classes=5/5 hits=[17351, 596, 1376, 191, 486] invalid_onehot=0 total=20000
-[uvm_test_top.env.uart_rx_ag.monitor]: RX read retry: Serial stream returned EOF
+[uvm_test_top.env.uart_rx_ag.monitor]: RX read retry: Serial stream returned EOF ذ

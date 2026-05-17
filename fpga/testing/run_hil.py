@@ -17,7 +17,7 @@ import os
 from pyuvm import uvm_root
 
 # Import tests so pyuvm factory registers all classes.
-from ecg_hil_uvm.tests.test_lib import (  # noqa: F401
+from ecg_uvm.tests.test_lib import (  # noqa: F401
     ECGDropStartNegativeTest,
     ECGFullDatasetTest,
     ECGFullDatasetResetEveryFiveEpochsTest,

@@ -31,10 +31,10 @@ FRAME_LEN = 187
 
 DEFAULT_VECTOR_FILE = (
     Path(__file__).parent
-    / "ecg_hil_uvm" / "tv" / "cdatafile"
+    / "ecg_uvm" / "tv" / "cdatafile"
     / "c.tiny_ecg_no_activ.autotvin_input_layer_3.dat"
 )
-DEFAULT_REF_FILE = Path(__file__).parent / "ecg_hil_uvm" / "tv" / "ref_onehot.txt"
+DEFAULT_REF_FILE = Path(__file__).parent / "ecg_uvm" / "tv" / "ref_onehot.txt"
 
 
 # ---------------------------------------------------------------------------
